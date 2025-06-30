@@ -1,0 +1,230 @@
+{
+  "articles": [
+    {
+      "id": 1,
+      "image": "images/R1.jpg",
+      "title": "13 Complete Protein Sources for Vegetarians and Vegans You...",
+      "summary": "There are a number of health benefits associated with yoga, but can...",
+      "date": "5 Feb, 2025",
+      "views": "5.5k",
+      "author": "Kazim Ali",
+      "category": "recommended"
+    },
+    {
+      "id": 2,
+      "image": "images/R2.jpg",
+      "title": "Living with Migraine? These Simple Exercises from DWTS Judge Derek Hough May Help",
+      "summary": "There are a number of health benefits associated with yoga, but can...",
+      "date": "5 Mar, 2025",
+      "views": "5.5k",
+      "author": "Kazim Ali",
+      "category": "recommended"
+    },
+    {
+      "id": 3,
+      "image": "images/R3.jpg",
+      "title": "Can Stress Cause Migraines? Loretta Lynn's Daughter Patsy Lynn",
+      "summary": "There are a number of health benefits associated with yoga, but can...",
+      "date": "5 Jun, 2025",
+      "views": "5.5k",
+      "author": "Kazim Ali",
+      "category": "mostRead"
+    },
+    {
+      "id": 4,
+      "image": "images/R4.jpg",
+      "title": "Living with Migraine? These Simple Exercises from DWTS Judge Derek Hough May Help",
+      "summary": "There are a number of health benefits associated with yoga, but can...",
+      "date": "5 Apr, 2025",
+      "views": "5.5k",
+      "author": "Kazim Ali",
+      "category": "mostRead"
+    },
+    {
+      "id": 5,
+      "image": "images/R5.jpg",
+      "title": "Can Stress Cause Migraines?",
+      "summary": "There are a number of health benefits associated with yoga, but can...",
+      "date": "5 May, 2025",
+      "views": "5.5k",
+      "author": "Kazim Ali",
+      "category": "mostRead"
+    },
+    {
+      "id": 6,
+   "image": "images/R6.jpg",
+      "title": "Living with Migraine? These Simple Exercises from DWTS Judge Derek Hough May Help",
+      "summary": "There are a number of health benefits associated with yoga, but can...",
+      "date": "5 Mar, 2025",
+      "views": "5.5k",
+      "author": "Kazim Ali",
+      "category": "recommended"
+    }
+  ],
+  "sidebar": {
+    "writePrompt": {
+      "title": "Write on Howtovest!",
+      "actions": [
+        "Publish Your Articles",
+        "Connect With Thousands",
+        "Get Real-Target Recognition"
+      ],
+      "button": "Write For Us"
+    },
+    "categories": [
+      "Blogs",
+      "Courses",
+      "CSS Essays",
+      "PMS Essays",
+      "PMS Miscellaneous Essays",
+      "Civil Judge Essays",
+      "CSS Solved Papers"
+    ],
+    "topAuthors": [
+      {
+        "name": "Syed Kazim Ali",
+        "action": "View Author"
+      },
+      {
+        "name": "Syed Kazim Ali",
+        "action": "View Author"
+      },
+      {
+        "name": "Syed Kazim Ali",
+        "action": "View Author"
+      }
+    ]
+  },
+  "books": [
+    {
+      "id": 1,
+      "image": "images/B1.png",
+      "title": "Current Affair",
+      "subtitle": "By Seth Price / Barry Feldman"
+    },
+    {
+      "id": 2,
+      "image": "images/B2.png",
+      "title": "The Road to Recognition",
+      "subtitle": "By Seth Price / Barry Feldman"
+    },
+    {
+      "id": 3,
+      "image": "images/B3.png",
+      "title": "International Relations Paper One CSS and PMS",
+      "subtitle": "By Seth Price / Barry Feldman"
+    },
+    {
+      "id": 4,
+      "image": "images/B4.png",
+      "title": "Most Important MCQs of Everyday Science (1980 to Date)",
+      "subtitle": "By Seth Price / Barry Feldman"
+    },
+    {
+      "id": 5,
+      "image": "images/B5.png",
+      "title": "The First Free Online Standardized English Test for CSS and PMS Aspirants",
+      "subtitle": "By Joyce Meyer"
+    },
+    {
+      "id": 6,
+      "image": "images/B1.png",
+      "title": "500 Most Repeated MCQs on Pakistan Affairs",
+      "subtitle": "By Seth Price / Barry Feldman"
+    },
+    {
+      "id": 7,
+      "image": "images/B2.png",
+      "title": "1000 Most Important One Word Substitutions MCQs (Edition 2)",
+      "subtitle": "By Seth Price / Barry Feldman"
+    },
+    {
+      "id": 8,
+      "image": "images/B3.png",
+      "title": "1000 Most Important MCQs",
+      "subtitle": "By Seth Price / Barry Feldman"
+    },
+    {
+      "id": 9,
+      "image": "images/B4.png",
+      "title": "1000 Most Important MCQs of Everyday Science",
+      "subtitle": "By Seth Price / Barry Feldman"
+    },
+    {
+      "id": 10,
+      "image": "images/B5.png",
+      "title": "1000 Most Important One Word Substitutions MCQs (CSS and PMS)",
+      "subtitle": "By Seth Price / Barry Feldman"
+    }
+  ],
+  "authors": [
+    {
+      "id": 1,
+      "name": "Tamás Hám-Szabó",
+      "bio": "Bio of the author will go here. It can be up to 80 characters",
+      "articlesPublished": 85,
+      "totalReaders": "40K",
+      "image": "/images/Author.png",
+      "isVerified": false
+    },
+    {
+      "id": 2,
+      "name": "Tamás Hám-Szabó",
+      "bio": "Bio of the author will go here. It can be up to 80 characters",
+      "articlesPublished": 85,
+      "totalReaders": "40K",
+      "image": "/images/Author.png",
+      "isVerified": false
+    },
+    {
+      "id": 3,
+      "name": "Tamás Hám-Szabó",
+      "bio": "Bio of the author will go here. It can be up to 80 characters",
+      "articlesPublished": 85,
+      "totalReaders": "40K",
+      "image": "/images/Author.png",
+      "isVerified": true
+    }
+  ],
+  "accordian": [{
+      "question": "Who is Sir Syed Kazim Ali?",
+      "answer": "Sir Syed Kazim Ali is a renowned mentor and essay evaluator known for his expertise in preparing students for competitive exams like CSS, PMS, and descriptive writing."
+    },
+    {
+      "question": "For how long has he been teaching CSS, PMS, and Descriptive aspirants?",
+      "answer": "He has been mentoring students for over 12 years with a strong track record of success in competitive examinations."
+    },
+    {
+      "question": "Where can I find his successful students’ essays?",
+      "answer": "Successful student essays can be found in the 'Success Stories' section of the website or shared directly during live sessions."
+    },
+    {
+      "question": "Is there a free trial?",
+      "answer": "Yes, a limited-time free trial is available for first-time users. It includes one essay evaluation with general feedback."
+    },
+    {
+      "question": "How does online essay evaluation work?",
+      "answer": "You submit your essay through the platform, and within 48–72 hours, you'll receive detailed feedback, scores, and improvement suggestions."
+    },
+    {
+      "question": "If I don’t buy a subscription plan, can I get my essay evaluate?",
+      "answer": "Without a subscription, you can still request a one-time evaluation by paying a small fee per essay."
+    },
+    {
+      "question": "How many essays can I evaluate daily?",
+      "answer": "Depending on your plan, you can submit up to 1–3 essays per day for evaluation."
+    },
+    {
+      "question": "Do I get one on one evaluation of my essay?",
+      "answer": "Yes, students on premium plans can receive personalized one-on-one feedback sessions from Sir Kazim."
+    },
+    {
+      "question": "Does Sir Kazim evaluate my essay by making an audio or video call?",
+      "answer": "Audio or video calls are available for advanced feedback sessions in premium plans or upon special request."
+    },
+    {
+      "question": "What kind of feedback will I get after evaluation?",
+      "answer": "You will receive detailed comments on structure, grammar, coherence, vocabulary usage, and suggestions to improve your score."
+    }
+  ]
+}
