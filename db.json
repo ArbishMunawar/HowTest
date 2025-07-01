@@ -3,6 +3,7 @@
     {
       "id": 1,
       "image": "images/R1.jpg",
+       "bio":"Bio of the author goes here. Bio can be up to a limited number of characters",
       "title": "13 Complete Protein Sources for Vegetarians and Vegans You...",
       "summary": "There are a number of health benefits associated with yoga, but can...",
       "date": "5 Feb, 2025",
@@ -13,6 +14,7 @@
     {
       "id": 2,
       "image": "images/R2.jpg",
+       "bio":"Bio of the author goes here. Bio can be up to a limited number of characters",
       "title": "Living with Migraine? These Simple Exercises from DWTS Judge Derek Hough May Help",
       "summary": "There are a number of health benefits associated with yoga, but can...",
       "date": "5 Mar, 2025",
@@ -23,6 +25,7 @@
     {
       "id": 3,
       "image": "images/R3.jpg",
+       "bio":"Bio of the author goes here. Bio can be up to a limited number of characters",
       "title": "Can Stress Cause Migraines? Loretta Lynn's Daughter Patsy Lynn",
       "summary": "There are a number of health benefits associated with yoga, but can...",
       "date": "5 Jun, 2025",
@@ -33,6 +36,7 @@
     {
       "id": 4,
       "image": "images/R4.jpg",
+       "bio":"Bio of the author goes here. Bio can be up to a limited number of characters",
       "title": "Living with Migraine? These Simple Exercises from DWTS Judge Derek Hough May Help",
       "summary": "There are a number of health benefits associated with yoga, but can...",
       "date": "5 Apr, 2025",
@@ -43,6 +47,7 @@
     {
       "id": 5,
       "image": "images/R5.jpg",
+       "bio":"Bio of the author goes here. Bio can be up to a limited number of characters",
       "title": "Can Stress Cause Migraines?",
       "summary": "There are a number of health benefits associated with yoga, but can...",
       "date": "5 May, 2025",
@@ -53,6 +58,7 @@
     {
       "id": 6,
    "image": "images/R6.jpg",
+   
       "title": "Living with Migraine? These Simple Exercises from DWTS Judge Derek Hough May Help",
       "summary": "There are a number of health benefits associated with yoga, but can...",
       "date": "5 Mar, 2025",
@@ -184,8 +190,128 @@
       "totalReaders": "40K",
       "image": "/images/Author.png",
       "isVerified": true
+    },
+      {
+      "id": 4,
+      "name": "Tamás Hám-Szabó",
+      "bio": "Bio of the author will go here. It can be up to 80 characters",
+      "articlesPublished": 85,
+      "totalReaders": "40K",
+      "image": "/images/Author.png",
+      "isVerified": true
+    },
+      {
+      "id": 5,
+      "name": "Tamás Hám-Szabó",
+      "bio": "Bio of the author will go here. It can be up to 80 characters",
+      "articlesPublished": 85,
+      "totalReaders": "40K",
+      "image": "/images/Author.png",
+      "isVerified": true
+    },
+      {
+      "id": 6,
+      "name": "Tamás Hám-Szabó",
+      "bio": "Bio of the author will go here. It can be up to 80 characters",
+      "articlesPublished": 85,
+      "totalReaders": "40K",
+      "image": "/images/Author.png",
+      "isVerified": true
+    },
+      {
+      "id": 7,
+      "name": "Tamás Hám-Szabó",
+      "bio": "Bio of the author will go here. It can be up to 80 characters",
+      "articlesPublished": 85,
+      "totalReaders": "40K",
+      "image": "/images/Author.png",
+      "isVerified": true
+    },
+      {
+      "id": 8,
+      "name": "Tamás Hám-Szabó",
+      "bio": "Bio of the author will go here. It can be up to 80 characters",
+      "articlesPublished": 85,
+      "totalReaders": "40K",
+      "image": "/images/Author.png",
+      "isVerified": true
+    }
+    ,
+      {
+      "id": 9,
+      "name": "Tamás Hám-Szabó",
+      "bio": "Bio of the author will go here. It can be up to 80 characters",
+      "articlesPublished": 85,
+      "totalReaders": "40K",
+      "image": "/images/Author.png",
+      "isVerified": true
+    },
+      {
+      "id": 10,
+      "name": "Tamás Hám-Szabó",
+      "bio": "Bio of the author will go here. It can be up to 80 characters",
+      "articlesPublished": 85,
+      "totalReaders": "40K",
+      "image": "/images/Author.png",
+      "isVerified": true
+    },
+      {
+      "id": 11,
+      "name": "Tamás Hám-Szabó",
+      "bio": "Bio of the author will go here. It can be up to 80 characters",
+      "articlesPublished": 85,
+      "totalReaders": "40K",
+      "image": "/images/Author.png",
+      "isVerified": true
+    },
+      {
+      "id": 12,
+      "name": "Tamás Hám-Szabó",
+      "bio": "Bio of the author will go here. It can be up to 80 characters",
+      "articlesPublished": 85,
+      "totalReaders": "40K",
+      "image": "/images/Author.png",
+      "isVerified": true
+    },
+      {
+      "id":13,
+      "name": "Tamás Hám-Szabó",
+      "bio": "Bio of the author will go here. It can be up to 80 characters",
+      "articlesPublished": 85,
+      "totalReaders": "40K",
+      "image": "/images/Author.png",
+      "isVerified": true
+    },
+      {
+      "id": 14,
+      "name": "Tamás Hám-Szabó",
+      "bio": "Bio of the author will go here. It can be up to 80 characters",
+      "articlesPublished": 85,
+      "totalReaders": "40K",
+      "image": "/images/Author.png",
+      "isVerified": true
+    },
+      {
+      "id": 15,
+      "name": "Tamás Hám-Szabó",
+      "bio": "Bio of the author will go here. It can be up to 80 characters",
+      "articlesPublished": 85,
+      "totalReaders": "40K",
+      "image": "/images/Author.png",
+      "isVerified": true
+    },
+      {
+      "id": 16,
+      "name": "Tamás Hám-Szabó",
+      "bio": "Bio of the author will go here. It can be up to 80 characters",
+      "articlesPublished": 85,
+      "totalReaders": "40K",
+      "image": "/images/Author.png",
+      "isVerified": true
     }
   ],
+
+
   "accordian": [{
       "question": "Who is Sir Syed Kazim Ali?",
       "answer": "Sir Syed Kazim Ali is a renowned mentor and essay evaluator known for his expertise in preparing students for competitive exams like CSS, PMS, and descriptive writing."

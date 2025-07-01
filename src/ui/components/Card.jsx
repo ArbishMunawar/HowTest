@@ -1,12 +1,14 @@
 import React from 'react';
-const Card = ({ id,title, summary, date, views, author,image }) => {
+import { Link } from "react-router";
+const Card = ({ id,bio,title, summary, date, views, author,image }) => {
   return (
+    <Link to={`/articles/${id}`}>
     <div className="  w-[100vw] md:w-full flex justify-between  ">
       <div className='lg:h-full lg:w-[15rem]'>
       <img
         src={image}
         alt={title}
-        className="w-[20rem]    rounded-lg mb-4"></img>
+        className="w-[20rem] rounded-lg mb-4"></img>
         </div>
         <div>
       <h2 className="pl-4 text-[15px] font-semibold text-gray-800 mb-2 lg:text-wrap hover:text-blue-600 cursor-pointer ">
@@ -23,6 +25,7 @@ const Card = ({ id,title, summary, date, views, author,image }) => {
       
       </div>
     </div>
+    </Link>
   );
 };
 

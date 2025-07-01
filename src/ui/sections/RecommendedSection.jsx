@@ -3,7 +3,7 @@ import UseFetch from "../../hooks/UseFetch";
 import { useSearchParams } from "react-router";
 import Card from "../components/Card";
 import TopSection from "../components/TopSection";
-import { Link } from "react-router-dom";
+import { Link } from "react-router";
 
 const RecommendedSection = () => {
   const [searchParams] = useSearchParams();
@@ -63,7 +63,7 @@ const RecommendedSection = () => {
             >
               {data.map((item, idx) => (
                 <div key={item.id} className="min-w-[300px] flex-shrink-0">
-                  <Card image={item.image} title={item.title} />
+                  <Card image={item.image} id={item.id} title={item.title} />
                 </div>
               ))}
             </div>
@@ -81,7 +81,7 @@ const RecommendedSection = () => {
             </div>
             <div className="hidden md:grid md:grid-cols-2 lg:grid-cols-2 gap-6 mt-6">
               {data.slice(0, 4).map((item) => (
-                <Card key={item.id} image={item.image} title={item.title} />
+                <Card key={item.id} image={item.image} id={item.id} title={item.title} />
               ))}
             </div>
           </>

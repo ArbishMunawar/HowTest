@@ -4,6 +4,8 @@ import MenuIcon from "../../assets/icons/MenuIcon";
 import CrossIcon from "../../assets/icons/CrossIcon";
 import LeftArrowIcon from "../../assets/icons/LeftArrow";
 import { ChevronRight, Search } from "lucide-react";
+import WriteForUsButton from "./WriteForUsButton";
+import NavSearch from "./NavSearch";
 
 const Navbar = () => {
   const [mobileOpen, setMobileOpen] = useState(false);
@@ -162,9 +164,9 @@ const Navbar = () => {
               </button>
 
               {isDropdownOpen && (
-                <div className="absolute left-0 top-7 mt-3 bg-white shadow-lg rounded w-[800px] z-50">
+                <div className="absolute left-0 top-7 mt-3 bg-white shadow-lg rounded w-[100vw] right-0 z-50">
                   <div className="grid grid-cols-2 gap-8 p-6">
-                    <ul className="space-y-4 text-xl text-gray-800 w-full border-r pr-6">
+                    <ul className="space-y-4 text-xl text-gray-800  border-r pr-6">
                       <li
                         onClick={(e) => {
                           e.stopPropagation();
@@ -223,8 +225,8 @@ const Navbar = () => {
             </div>
           </div>
 
-          <div className="flex gap-10 max-w-md  w-full mx-4">
-            <div className="relative flex justify-between">
+          <div className="flex gap-10 max-w-md  w-full">
+            {/* <div className="relative flex justify-between">
               <input
                 type="text"
                 placeholder="What you are looking for"
@@ -235,12 +237,16 @@ const Navbar = () => {
                   <Search />
                 </button>
               </div>
-            </div>
-            <div>
-              <button className="border border-blue-500 text-blue-500 px-4 py-1 rounded hover:bg-blue-50 text-sm">
+            </div> */}
+
+            <NavSearch/>
+            {/* <div> */}
+              {/* <button className="border border-blue-500 text-blue-500 px-4 py-1 rounded hover:bg-blue-50 text-sm">
                 Write For Us
-              </button>
-            </div>
+              </button> */}
+
+              <WriteForUsButton >Write For Us</WriteForUsButton>
+            {/* </div> */}
           </div>
         </div>
       </div>
