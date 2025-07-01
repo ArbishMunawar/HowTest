@@ -5,6 +5,8 @@ import {createBrowserRouter,RouterProvider} from "react-router";
 import Root from './App.jsx'
 import HomePage from './ui/pages/HomePage/index.jsx'
 import RecommendedPage from './ui/pages/RecommendedPage/index.jsx';
+import AllAuthorsPage from './ui/pages/AllAuthorsPage/index.jsx'
+import RecommendedDetailsPage from './ui/pages/RecommendedDetailsPage/index.jsx';
 const router = createBrowserRouter([
   {
     path: "/",
@@ -12,7 +14,8 @@ const router = createBrowserRouter([
     children: [
       { index: true, element: <HomePage /> },
       { path: "/recommended", element: <RecommendedPage /> },
-      // { path: "shop/", element: <ShopPage /> },
+        { path: "/articles/:id", element: <RecommendedDetailsPage/>},
+      { path: "/authors", element: <AllAuthorsPage /> },
       // { path: "blog/", element: <BlogPage /> },
       // { path: "cart/", element: <Cart /> },
       // { path: "contact/", element: <ContactUs /> },

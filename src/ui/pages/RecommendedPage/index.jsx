@@ -3,6 +3,9 @@ import Tabs from "../../components/Tabs";
 import UseFetch from "../../../hooks/UseFetch";
 import { useSearchParams } from "react-router";
 import RecommendedCard from "../../components/RecommendeCard";
+import CourseBanner from "../../components/CourseBanner";
+import Sidebar  from "../../sections/RecommendedSidebar/Sidebar";
+import SubscribeSection from '../../sections/SubscribeSection'
 
 const RecommendedPage = () => {
   const [searchParams] = useSearchParams();
@@ -25,30 +28,60 @@ const RecommendedPage = () => {
         </h2>
       </div>
 
-      <Tabs activeTab={activeTab} setActiveTab={setActiveTab} />
-      <div className=" md:flex ">
-        <div className="lg:max-w-[1200px] mx-auto ">
-          {isLoading ? (
-            <p>Loading...</p>
-          ) : filteredArticles.length > 0 ? (
-            <div className=" mt-6">
-              {filteredArticles.map((item) => (
-                <RecommendedCard
-                  key={item.id}
-                  image={item.image}
-                  title={item.title}
-                  // summary={item.summary}
-                  date={item.date}
-                  views={item.views} 
-                  author={item.author}
-                />
-              ))}
-            </div>
-          ) : (
-            <p>No Articles Found</p>
-          )}
+      <div className="lg:max-w-[1200px] mx-auto">
+        <Tabs activeTab={activeTab} setActiveTab={setActiveTab} />
+        <div className=" md:flex ">
+          <div className="">
+            {isLoading ? (
+              <p>Loading...</p>
+            ) : filteredArticles.length > 0 ? (
+              <div className=" mt-6">
+                {filteredArticles.slice(0, 2).map((item) => (
+                  <RecommendedCard
+                    id={item.id}
+                    key={item.id}
+                    image={item.image}
+                    title={item.title}
+                    summary={item.summary}
+                    date={item.date}
+                    views={item.views}
+                    author={item.author}
+                  />
+                ))}
+              </div>
+            ) : (
+              <p>No Articles Found</p>
+            )}
+
+            <CourseBanner />
+
+            {isLoading ? (
+              <p>Loading...</p>
+            ) : filteredArticles.length > 0 ? (
+              <div className=" mt-6">
+                {filteredArticles.slice(2).map((item) => (
+                  <RecommendedCard
+                   id={item.id}
+                    key={item.id}
+                    image={item.image}
+                    title={item.title}
+                    summary={item.summary}
+                    date={item.date}
+                    views={item.views}
+                    author={item.author}
+                  />
+                ))}
+              </div>
+            ) : (
+              <p>No Articles Found</p>
+            )}
+          </div>
+          <div className="hidden md:block md:w-[35%]">
+           <Sidebar/>
+          </div>
+
         </div>
-        <div className="hidden md:block md:w-[40%] md:bg-amber-400">hedhvd</div>
+          <SubscribeSection/>
       </div>
     </>
   );

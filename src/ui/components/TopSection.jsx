@@ -12,7 +12,7 @@ const TopSection = ({
         <h1 className={`text-2xl font-bold text-gray-800 ${className}`}>
           {title}
         </h1>
-        <div className="flex items-center gap-4">
+        <div className="flex items-center gap-4 cursor-pointer">
           <p className="text-[15px] text-blue-600">{subtitle}</p>
           <button className="h-[2rem] w-[2rem] border border-blue-600 flex items-center justify-center bg-[#F5F5F5] rounded-full">
             <ArrowRight className=" text-blue-600 " />

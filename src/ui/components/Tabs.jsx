@@ -16,7 +16,7 @@ const Tabs = ({ activeTab, setActiveTab }) => {
   };
 
   return (
-    <div className="border-b border-gray-200 py-3 bg-white shadow-sm">
+    <div className="border-b border-gray-200 py-3 bg-white my-9 md:max-w-[65%] ml-5">
       <div className="hidden md:flex md:justify-between gap-6 lg:max-w-[1200px] mx-auto px-4">
         <div className="md:flex md:gap-10">
           {tabs.map((tab) => (
