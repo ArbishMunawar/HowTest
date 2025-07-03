@@ -1,6 +1,6 @@
 import React from 'react';
 
-const BookCard = ({ image, title, subtitle }) => {
+const BookCard = ({id, image, title, subtitle }) => {
   return (
     <div className="bg-white rounded-lg overflow-hidden   flex flex-col h-full">
       <img
@@ -9,7 +9,7 @@ const BookCard = ({ image, title, subtitle }) => {
         className="w-full h-[70%] object-cover" 
         
       />
-      <div className="py-4 px-3 flex-grow">
+      <div className="py-4 md:px-3 flex-grow">
         <h3 className="text-lg font-bold text-left text-gray-800 line-clamp-2">
           {title}
         </h3>

@@ -14,11 +14,15 @@ const RecommendedPage = () => {
   const { data, isLoading } = UseFetch(
     `${import.meta.env.VITE_REACT_APP_API_URL}/articles`
   );
-
+const allTabs= [
+    { label: "All Articles", value: "all" },
+    { label: "Recommended", value: "recommended" },
+    { label: "Most Read", value: "mostRead" },
+  ];
   const filteredArticles =
     activeTab === "all"
       ? data
-      : data.filter((item) => item.category === activeTab);
+      : data.filter((item) => item.tag === activeTab);
 
   return (
     <>
@@ -29,7 +33,7 @@ const RecommendedPage = () => {
       </div>
 
       <div className="lg:max-w-[1200px] mx-auto">
-        <Tabs activeTab={activeTab} setActiveTab={setActiveTab} />
+        <Tabs tabs={allTabs} activeTab={activeTab} setActiveTab={setActiveTab} title="Recommended"/>
         <div className=" md:flex ">
           <div className="">
             {isLoading ? (

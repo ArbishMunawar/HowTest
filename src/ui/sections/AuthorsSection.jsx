@@ -8,8 +8,7 @@ const AuthorsSection = () => {
   const [searchParams] = useSearchParams();
   const { data, isLoading } = UseFetch(
     `${
-      import.meta.env.VITE_REACT_APP_API_URL
-    }/authors?${searchParams.toString()}`
+      import.meta.env.VITE_REACT_APP_API_URL }/authors?${searchParams.toString()}`
   );
 
   return (

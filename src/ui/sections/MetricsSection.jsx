@@ -1,27 +1,27 @@
 import React from "react";
 import Button from "../components/Button";
 
-const MetricsSection = () => {
+const MetricsSection = ({className=""}) => {
   return (
     <>
-      <div className="lg:max-w-[1200px] mx-auto my-20">
+      <div className={`lg:max-w-[1200px] mx-auto my-20 ${className}`}>
         <div className="p-5 px-9 bg-white shadow-xl rounded-xl w-[89%] mx-auto my-14 border border-gray-300 md:grid md:grid-cols-4 gap-6">
           <div className=" border-b border-gray-400 py-4 md:border-b-0 md:border-r ">
-            <h2 className="font-bold text-xl">Author</h2>
-            <h2 className="font-semibold text-lg text-gray-600 md:text-[16px]">
+            <h2 className="font-[600] text-[15px] text-[#231F20]">Author</h2>
+            <h2 className="font-[400] text-[14px] text-[#778088] md:text-[16px]">
               Type Author Name
             </h2>
           </div>
           <div className=" border-b border-gray-400 py-4 md:border-b-0 md:border-r">
-            <h2 className="font-bold text-xl">Title</h2>
-            <h2 className="font-semibold text-lg text-gray-600 md:text-[16px]">
+            <h2 className="font-[600] text-[15px] text-[#231F20]">Title</h2>
+            <h2 className="font-[400] text-[14px] text-[#778088] md:text-[16px]">
               Type the title
             </h2>
           </div>
 
           <div className="  py-4 ">
-            <h2 className="font-bold text-xl">Keyword</h2>
-            <h2 className="font-semibold text-lg text-gray-600 md:text-[16px]">
+            <h2 className="font-[600] text-[15px] text-[#231F20]">Keyword</h2>
+            <h2 className="font-[400] text-[14px] text-[#778088] md:text-[16px]">
               Type Keyword
             </h2>
           </div>

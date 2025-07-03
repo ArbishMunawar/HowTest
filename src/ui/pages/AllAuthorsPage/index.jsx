@@ -3,7 +3,7 @@ import UseFetch from "../../../hooks/UseFetch";
 import { Link, useSearchParams } from "react-router";
 import AuthorCard from "../../components/AuthorCard";
 import { Search } from "lucide-react";
-import NavSearch from "../../components/NavSearch";
+// import NavSearch from "../../components/NavSearch";
 const AllAuthorsPage = () => {
   const [searchParams] = useSearchParams();
   const { data, isLoading } = UseFetch(
