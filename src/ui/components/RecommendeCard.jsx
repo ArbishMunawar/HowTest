@@ -15,10 +15,10 @@ const RecommendedCard = ({
 }) => {
   return (
        <Link to={`/articles/${id}`}>
-    <div className="  md:w-full flex ">
+    <div className="  md:w-full flex my-3 ">
       <div className="lg:h-full lg:w-[15rem] w-[40%] ">
         <img
-          src={image}
+          src={image }
           alt={title}
           className="w-[100%] rounded-lg mb-4 pl-5"
         ></img>
@@ -34,8 +34,8 @@ const RecommendedCard = ({
           </p>
         </div>
 
-        <div className="flex items-center pl-5 text-[14px]  text-gray-500  pt-3">
-          <div className="flex  border-r gap-2 pr-3">
+        <div className="flex items-center pl-5 text-[12px]  text-gray-500  pt-3">
+          <div className="flex  border-r gap-2 pr-2">
             <DateIcon />
             <span>{date}</span>
           </div>

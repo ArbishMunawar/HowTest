@@ -2,21 +2,15 @@ import React, { useState } from "react";
 import RMenuIcon from "../../assets/icons/RMenuIcon";
 import SortIcon from "../../assets/icons/SortIcon";
 
-const Tabs = ({ activeTab, setActiveTab }) => {
+const Tabs = ({ tabs,activeTab, setActiveTab,className="",title="" }) => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-
-  const tabs = [
-    { label: "All Articles", value: "all" },
-    { label: "Recommended", value: "recommended" },
-    { label: "Most Read", value: "mostRead" },
-  ];
 
   const handleTabClick = (value) => {
     setActiveTab(value);
   };
 
   return (
-    <div className="border-b border-gray-200 py-3 bg-white my-9 md:max-w-[65%] ml-5">
+    <div className={`md:border-b md:border-gray-200  py-3 bg-white my-9 md:max-w-[65%] ml-5  ${className}`}>
       <div className="hidden md:flex md:justify-between gap-6 lg:max-w-[1200px] mx-auto px-4">
         <div className="md:flex md:gap-10">
           {tabs.map((tab) => (
@@ -51,7 +45,7 @@ const Tabs = ({ activeTab, setActiveTab }) => {
         >
           <RMenuIcon />
         </button>
-        <h3 className="font-semibold text-base">Articles</h3>
+        <h3 className="font-semibold text-base">{title}</h3>
       </div>
 
       {isMobileMenuOpen && (

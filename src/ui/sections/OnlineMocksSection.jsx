@@ -14,7 +14,7 @@ const OnlineMocksSection = () => {
 
 
   return (
-    <div className="lg:max-w-[1200px] mx-auto lg:my-9">
+    <div className="lg:max-w-[1200px] mx-auto lg:my-9 my-6">
       <TopSection title="All Online Mocks" />
 
       <div>

@@ -1,10 +1,9 @@
-
 import React, { useState } from "react";
 import UseFetch from "../../hooks/UseFetch";
 import { useSearchParams } from "react-router";
 import TopSection from "../components/TopSection";
 import BookCard from "../components/BookCard";
-
+import { Link } from "react-router";
 const McqBooksSection = () => {
   const [searchParams] = useSearchParams();
   const { data, isLoading } = UseFetch(
@@ -16,8 +15,9 @@ const McqBooksSection = () => {
 
   return (
     <div className="lg:max-w-[1200px] mx-auto lg:my-9">
+      <Link to={`books`}>
       <TopSection title="All MCQs Books" />
-
+</Link>
       <div>
         {isLoading ? (
           <p>Loading...</p>

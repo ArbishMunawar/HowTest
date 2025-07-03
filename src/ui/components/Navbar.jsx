@@ -6,14 +6,26 @@ import LeftArrowIcon from "../../assets/icons/LeftArrow";
 import { ChevronRight, Search } from "lucide-react";
 import WriteForUsButton from "./WriteForUsButton";
 import NavSearch from "./NavSearch";
+import { useSearch } from "../../hooks/searchContet";
+import { useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const [mobileOpen, setMobileOpen] = useState(false);
   const [mobileSearchOpen, setMobileSearchOpen] = useState(false);
   const [activeSubMenu, setActiveSubMenu] = useState("main");
-  const [input, setInput] = useState("");
+  // const [input, setInput] = useState("");
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const [activeMenu, setActiveMenu] = useState(null);
+  const { input, setInput, setSearchQuery } = useSearch();
+  const navigate = useNavigate();
+
+  const handleSearch = () => {
+    setSearchQuery(input);
+    setInput("");
+    setMobileSearchOpen(false);
+    navigate("/search");
+  };
 
   const subMenus = {
     Blog: [
@@ -41,10 +53,12 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="bg-white shadow-3xl">
+    <nav className="bg-white shadow-3xl w-full relative z-50">
       <div className="lg:max-w-[1200px] mx-auto ">
         <div className="md:hidden flex justify-between items-center px-6 py-3 lg:max-w-[1200px] mx-auto ">
-          <img src={Logo} alt="Logo" className="w-10" />
+          <Link to="/">
+            <img src={Logo} alt="Logo" className="w-10 cursor-pointer" />
+          </Link>
           <div className="flex items-center gap-2">
             <button onClick={() => setMobileSearchOpen(!mobileSearchOpen)}>
               <Search />
@@ -66,8 +80,8 @@ const Navbar = () => {
               type="text"
               placeholder="Search..."
               className="w-full border rounded px-4 py-2 text-sm"
-              value={input}
               onChange={(e) => setInput(e.target.value)}
+              onKeyDown={(e) => e.key === "Enter" && handleSearch()}
             />
           </div>
         )}
@@ -86,27 +100,29 @@ const Navbar = () => {
                 <li className="font-bold">Explore</li>
                 <li
                   onClick={() => setActiveSubMenu("Blog")}
-                  className="cursor-pointer flex items-center justify-between"
+                  className={`cursor-pointer flex items-center justify-between ${
+                    activeSubMenu === "Blog" ? "text-[#3874FF] font-[600]" : ""
+                  }`}
                 >
-                  Blog Categories <ChevronRight className="w-5 h-5" />
+                  Blog Categories <ChevronRight className="w-5 h-5 " />
                 </li>
                 <li
                   onClick={() => setActiveSubMenu("Books")}
                   className="cursor-pointer flex items-center justify-between"
                 >
-                  Online Books <ChevronRight className="w-5 h-5" />
+                  Online Books <ChevronRight className="w-5 h-5 " />
                 </li>
                 <li
                   onClick={() => setActiveSubMenu("Mock")}
                   className="cursor-pointer flex items-center justify-between"
                 >
-                  Mock Tests <ChevronRight className="w-5 h-5" />
+                  Mock Tests <ChevronRight className="w-5 h-5 " />
                 </li>
                 <li
                   onClick={() => setActiveSubMenu("Other")}
                   className="cursor-pointer flex items-center justify-between"
                 >
-                  Other Pages <ChevronRight className="w-5 h-5" />
+                  Other Pages <ChevronRight className="w-5 h-5 " />
                 </li>
               </ul>
             )}
@@ -164,8 +180,8 @@ const Navbar = () => {
               </button>
 
               {isDropdownOpen && (
-                <div className="absolute left-0 top-7 mt-3 bg-white shadow-lg rounded w-[100vw] right-0 z-50">
-                  <div className="grid grid-cols-2 gap-8 p-6">
+                <div className=" fixed left-0 top-10 mt-9 bg-white shadow-lg rounded w-screen z-50">
+                  <div className="grid grid-cols-2 gap-8 p-6 lg:max-w-[1200px] mx-auto">
                     <ul className="space-y-4 text-xl text-gray-800  border-r pr-6">
                       <li
                         onClick={(e) => {
@@ -225,27 +241,13 @@ const Navbar = () => {
             </div>
           </div>
 
-          <div className="flex gap-10 max-w-md  w-full">
-            {/* <div className="relative flex justify-between">
-              <input
-                type="text"
-                placeholder="What you are looking for"
-                className="w-full border border-[#DCDBDB99] rounded py-2 px-4 pr-[7rem] text-sm font-ligt"
-              />
-              <div className="bg-blue-600">
-                <button className="absolute right-0 rounded-tr rounded-br top-1/2 transform -translate-y-1/2 text-white bg-blue-600 py-1.5 px-4">
-                  <Search />
-                </button>
-              </div>
-            </div> */}
-
-            <NavSearch/>
-            {/* <div> */}
-              {/* <button className="border border-blue-500 text-blue-500 px-4 py-1 rounded hover:bg-blue-50 text-sm">
-                Write For Us
-              </button> */}
-
-              <WriteForUsButton >Write For Us</WriteForUsButton>
+          {/* <div className="flex gap-10 max-w-md  w-full"> */}
+          <div className="flex gap-6 items-center">
+            <NavSearch />
+            <WriteForUsButton>Write For Us</WriteForUsButton>
+            <Link to={"login"}>
+            <button className="text-blue-500 cursor-pointer">LogIn</button>
+            </Link>
             {/* </div> */}
           </div>
         </div>

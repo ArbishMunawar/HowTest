@@ -2,6 +2,11 @@ import React from "react";
 import bg3 from "../../assets/images/bg3.jpg";
 import Logo from "../../assets/images/Logo.png";
 import Button from "../components/Button";
+import History from "../components/History";
+import ReviewArticle from "./ReviewArticle";
+import Commentform from "./Commentform";
+import CommentsSection from "./CommentsSection";
+import FromCategory from "./FromCategory";
 const TakeAway = () => {
   return (
     <>
@@ -20,18 +25,23 @@ const TakeAway = () => {
 
         <div className="bg-[#F9F9F9] rounded-[10px] my-5">
           <div className=" p-5 md:flex  md:gap-10 ">
-            <img src={bg3} alt="" className="rounded-[10px] md:pt-10  lg:w-[185px] lg:h-[185px]" />
+            <img
+              src={bg3}
+              alt=""
+              className="rounded-[10px] md:mt-7 md:w-[40%] md:h-[70%] lg:w-[185px] lg:h-[185px]"
+            />
             <div className="">
-            <h2 className="text-[20px] font-[700] text-[#231F20] py-5">
-              Heading of the ad goes here
-            </h2>
-            <p>
-              Lorem Ipsu`m is simply dummy text of the printing and typesetting
-              industry. Lorem Ipsum has been the industry's standard dummy text
-              ever since the 1500s, when an unknown printer took a galley of
-              type and scrambled it to make a type specimen book.
-            </p>
-            <Button className="my-5">Explore the course</Button>
+              <h2 className="text-[20px] font-[700] text-[#231F20] py-5">
+                Heading of the ad goes here
+              </h2>
+              <p>
+                Lorem Ipsu`m is simply dummy text of the printing and
+                typesetting industry. Lorem Ipsum has been the industry's
+                standard dummy text ever since the 1500s, when an unknown
+                printer took a galley of type and scrambled it to make a type
+                specimen book.
+              </p>
+              <Button className="my-5">Explore the course</Button>
             </div>
           </div>
           <div className="bg-[#EBF3F9] rounded-b-[10px] p-5 flex justify-between">
@@ -41,6 +51,35 @@ const TakeAway = () => {
             </p>
           </div>
         </div>
+
+        <h2 className="text-[#231F20] text-[20px] font-[700] md:text-[24] my-3">
+          How we have reviewed this article!
+        </h2>
+        <p>
+          At HowTests, every submitted article undergoes a careful editorial
+          review to ensure it aligns with our content standards, relevance, and
+          quality guidelines. Our team evaluates the article for accuracy,
+          originality, clarity, and usefulness to competitive exam aspirants. We
+          strongly emphasise human-written, well-researched content, but we may
+          accept AI-assisted submissions if they provide valuable, verifiable,
+          and educational information.
+          <br />
+          <br />
+          Moreover, articles are evaluated based on academic credibility, expert
+          input, and alignment with exam trends. Only those that meet our
+          educational quality benchmarks are published. This process reflects
+          our commitment to delivering reliable, high-quality resources. Learn
+          more in our Editorial and Publishing Policy.
+        </p>
+
+        <History />
+
+        <ReviewArticle />
+
+        <Commentform />
+        <CommentsSection />
+        <Commentform />
+        <FromCategory/>
       </div>
     </>
   );

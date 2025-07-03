@@ -9,11 +9,10 @@ const RecommendedSection = () => {
   const [searchParams] = useSearchParams();
   const { data, isLoading } = UseFetch(
     `${
-      import.meta.env.VITE_REACT_APP_API_URL
-    }/articles?${searchParams.toString()}`
+      import.meta.env.VITE_REACT_APP_API_URL}/articles?${searchParams.toString()}`
   );
 
-  console.log(data,"data");
+  // console.log(data,"data");
   
   const scrollRef = useRef(null);
   const [activeIndex, setActiveIndex] = useState(0);

@@ -10,8 +10,11 @@ import CopyIcon from "../../../assets/icons/CopyIcon";
 import laptop from "../../../assets/images/laptop.png";
 import bg1 from "../../../assets/images/bg1.png";
 import bg2 from "../../../assets/images/bg2.png";
+import S1 from "../../../assets/images/S1.png";
+import S2 from "../../../assets/images/S2.png";
 import Table from "../../components/Table";
 import TakeAway from "../../components/TakeAway";
+import SidebarOrientation from "../../components/SidebarOrientation";
 
 const RecommendedDetailsPage = () => {
   const { id } = useParams();
@@ -32,7 +35,9 @@ const RecommendedDetailsPage = () => {
     <>
       <div className="md:flex lg:max-w-[1200px] mx-auto">
         <div className=" px-4 py-10  lg:max-w-[1200px] md:max-w-[70%]">
-          <h1 className="text-[22px] font-[600] mb-4">{data.title}</h1>
+          <h1 className="text-[22px] font-[600] mb-4 lg:text-[40px] lg:font-[700]">
+            {data.title}
+          </h1>
           <div className="flex  ">
             {data.image && (
               <img
@@ -42,11 +47,10 @@ const RecommendedDetailsPage = () => {
               />
             )}
             <div className="pl-4 md:w-[60%]">
-              <div className="text-[#231F2 text-[14px] font-[500] ">
+              <div className="text-[#231F2 text-[14px] md:text-[16px] font-[500] ">
                 <span>{data.author}</span>
               </div>
               <span className="text-[#787878] text-[12px] font-[400] ">
-                {" "}
                 {data.bio}
               </span>
               <div className="text-[#3874FF] text-[12px] font-[400]">
@@ -55,7 +59,7 @@ const RecommendedDetailsPage = () => {
             </div>
           </div>
 
-          <div className="mt-5 text-[#3874FF] text-[12px] font-[400] grid grid-cols-2 items-center grid-rows-2 md:grid md:grid-cols-3 md:pr-20">
+          <div className="mt-5 text-[#3874FF] text-[12px] md:text-[16px] font-[400] grid grid-cols-2 items-center grid-rows-2 md:grid md:grid-cols-3 md:pr-20">
             <span>Economics of Agriculture</span>
             <span>Economics of Agriculture</span>
             <span>Economics of Agriculture</span>
@@ -319,6 +323,13 @@ const RecommendedDetailsPage = () => {
 
         <div className="hidden md:block">
           <Sidebar />
+          <img src={S1} alt="" className="my-6" />
+          <img src={S1} alt="" className="my-6" />
+          <img src={S2} alt="" className="my-6" />
+          <img src={S2} alt="" className="my-6" />
+
+          <SidebarOrientation />
+          <SidebarOrientation />
         </div>
       </div>
     </>
