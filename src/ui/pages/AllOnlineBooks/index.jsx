@@ -2,8 +2,10 @@ import React from "react";
 import { Search } from "lucide-react";
 import { Link } from "react-router-dom"; 
 import Blog1 from "../../../assets/images/Blog1.png";
+import { useSearch } from "../../../hooks/searchContet";
 import Blog2 from "../../../assets/images/Blog2.png";
 import Blog3 from "../../../assets/images/Blog3.png";
+import { useNavigate } from "react-router-dom";
 import Blog4 from "../../../assets/images/Blog4.png";
 import SubscribeSection from "../../sections/SubscribeSection";
 
@@ -16,6 +18,16 @@ const AllOnlineBooks = () => {
     { img: Blog1, label: "Featured" },
     { img: Blog3, label: "Microsoft Cares About Your Privacy" },
   ];
+
+   const { input, setInput, setSearchQuery } = useSearch();
+    const navigate = useNavigate();
+  
+    const handleSearch = () => {
+      setSearchQuery(input);
+      setInput("");
+      setMobileSearchOpen(false);
+      navigate("/search");
+    };
 
   return (
     <>
@@ -35,6 +47,8 @@ const AllOnlineBooks = () => {
               type="text"
               placeholder="Type for Search..."
               className="flex-grow text-[#333] placeholder-[#C4C4C4] py-3 px-4 text-sm outline-none"
+                 onChange={(e) => setInput(e.target.value)}
+              onKeyDown={(e) => e.key === "Enter" && handleSearch()}
             />
             <button className="bg-[#3874FF] text-white px-4 flex items-center justify-center">
               <Search />
