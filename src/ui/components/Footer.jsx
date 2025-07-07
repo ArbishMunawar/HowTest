@@ -1,5 +1,5 @@
 import React from 'react';
-import Logo from '../../assets/images/logo.png';
+import Logo from '../../assets/images/Logo.png';
 import Ficon from '../../assets/icons/Ficon';
 import XIcon from '../../assets/icons/Xicon';
 import InIcon from '../../assets/icons/InIcon';
