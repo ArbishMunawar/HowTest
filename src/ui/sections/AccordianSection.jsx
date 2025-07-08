@@ -20,7 +20,7 @@ const AccordianSection = () => {
       <h2 className="text-2xl font-bold mb-6">FAQs</h2>
       <div className="space-y-3">
         {data.map((item, idx) => (
-          <div key={idx} className=" rounded-lg shadow-sm bg-[#F8F9FA]">
+          <div key={idx} className=" rounded-lg  bg-[#F8F9FA]">
             <button
               onClick={() => toggleIndex(idx)}
               className="flex gap-5 md:gap-10  text-left items-center w-full px-5 py-4 font-medium text-gray-800"

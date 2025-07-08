@@ -4,8 +4,8 @@ import Button from "../components/Button";
 const MetricsSection = ({className=""}) => {
   return (
     <>
-      <div className={`lg:max-w-[1200px] mx-auto my-20 ${className}`}>
-        <div className="p-5 px-9 bg-white shadow-xl rounded-xl w-[89%] mx-auto my-14 border border-gray-300 md:grid md:grid-cols-4 gap-6">
+      <div className={`lg:max-w-[1200px] mx-auto  ${className}`}>
+        <div className="p-5 px-9 bg-white shadow-xl rounded-xl w-[89%] mx-auto my-[60px] lg:my-[80px] border border-gray-300 md:grid md:grid-cols-4 gap-6">
           <div className=" border-b border-gray-400 py-4 md:border-b-0 md:border-r ">
             <h2 className="font-[600] text-[15px] text-[#231F20]">Author</h2>
             <h2 className="font-[400] text-[14px] text-[#778088] md:text-[16px]">

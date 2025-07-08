@@ -9,6 +9,7 @@ import NavSearch from "./NavSearch";
 import { useSearch } from "../../hooks/searchContet";
 import { useNavigate } from "react-router-dom";
 import { Link } from "react-router-dom";
+import NavAdd from "./NavAdd";
 
 const Navbar = () => {
   const [mobileOpen, setMobileOpen] = useState(false);
@@ -55,9 +56,10 @@ const Navbar = () => {
   return (
     <nav className="bg-white shadow-3xl w-full relative z-50">
       <div className="lg:max-w-[1200px] mx-auto ">
-        <div className="md:hidden flex justify-between items-center px-6 py-3 lg:max-w-[1200px] mx-auto ">
+        <div className="md:hidden flex justify-between items-center px-6 lg:max-w-[1200px] mx-auto">
+        
           <Link to="/">
-            <img src={Logo} alt="Logo" className="w-10 cursor-pointer" />
+            <img src={Logo} alt="Logo" className="w-[50px] h-[50px] cursor-pointer" />
           </Link>
           <div className="flex items-center gap-2">
             <button onClick={() => setMobileSearchOpen(!mobileSearchOpen)}>
@@ -158,9 +160,9 @@ const Navbar = () => {
           </div>
         )}
 
-        <div className="hidden md:flex items-center justify-between py-4 z-30">
+        <div className="hidden md:flex items-center justify-between  z-30">
           <div className="flex items-center gap-6">
-            <img src={Logo} alt="Logo" className="w-10" />
+            <img src={Logo} alt="Logo" className="w-[50px] h-[50px]" />
             <div
               className="relative group"
               onClick={() => {
@@ -252,6 +254,7 @@ const Navbar = () => {
           </div>
         </div>
       </div>
+      <NavAdd/>
     </nav>
   );
 };

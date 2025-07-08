@@ -18,12 +18,12 @@ const NavSearch = ({ className }) => {
         onKeyDown={(e) => e.key === "Enter" && handleSearch()}
         type="text"
         placeholder="What you are looking for"
-        className="w-full border border-[#DCDBDB99] rounded py-2 px-4 pr-[7rem] text-sm font-ligt"
+        className=" border border-[#DCDBDB99] rounded pl-[11px] pt-[6px] pb-[7px] h-[34px] w-[349px] pr-[7rem] text-sm font-ligt"
       />
-      <div className="bg-blue-600">
+      <div className="bg-blue-600 ">
         <button
           onClick={handleSearch}
-          className="absolute right-0 rounded-tr rounded-br top-1/2 transform -translate-y-1/2 text-white bg-blue-600 py-1.5 px-4"
+          className="absolute right-0 rounded-tr h-[34px] w-[42px] rounded-br top-1/2 transform -translate-y-1/2 text-white bg-blue-600 flex items-center justify-center "
         >
           <Search />
         </button>

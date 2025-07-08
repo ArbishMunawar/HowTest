@@ -2,6 +2,10 @@
 
 @import "tailwindcss";
 
+:root{
+  --color-border-color: #DCDBDB99;
+}
+
 
 body{
    font-family: "Poppins", sans-serif;

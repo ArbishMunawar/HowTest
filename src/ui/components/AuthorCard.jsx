@@ -1,7 +1,7 @@
 import { ArrowRight } from "lucide-react";
 const AuthorCard = ({ author }) => {
   return (
-    <div className="w-full rounded-xl border border-gray-300 text-center shadow-sm ">
+    <div className="w-full rounded-xl border border-gray-300 text-center  ">
         <div className="bg-gradient-to-r from-[#FBEEEE] to-[#F7FFFE] p-6 rounded-tr-xl rounded-tl-xl">
       <img
         src={author.image}
@@ -19,6 +19,9 @@ const AuthorCard = ({ author }) => {
           <p className="text-gray-900 font-bold text-xl">{author.articlesPublished}</p>
           <span className="text-gray-500 text-md">Articles Published</span>
         </div>
+        {/* <div className="border border-gray-400 bg-[linear-gradient(to bottom,_#FFFFFF,_#C4C4C4,_#FFFFFF)]"></div> */}
+        <div className="w-[1px] h-[48px] bg-[linear-gradient(to_bottom,_#FFFFFF,_#C4C4C4,_#FFFFFF)]" />
+
         <div>
           <p className="text-gray-900 font-bold text-xl">{author.totalReaders}</p>
           <span className="text-gray-500 text-md">Total Readers</span>

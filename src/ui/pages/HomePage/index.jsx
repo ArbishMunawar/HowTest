@@ -15,7 +15,7 @@ const HomePage = () => {
   return (
     <>
     <div className="bg-gradient-to-r from-[#FBEEEE] to-[#F7FFFE] py-10">
-      <div className="max-w-[1200px] mx-auto flex flex-col md:flex-row items-center g px-4 lg:px-0 lg:py-12">
+      <div className="max-w-[1200px] mx-auto flex flex-col md:flex-row items-center  px-4 lg:px-0 lg:py-12">
         <div className="md:w-2/3">
           <h2 className="text-[24px] lg:text-[42px] font-[600] text-[#231F20] leading-[2.5rem] lg:leading-[3rem] pb-4">
             Welcome to Howtest, Pakistan's Significant Competitive Forum

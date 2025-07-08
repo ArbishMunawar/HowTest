@@ -47,10 +47,10 @@ const RecommendedSection = () => {
   }, []);
 
   return (
-    <div className="bg-gradient-to-r from-[#FBEEEE] to-[#F7FFFE] py-10">
+    <div className="bg-gradient-to-r from-[#FBEEEE] to-[#F7FFFE] lg:py-[90px] py-[41px]">
       <div className="lg:max-w-[1200px] mx-auto px-4">
         <Link to={`recommended`}>
-          <TopSection title="Recommended Articles" subtitle="Latest" />
+          <TopSection title="Recommended" subtitle="View All" />
         </Link>
         {isLoading ? (
           <p>Loading...</p>
@@ -58,10 +58,10 @@ const RecommendedSection = () => {
           <>
             <div
               ref={scrollRef}
-              className="flex gap-4 overflow-x-auto scrollbar-hide scroll-smooth md:hidden"
+              className="flex gap-4 overflow-x-auto scrollbar-hide scroll-smooth md:hidden text-[#231F20] lg:text-[22px] lg:font-[500]"
             >
               {data.map((item, idx) => (
-                <div key={item.id} className="min-w-[300px] flex-shrink-0">
+                <div key={item.id} className="min-w-[100px] flex-shrink-0">
                   <Card image={item.image} id={item.id} title={item.title} />
                 </div>
               ))}
@@ -78,7 +78,7 @@ const RecommendedSection = () => {
                 ></button>
               ))}
             </div>
-            <div className="hidden md:grid md:grid-cols-2 lg:grid-cols-2 gap-6 mt-6">
+            <div className="hidden md:grid md:grid-cols-2 lg:grid-cols-2 gap-6 mt-6 text-[#231F20] lg:text-[22px] lg:font-[500]">
               {data.slice(0, 4).map((item) => (
                 <Card key={item.id} image={item.image} id={item.id} title={item.title} />
               ))}
