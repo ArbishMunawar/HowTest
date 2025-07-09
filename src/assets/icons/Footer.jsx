@@ -4,14 +4,13 @@ import FbFooter from '../../../assets/icons/FbFooter';
 import InstaFooter from '../../../assets/icons/InstaFooter';
 import GoogleFooter from '../../../assets/icons/GoogleFooter';
 import YTFooter from '../../../assets/icons/YTFooter';
-import InFooter from '../../../assets/icons/InFooter';
-import WFooter from '../../../assets/icons/WFooter';
+import Wicon from '../../../assets/icons/Wicon';
 
 const Footer = () => {
   return (
     <>
       <footer className="bg-[#2C4870] text-white px-6 md:px-12 lg:px-16 py-[70px]">
-        <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 md:gap-0">
+        <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
           <div>
             <div className="flex items-center mb-4">
               <img src={Logo} alt="logo" className="w-10 h-10 object-contain" />
@@ -28,12 +27,11 @@ const Footer = () => {
               <InstaFooter />
               <GoogleFooter />
               <YTFooter />
-              <InFooter />
-              <WFooter />
+              <Wicon />
             </div>
           </div>
 
-          <div className="flex flex-col sm:flex-row md:col-span-1 lg:pl-[120px] lg:col-span-2 gap-10 md:gap-0 md:grid md:grid-cols-2">
+          <div className="flex flex-col sm:flex-row md:col-span-1 lg:col-span-2 gap-10 md:gap-0 md:grid md:grid-cols-2">
             <div>
               <h3 className="text-lg font-semibold mb-3">Quick Links</h3>
               <ul className="space-y-2 text-sm text-gray-300">

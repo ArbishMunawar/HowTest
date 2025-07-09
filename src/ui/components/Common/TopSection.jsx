@@ -9,7 +9,7 @@ const TopSection = ({
   return (
     <>
       <div className="flex items-center justify-between mb-6 px-5 lg:px-0 ">
-        <h1 className={`text-2xl font-bold  ${className}`}>
+        <h1 className={`text-medium lg:text-normal font-[600]  ${className}`}>
           {title}
         </h1>
         <div className="flex items-center gap-4 cursor-pointer">

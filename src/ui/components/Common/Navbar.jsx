@@ -175,7 +175,7 @@ const Navbar = () => {
                 }
               }}
             >
-              <button className="flex items-center font-semibold text-sm text-gray-700">
+              <button className="flex items-center font-semibold text-sm text-text-gray">
                 Explore
                 <ChevronRight
                   className={`ml-1 w-4 h-4 transition-transform duration-300 ${
@@ -185,17 +185,18 @@ const Navbar = () => {
               </button>
 
               {isDropdownOpen && (
-                <div className=" fixed left-0 top-10 mt-9 bg-white shadow-lg rounded w-screen z-50">
-                  <div className="grid grid-cols-2 gap-8 p-6 lg:max-w-[1200px] mx-auto">
-                    <ul className="space-y-4 text-xl text-gray-800  border-r pr-6">
+                <div className=" fixed left-0 top-5 mt-9 bg-white shadow-md rounded w-screen z-50">
+                    <h2 className="lg:max-w-[1200px] mx-auto pt-[40px] text-small-medium font-[600]">Explore</h2>
+                  <div className="flex gap-[30px] py-[30px] lg:max-w-[1200px] mx-auto">
+                    <ul className="space-y-4 text-[16px] text-rasin-black  border-r border-border-gray pr-6">
                       <li
                         onClick={(e) => {
                           e.stopPropagation();
                           setActiveMenu("Blog");
                         }}
-                        className="cursor-pointer flex items-center justify-between hover:text-blue-600"
+                        className="cursor-pointer flex items-center pr-[149px] hover:text-blue-600"
                       >
-                        Blog Categories <ChevronRight className="w-4 h-4" />
+                        Blog Categories 
                       </li>
                       <li
                         onClick={(e) => {
@@ -204,7 +205,7 @@ const Navbar = () => {
                         }}
                         className="cursor-pointer flex items-center justify-between hover:text-blue-600"
                       >
-                        Online Books <ChevronRight className="w-4 h-4" />
+                        Online Books 
                       </li>
                       <li
                         onClick={(e) => {
@@ -213,16 +214,16 @@ const Navbar = () => {
                         }}
                         className="cursor-pointer flex items-center justify-between hover:text-blue-600"
                       >
-                        Mock Tests <ChevronRight className="w-4 h-4" />
+                        Mock Tests 
                       </li>
                       <li
                         onClick={(e) => {
                           e.stopPropagation();
                           setActiveMenu("Other");
                         }}
-                        className="cursor-pointer flex items-center justify-between hover:text-blue-600"
+                        className="cursor-pointer flex items-center justify-between "
                       >
-                        Other Pages <ChevronRight className="w-4 h-4" />
+                        Other Pages 
                       </li>
                     </ul>
 
@@ -232,7 +233,7 @@ const Navbar = () => {
                           {subMenus[activeMenu]?.map((item, idx) => (
                             <li
                               key={idx}
-                              className="hover:text-blue-500 cursor-pointer"
+                              className=" cursor-pointer"
                             >
                               {item}
                             </li>

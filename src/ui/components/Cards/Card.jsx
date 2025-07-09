@@ -3,12 +3,12 @@ import { Link } from "react-router";
 const Card = ({ id, bio, title, summary, date, views, author, image }) => {
   return (
     <Link to={`/articles/${id}`}>
-      <div className="  w-[100vw] md:w-full flex justify-between  ">
-        <div className="lg:h-full lg:w-[15rem] w-[100px] shrink-0">
+      <div className="  w-[96vw] md:w-full flex justify-between  px-3">
+        <div className="lg:h-full lg:w-[208px] w-[100px] shrink-0">
           <img src={image} alt={title} className=" rounded-lg mb-4"></img>
         </div>
         <div>
-          <h2 className="pl-4 text-small font-[500] mb-2 text-rasin-black lg:text-[22px] cursor-pointer ">
+          <h2 className="pl-[16px] text-small lg:text-medium font-[500] mb-2 text-rasin-black cursor-pointer ">
             {title}
           </h2>
 

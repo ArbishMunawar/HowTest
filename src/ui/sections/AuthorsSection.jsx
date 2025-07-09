@@ -1,5 +1,3 @@
-
-
 import React, { useEffect, useState } from "react";
 import UseFetch from "../../hooks/UseFetch";
 import { Link, useSearchParams } from "react-router";

@@ -60,8 +60,8 @@ const RecommendedSection = () => {
               ref={scrollRef}
               className="flex gap-4 overflow-x-auto scrollbar-hide scroll-smooth md:hidden text-rasin-black lg:text-[22px] lg:font-[500]"
             >
-              {data.map((item, idx) => (
-                <div key={item.id} className="min-w-[100px] flex-shrink-0">
+              {data.slice(0, 4).map((item, idx) => (
+                <div key={item.id} className="min-w-[90px] flex-shrink-0">
                   <Card image={item.image} id={item.id} title={item.title} />
                 </div>
               ))}

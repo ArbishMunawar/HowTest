@@ -11,6 +11,7 @@
   --color-text-normal-gray:#787878;
   --color-text-dark-gray:#C4C4C4;
   --color-ice-blue:#E6F5FE;
+  --color-border-gray:#E2E8F0;
 
   --color-light-gray: #DCDBDB99;
   --text-extra-small:14px;
@@ -18,6 +19,7 @@
   --text-small-medium: 18px;
   --text-medium: 22px;
   --text-medium-large: 28px;
+  --text-normal: 32px;
   --text-large: 36px;
 
   --font-medium:500;
