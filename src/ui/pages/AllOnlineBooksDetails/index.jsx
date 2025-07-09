@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import UseFetch from "../../../hooks/UseFetch";
-import Tabs from "../../components/Tabs";
+import Tabs from "../../components/Common/Tabs";
 import { useParams } from "react-router-dom";
 import { Link } from "react-router";
-import BookCard from "../../components/BookCard";
+import BookCard from "../../components/Cards/BookCard";
 import MetricsSection from "../../sections/MetricsSection";
 import SubscribeSection from "../../sections/SubscribeSection";
 

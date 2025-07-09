@@ -1,7 +1,7 @@
 import React from "react";
 import UseFetch from "../../../hooks/UseFetch";
 import { Link, useSearchParams } from "react-router";
-import AuthorCard from "../../components/AuthorCard";
+import AuthorCard from "../../components/Cards/AuthorCard";
 import { Search } from "lucide-react";
 // import NavSearch from "../../components/NavSearch";
 const AllAuthorsPage = () => {

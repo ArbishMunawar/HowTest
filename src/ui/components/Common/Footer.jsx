@@ -1,10 +1,10 @@
 import React from 'react';
-import Logo from '../../assets/images/Logo.png';
-import Ficon from '../../assets/icons/Ficon';
-import XIcon from '../../assets/icons/Xicon';
-import InIcon from '../../assets/icons/InIcon';
-import IIcon from '../../assets/icons/IIcon';
-import Wicon from '../../assets/icons/Wicon';
+import Logo from '../../../assets/images/Logo.png';
+import Ficon from '../../../assets/icons/Ficon';
+import XIcon from '../../../assets/icons/Xicon';
+import InIcon from '../../../assets/icons/InIcon';
+import IIcon from '../../../assets/icons/IIcon';
+import Wicon from '../../../assets/icons/Wicon';
 
 const Footer = () => {
   return (

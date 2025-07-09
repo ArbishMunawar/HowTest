@@ -6,9 +6,9 @@ import EyeIcon from "../../../assets/icons/EyeIcon";
 import ShareIcon from "../../../assets/icons/ShareIcon";
 import ShareIconBorder from "../../../assets/icons/ShareIconBorder";
 import Teracy from "../../../assets/images/Teracy.png";
-import Button from "../../components/Button";
-import HistoryTabs from "../../components/History";
-import ReviewArticle from "../../components/ReviewArticle";
+import Button from "../../components/Button/Button";
+import HistoryTabs from "../../components/Common/History";
+import ReviewArticle from "../../components/Common/ReviewArticle";
 import SubscribeSection from "../../sections/SubscribeSection";
 import MostReadBooks from "../../sections/MostReadBooks";
 

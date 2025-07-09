@@ -1,7 +1,7 @@
 import React from 'react';
-import UseFetch from "../../hooks/UseFetch";
+import UseFetch from "../../../hooks/UseFetch";
 import { useSearchParams } from "react-router";
-import RecommendedCard from "../components/RecommendeCard";
+import RecommendedCard from "../../components/Cards/RecommendeCard";
 
 const FromCategory = () => {
   const [searchParams] = useSearchParams();

@@ -1,6 +1,6 @@
 import React from "react";
 import UseFetch from "../../hooks/UseFetch";
-import BookCard from "../components/BookCard";
+import BookCard from "../components/Cards/BookCard";
 
 const MostReadBooks = () => {
   const { data, isLoading } = UseFetch(

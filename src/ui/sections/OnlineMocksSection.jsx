@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import UseFetch from "../../hooks/UseFetch";
 import { useSearchParams } from "react-router";
-import TopSection from "../components/TopSection";
-import BookCard from "../components/BookCard";
+import TopSection from "../components/Common/TopSection";
+import BookCard from "../components/Cards/BookCard";
 
 const OnlineMocksSection = () => {
   const [searchParams] = useSearchParams();
@@ -14,7 +14,7 @@ const OnlineMocksSection = () => {
 
 
   return (
-    <div className="lg:max-w-[1200px] mx-auto lg:my-9 my-6">
+    <div className="lg:max-w-[1200px] mx-auto lg:my-[80px] my-6">
       <TopSection title="All Online Mocks" />
 
       <div>
@@ -49,7 +49,7 @@ const OnlineMocksSection = () => {
             </div>
           </>
         ) : (
-          <p className="text-center text-gray-500 py-10">No Books Found</p>
+          <p className="text-center text-text-gray py-10">No Books Found</p>
         )}
       </div>
     </div>

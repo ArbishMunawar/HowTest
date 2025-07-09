@@ -1,7 +1,7 @@
 import React from "react";
-import DateIcon from "../../assets/icons/DateIcon";
-import EyeIcon from "../../assets/icons/EyeIcon";
-import AuthorIcon from "../../assets/icons/AuthorIcon";
+import DateIcon from "../../../assets/icons/DateIcon";
+import EyeIcon from "../../../assets/icons/EyeIcon";
+import AuthorIcon from "../../../assets/icons/AuthorIcon";
 import { Link } from "react-router";
 const RecommendedCard = ({
   id,

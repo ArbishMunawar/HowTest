@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import UseFetch from "../../hooks/UseFetch";
 import { useSearchParams } from "react-router";
-import TopSection from "../components/TopSection";
-import BookCard from "../components/BookCard";
+import TopSection from "../components/Common/TopSection";
+import BookCard from "../components/Cards/BookCard";
 import { Link } from "react-router";
 const McqBooksSection = () => {
   const [searchParams] = useSearchParams();
@@ -14,7 +14,7 @@ const McqBooksSection = () => {
 
 
   return (
-    <div className="lg:max-w-[1200px] mx-auto lg:my-9">
+    <div className="lg:max-w-[1200px] mx-auto my-[80px]">
       <Link to={`books`}>
       <TopSection title="All MCQs Books" />
 </Link>

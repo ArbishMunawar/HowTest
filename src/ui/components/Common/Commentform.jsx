@@ -1,6 +1,6 @@
 import React from "react";
-import Captcha from '../../assets/images/Captcha.png'
-import Button from "./Button";
+import Captcha from '../../../assets/images/captcha.png';
+import Button from "../Button/Button";
 const Commentform = () => {
   return (
     <div className="border border-[#D4D7E5] rounded-[9px] p-6 mt-8 bg-white ">

@@ -1,12 +1,12 @@
 import React from "react";
-import bg3 from "../../assets/images/bg3.jpg";
-import Logo from "../../assets/images/Logo.png";
-import Button from "../components/Button";
-import History from "../components/History";
+import bg3 from "../../../assets/images/bg3.jpg";
+import Logo from "../../../assets/images/Logo.png";
+import Button from "../Button/Button";
+import History from "../Common/History";
 import ReviewArticle from "./ReviewArticle";
-import Commentform from "./Commentform";
-import CommentsSection from "./CommentsSection";
-import FromCategory from "./FromCategory";
+import Commentform from "../Common/Commentform";
+import CommentsSection from "../Common/CommentsSection";
+import FromCategory from "../Common/FromCategory";
 const TakeAway = () => {
   return (
     <>

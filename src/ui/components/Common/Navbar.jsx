@@ -1,15 +1,15 @@
 import React, { useState } from "react";
-import Logo from "../../assets/images/Logo.png";
-import MenuIcon from "../../assets/icons/MenuIcon";
-import CrossIcon from "../../assets/icons/CrossIcon";
-import LeftArrowIcon from "../../assets/icons/LeftArrow";
+import Logo from "../../../assets/images/Logo.png";
+import MenuIcon from "../../../assets/icons/MenuIcon";
+import CrossIcon from "../../../assets/icons/CrossIcon";
+import LeftArrowIcon from "../../../assets/icons/LeftArrow";
 import { ChevronRight, Search } from "lucide-react";
-import WriteForUsButton from "./WriteForUsButton";
-import NavSearch from "./NavSearch";
-import { useSearch } from "../../hooks/searchContet";
+import WriteForUsButton from "../Button/WriteForUsButton";
+import NavSearch from "../../components/Common/NavSearch";
+import { useSearch } from "../../../hooks/searchContet";
 import { useNavigate } from "react-router-dom";
 import { Link } from "react-router-dom";
-import NavAdd from "./NavAdd";
+import NavAdd from "../../components/Common/NavAdd";
 
 const Navbar = () => {
   const [mobileOpen, setMobileOpen] = useState(false);
@@ -57,9 +57,12 @@ const Navbar = () => {
     <nav className="bg-white shadow-3xl w-full relative z-50">
       <div className="lg:max-w-[1200px] mx-auto ">
         <div className="md:hidden flex justify-between items-center px-6 lg:max-w-[1200px] mx-auto">
-        
           <Link to="/">
-            <img src={Logo} alt="Logo" className="w-[50px] h-[50px] cursor-pointer" />
+            <img
+              src={Logo}
+              alt="Logo"
+              className="w-[50px] h-[50px] cursor-pointer"
+            />
           </Link>
           <div className="flex items-center gap-2">
             <button onClick={() => setMobileSearchOpen(!mobileSearchOpen)}>
@@ -248,13 +251,13 @@ const Navbar = () => {
             <NavSearch />
             <WriteForUsButton>Write For Us</WriteForUsButton>
             <Link to={"login"}>
-            <button className="text-blue-500 cursor-pointer">LogIn</button>
+              <button className="text-blue-500 cursor-pointer">LogIn</button>
             </Link>
             {/* </div> */}
           </div>
         </div>
       </div>
-      <NavAdd/>
+      <NavAdd />
     </nav>
   );
 };

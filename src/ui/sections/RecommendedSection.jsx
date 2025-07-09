@@ -1,8 +1,8 @@
 import React, { useRef, useState, useEffect } from "react";
 import UseFetch from "../../hooks/UseFetch";
 import { useSearchParams } from "react-router";
-import Card from "../components/Card";
-import TopSection from "../components/TopSection";
+import Card from "../components/Cards/Card";
+import TopSection from "../components/Common/TopSection";
 import { Link } from "react-router";
 
 const RecommendedSection = () => {
@@ -47,7 +47,7 @@ const RecommendedSection = () => {
   }, []);
 
   return (
-    <div className="bg-gradient-to-r from-[#FBEEEE] to-[#F7FFFE] lg:py-[90px] py-[41px]">
+    <div className="bg-gradient-to-r from-[#FBEEEE] to-[#F7FFFE] py-[41px] md:py-[75px] lg:py-[75px]">
       <div className="lg:max-w-[1200px] mx-auto px-4">
         <Link to={`recommended`}>
           <TopSection title="Recommended" subtitle="View All" />
@@ -58,7 +58,7 @@ const RecommendedSection = () => {
           <>
             <div
               ref={scrollRef}
-              className="flex gap-4 overflow-x-auto scrollbar-hide scroll-smooth md:hidden text-[#231F20] lg:text-[22px] lg:font-[500]"
+              className="flex gap-4 overflow-x-auto scrollbar-hide scroll-smooth md:hidden text-rasin-black lg:text-[22px] lg:font-[500]"
             >
               {data.map((item, idx) => (
                 <div key={item.id} className="min-w-[100px] flex-shrink-0">
@@ -67,18 +67,18 @@ const RecommendedSection = () => {
               ))}
             </div>
                                                                         
-            <div className="flex justify-center mt-4 gap-2 md:hidden">
+            <div className="flex justify-center gap-2 md:hidden">
               {data.slice(0, 4).map((_, idx) => (
                 <button
                   key={idx}
                   onClick={() => scrollToIndex(idx)}
-                  className={`h-2 w-2 rounded-full transition-all duration-300 ${
-                    activeIndex === idx ? "bg-blue-500 w-3" : "bg-gray-400"
+                  className={`h-[12px] w-[12px] rounded-full transition-all duration-300 ${
+                    activeIndex === idx ? "bg-azure-blue " : "bg-text-dark-gray"
                   }`}
                 ></button>
               ))}
             </div>
-            <div className="hidden md:grid md:grid-cols-2 lg:grid-cols-2 gap-6 mt-6 text-[#231F20] lg:text-[22px] lg:font-[500]">
+            <div className="hidden md:grid md:grid-cols-2 lg:grid-cols-2 gap-6  ">
               {data.slice(0, 4).map((item) => (
                 <Card key={item.id} image={item.image} id={item.id} title={item.title} />
               ))}

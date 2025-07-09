@@ -12,9 +12,9 @@ import bg1 from "../../../assets/images/bg1.png";
 import bg2 from "../../../assets/images/bg2.png";
 import S1 from "../../../assets/images/S1.png";
 import S2 from "../../../assets/images/S2.png";
-import Table from "../../components/Table";
-import TakeAway from "../../components/TakeAway";
-import SidebarOrientation from "../../components/SidebarOrientation";
+import Table from "../../components/Common/Table";
+import TakeAway from "../../components/Common/TakeAway";
+import SidebarOrientation from "../../components/Common/SidebarOrientation";
 
 const RecommendedDetailsPage = () => {
   const { id } = useParams();

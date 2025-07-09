@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import HistoryCheck from "../../assets/icons/HistoryCheck";
-import ArticleHistoryIcon from "../../assets/icons/ArticleHistory";
+import HistoryCheck from "../../../assets/icons/HistoryCheck";
+import ArticleHistoryIcon from "../../../assets/icons/ArticleHistory";
 
 const ArticleHistory = () => (
   <div className="relative pl-6 my-10">

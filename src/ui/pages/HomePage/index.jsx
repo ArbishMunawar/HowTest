@@ -20,7 +20,7 @@ const HomePage = () => {
           <h2 className="text-[24px] lg:text-[42px] font-[600] text-[#231F20] leading-[2.5rem] lg:leading-[3rem] pb-4">
             Welcome to Howtest, Pakistan's Significant Competitive Forum
           </h2>
-          <p className="text-lg lg:text-xl text-[#4F4F4F] leading-relaxed">
+          <p className="text-small lg:text-[20px] text-[#4F4F4F] leading-relaxed">
             HowTests helps millions of students and aspirants prepare effectively for competitive exams with expertly written MCQs, articles, essays, blogs, research, practice tests, and study resources. Enhance your learning and achieve excellence with confidence!
           </p>
         </div>

@@ -1,40 +1,96 @@
-import React from "react";
+
+
+import React, { useEffect, useState } from "react";
 import UseFetch from "../../hooks/UseFetch";
 import { Link, useSearchParams } from "react-router";
-import AuthorCard from "../components/AuthorCard";
-import TopSection from "../components/TopSection";
+import AuthorCard from "../components/Cards/AuthorCard";
+import TopSection from "../components/Common/TopSection";
 
 const AuthorsSection = () => {
   const [searchParams] = useSearchParams();
   const { data, isLoading } = UseFetch(
-    `${
-      import.meta.env.VITE_REACT_APP_API_URL }/authors?${searchParams.toString()}`
+    `${import.meta.env.VITE_REACT_APP_API_URL}/authors?${searchParams.toString()}`
   );
 
+  const [currentGroupIndex, setCurrentGroupIndex] = useState(0);
+  const [groupSize, setGroupSize] = useState(1); 
+
+  useEffect(() => {
+    const updateGroupSize = () => {
+      if (window.innerWidth >= 768) {
+        setGroupSize(3); 
+      } else {
+        setGroupSize(1);
+      }
+    };
+
+    updateGroupSize();
+    window.addEventListener("resize", updateGroupSize);
+    return () => window.removeEventListener("resize", updateGroupSize);
+  }, []);
+
+  const groupedData = [];
+  for (let i = 0; i < data?.length; i += groupSize) {
+    groupedData.push(data.slice(i, i + groupSize));
+  }
+
   return (
-    <div className="lg:max-w-[1200px] mx-auto  lg:my-10 my-8">
+    <div className="lg:max-w-[1200px] mx-auto lg:mb-[80px] my-8">
       <Link to={`authors`}>
         <TopSection title="All Authors" />
       </Link>
+
       {isLoading ? (
         <p>Loading...</p>
       ) : data && data.length > 0 ? (
         <>
-          <div className="md:hidden flex  overflow-x-auto gap-10 scrollbar-hide scroll-smooth my-8 px-5">
-            {data.slice(0, 3).map((item) => (
-              <div
-                key={item.id}
-                className="min-w-[100%] max-w-[100%] flex-shrink-0"
-              >
-                <AuthorCard author={item} />
-              </div>
-            ))}
-          </div>
+          <div className="relative w-full overflow-hidden my-8">
+            <div
+              className="flex transition-transform duration-500 ease-in-out"
+              style={{ transform: `translateX(-${currentGroupIndex * 100}%)` }}
+            >
+              {groupedData.map((group, i) => (
+                <div key={i} className="w-full shrink-0 flex gap-6 px-5 md:px-0">
+                  {group.map((item) => (
+                    <div
+                      key={item.id}
+                      className="w-full "
+                      style={{ flex: groupSize === 3 ? "1" : "none" }}
+                    >
+                      <AuthorCard author={item} />
+                    </div>
+                  ))}
+                </div>
+              ))}
 
-          <div className="hidden md:grid grid-cols-3 lg:grid-cols-3 xl:grid-cols-3 gap-6 mt-6">
-            {data.slice(0, 3).map((item) => (
-              <AuthorCard key={item.id} author={item} />
-            ))}
+                  {groupedData.slice(0,3).map((group, i) => (
+                <div key={i} className="w-full shrink-0 flex gap-6 px-5 md:px-0 md:hidden">
+                  {group.map((item) => (
+                    <div
+                      key={item.id}
+                      className="w-full "
+                      style={{ flex: groupSize === 3 ? "1" : "none" }}
+                    >
+                      <AuthorCard author={item} />
+                    </div>
+                  ))}
+                </div>
+              ))}
+            </div>
+
+            <div className="flex justify-center mt-[30px] gap-2">
+              {groupedData.slice(0,3).map((_, idx) => (
+                <button
+                  key={idx}
+                  onClick={() => setCurrentGroupIndex(idx)}
+                  className={`h-[16px] w-[16px] rounded-full transition-all duration-300 border border-text-dark-gray ${
+                    currentGroupIndex === idx
+                      ? "bg-azure-blue"
+                      : "bg-ice-blue"
+                  }`}
+                ></button>
+              ))}
+            </div>
           </div>
         </>
       ) : (

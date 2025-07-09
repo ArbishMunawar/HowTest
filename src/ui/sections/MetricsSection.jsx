@@ -1,37 +1,37 @@
 import React from "react";
-import Button from "../components/Button";
+import Button from "../components/Button/Button";
 
 const MetricsSection = ({ className = "" }) => {
   return (
     <>
       <div className={`lg:max-w-[1200px] mx-auto  ${className}`}>
-        <div className="p-5 px-9 bg-white shadow-xl rounded-xl w-[89%] mx-auto my-[60px] lg:my-[80px] border border-gray-300 md:grid md:grid-cols-4 gap-6">
-          <div className=" border-b border-gray-400 py-4 md:border-b-0 md:border-r ">
+        <div className="p-5 px-9 bg-white shadow-xl rounded-xl w-[89%] mx-auto my-[60px] lg:my-[80px] border border-dim-gray md:grid md:grid-cols-4 gap-6">
+          <div className=" border-b border-text-dark-gray py-4 md:border-b-0 md:border-r ">
             <h2 className="font-[600] text-[15px] text-[#231F20]">Author</h2>
 
             <input
               type="text"
               placeholder="Type Author Name"
-              className="font-[400] text-[14px] text-[#778088] md:text-[16px] border-0 outline-0"
+              className="font-[400] text-extra-small text-text-dark-gray  md:text-[16px] border-0 outline-0"
             />
           </div>
-          <div className=" border-b border-gray-400 py-4 md:border-b-0 md:border-r">
-            <h2 className="font-[600] text-[15px] text-[#231F20]">Title</h2>
+          <div className=" border-b border-text-dark-gray py-4 md:border-b-0 md:border-r">
+            <h2 className="font-[600] text-small text-rasin-black">Title</h2>
 
             <input
               type="text"
               placeholder="Type the title"
-              className="font-[400] text-[14px] text-[#778088] md:text-[16px] border-0 outline-0"
+              className="font-[400] text-small text-text-dark-gray  md:text-[16px] border-0 outline-0"
             />
           </div>
 
           <div className="  py-4 ">
-            <h2 className="font-[600] text-[15px] text-[#231F20]">Keyword</h2>
+            <h2 className="font-[600] text-small text-rasin-black">Keyword</h2>
 
             <input
               type="text"
               placeholder="Type Keyword"
-              className="font-[400] text-[14px] text-[#778088] md:text-[16px] border-0 outline-0"
+              className="font-[400] text-small text-text-dark-gray  md:text-small border-0 outline-0"
             />
           </div>
           <Button className="w-full md:my-4">Search</Button>

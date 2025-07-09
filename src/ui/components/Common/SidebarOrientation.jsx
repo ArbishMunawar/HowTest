@@ -1,6 +1,6 @@
 import React from "react";
-import DOG from "../../assets/images/DOG.jpg";
-import Button from "./Button";
+import DOG from "../../../assets/images/DOG.jpg";
+import Button from "../Button/Button";
 const SidebarOrientation = () => {
   return (
     <div className="bg-[#F9F9F9] rounded-10px p-3 my-6">

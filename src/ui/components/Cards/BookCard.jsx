@@ -10,10 +10,10 @@ const BookCard = ({id, image, title, subtitle }) => {
         
       />
       <div className="py-4 md:px-3 flex-grow">
-        <h3 className="text-lg font-bold text-left text-gray-800 line-clamp-2">
+        <h3 className="text-small-medium font-bold text-left text-rasin-black line-clamp-2">
           {title}
         </h3>
-        <p className="text-sm text-gray-600 mt-1 line-clamp-2">
+        <p className="text-extra-small text-text-gray mt-1 line-clamp-2">
           {subtitle}
         </p>
       </div>

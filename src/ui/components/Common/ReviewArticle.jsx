@@ -1,11 +1,11 @@
 import React from 'react'
-import Thumbdown from '../../assets/icons/Thumbdown'
-import Thumbup from '../../assets/icons/Thumbup'
-import Ficon from '../../assets/icons/Ficon'
-import Xicon from '../../assets/icons/Xicon'
-import InIcon from '../../assets/icons/InIcon'
-import IIcon from '../../assets/icons/IIcon'
-import Wicon from '../../assets/icons/Wicon'
+import Thumbdown from '../../../assets/icons/Thumbdown'
+import Thumbup from '../../../assets/icons/Thumbup'
+import Ficon from '../../../assets/icons/Ficon'
+import Xicon from '../../../assets/icons/Xicon'
+import InIcon from '../../../assets/icons/InIcon'
+import IIcon from '../../../assets/icons/IIcon'
+import Wicon from '../../../assets/icons/Wicon'
 
 const ReviewArticle = () => {
   return (

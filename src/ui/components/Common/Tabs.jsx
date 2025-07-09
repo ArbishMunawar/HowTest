@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import RMenuIcon from "../../assets/icons/RMenuIcon";
-import SortIcon from "../../assets/icons/SortIcon";
+import RMenuIcon from "../../../assets/icons/RMenuIcon";
+import SortIcon from "../../../assets/icons/SortIcon";
 
 const Tabs = ({ tabs,activeTab, setActiveTab,className="",title="" }) => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);

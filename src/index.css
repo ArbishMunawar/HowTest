@@ -2,10 +2,27 @@
 
 @import "tailwindcss";
 
-:root{
-  --color-border-color: #DCDBDB99;
-}
 
+@theme {
+  --color-azure-blue: #3874FF;
+  --color-rasin-black: #231F20;
+  --color-dim-gray: #F3F4FE;
+  --color-text-gray: #4F4F4F;
+  --color-text-normal-gray:#787878;
+  --color-text-dark-gray:#C4C4C4;
+  --color-ice-blue:#E6F5FE;
+
+  --color-light-gray: #DCDBDB99;
+  --text-extra-small:14px;
+  --text-small:16px;
+  --text-small-medium: 18px;
+  --text-medium: 22px;
+  --text-medium-large: 28px;
+  --text-large: 36px;
+
+  --font-medium:500;
+  --font-bold-size:600;
+}
 
 body{
    font-family: "Poppins", sans-serif;

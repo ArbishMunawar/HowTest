@@ -1,6 +1,6 @@
 import { Outlet } from "react-router";
-import Navbar from './ui/components/Navbar.jsx';
-import Footer from './ui/components/Footer.jsx';
+import Navbar from './ui/components/Common/Navbar.jsx';
+import Footer from './ui/components/Common/Footer.jsx';
 
 export default function Root() {
   
@@ -9,6 +9,7 @@ export default function Root() {
     <>
      
       <div className="layout">
+        {/* <h1 className="text-azure-blue" >Test</h1> */}
       <Navbar/>
       <main  >
       <Outlet />

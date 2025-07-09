@@ -1,9 +1,9 @@
 import React, { useState } from "react";
-import Tabs from "../../components/Tabs";
+import Tabs from "../../components/Common/Tabs";
 import UseFetch from "../../../hooks/UseFetch";
 import { useSearchParams } from "react-router";
-import RecommendedCard from "../../components/RecommendeCard";
-import CourseBanner from "../../components/CourseBanner";
+import RecommendedCard from "../../components/Cards/RecommendeCard";
+import CourseBanner from "../../components/Common/CourseBanner";
 import Sidebar  from "../../sections/RecommendedSidebar/Sidebar";
 import SubscribeSection from '../../sections/SubscribeSection'
 

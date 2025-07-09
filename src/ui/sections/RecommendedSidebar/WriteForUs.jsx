@@ -1,4 +1,4 @@
-import WriteForUsButton from '../../components/WriteForUsButton'
+import WriteForUsButton from '../../components/Button/WriteForUsButton';
 const WriteForUs = () => (
   <div className="bg-[#F9F9F9]  rounded-lg p-4 mb-6 ">
     <h3 className="font-[600] text-[16px] text-[#4F4F4F] mb-2">Write on Howtests!</h3>
