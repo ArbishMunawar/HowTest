@@ -42,28 +42,28 @@ const AllOnlineBooksDetails = () => {
   return (
     <>
       <div className="relative">
-        <div className="bg-gradient-to-r from-[#fef6f6] to-[#f0fdfd] pb-54 pt-30 px-4 md:pb-28 md:p-20 ">
+        <div className="bg-gradient-to-r from-[#fef6f6] to-[#f0fdfd] pb-54 pt-30 px-4 md:pb-28 md:p-30 ">
           <div className="max-w-[1200px] mx-auto flex flex-col items-center">
-            <h3 className="text-center text-[#231F20] text-[24px] font-semibold capitalize">
+            <h3 className="text-center text-rasin-black text-[24px] font-semibold capitalize">
               {normalizedCategory}
             </h3>
-            <p className="hidden md:block text-[18px] font-normal text-[#767070] text-center  max-w-2xl mt-2">
+            <p className="hidden lg:block text-[18px] font-normal text-[#767070] text-center  max-w-2xl mt-2">
               Meet the expert authors behind HowTests' top books, creating
               high-quality study materials for competitive exam aspirants.
               Explore their work and boost your exam preparation with
               trusted resources!
             </p>
-            <MetricsSection className="absolute w-full top-20 md:top-30" />
+            <MetricsSection className="absolute w-full top-40 md:top-30 lg:top-50" />
           </div>
         </div>
       </div>
-      <div className="max-w-[1200px] mx-auto px-4 mt-50">
+      <div className="max-w-[1200px] mx-auto px-4 md: mt-60 lg:mt-20">
         <Tabs
           title="All books"
           tabs={booksTabs}
           activeTab={activeTab}
           setActiveTab={setActiveTab}
-          className="md:max-w-full"
+          className="md:max-w-full lg:max-w-[100%]"
         />
 
         {isLoading ? (
@@ -86,8 +86,8 @@ const AllOnlineBooksDetails = () => {
         ) : (
           <p className="text-center text-gray-500 py-10">No Books Found</p>
         )}
-        <SubscribeSection />
       </div>
+        <SubscribeSection />
     </>
   );
 };

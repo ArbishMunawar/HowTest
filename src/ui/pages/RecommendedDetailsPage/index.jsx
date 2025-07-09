@@ -50,10 +50,10 @@ const RecommendedDetailsPage = () => {
               <div className="text-[#231F2 text-[14px] md:text-[16px] font-[500] ">
                 <span>{data.author}</span>
               </div>
-              <span className="text-[#787878] text-[12px] font-[400] ">
+              <span className="text-text-normal-gray text-[12px] font-[400] ">
                 {data.bio}
               </span>
-              <div className="text-[#3874FF] text-[12px] font-[400]">
+              <div className="text-azure-blue text-[12px] font-[400]">
                 <a href="">View Author</a>
               </div>
             </div>
@@ -66,8 +66,8 @@ const RecommendedDetailsPage = () => {
             <span>Economics of Agriculture</span>
           </div>
 
-          <div className="flex justify-between items-center border-y-1 border-[#E5E7EB] mt-5">
-            <div className="flex items-center text-[14px] text-[#787878]  py-3">
+          <div className="flex justify-between items-center border-y-1 border-dim-gray mt-5">
+            <div className="flex items-center text-[14px] text-text-normal-gray  py-3">
               <div className="flex  border-r gap-2 pr-3">
                 <DateIcon />
                 <span>{data.date}</span>
@@ -87,7 +87,7 @@ const RecommendedDetailsPage = () => {
             </div>
           </div>
 
-          <div className="text-[15px] md:text-[18px] lg:text-[18px] font-[400] text-[#4F4F4F]">
+          <div className="text-[15px] md:text-[18px] lg:text-[18px] font-[400] text-rasin-black">
             <p className="my-5">
               Agriculture has been the backbone of human sustenance since the
               dawn of civilization, providing the vital link between the soil
@@ -131,7 +131,7 @@ const RecommendedDetailsPage = () => {
               food production for the worldwide population. 
             </p>
 
-            <h2 className="text-[#231F20] text-[20px] font-[700] md:text-[24] my-3">
+            <h2 className="text-rasin-black text-[20px] font-[700] md:text-[24] my-3">
               Sign Up To Read This Article And Everything Else
             </h2>
             <p>
@@ -152,7 +152,7 @@ const RecommendedDetailsPage = () => {
               supply.
             </p>
 
-            <h2 className="text-[#231F20] text-[20px] font-[700] md:text-[24] my-3">
+            <h2 className="text-rasin-black text-[20px] font-[700] md:text-[24] my-3">
               How can I manage refractory chronic migraine? 
             </h2>
 
@@ -167,7 +167,7 @@ const RecommendedDetailsPage = () => {
               <li>making certain lifestyle changes</li>
             </ul>
 
-            <h2 className="text-[#231F20] text-[20px] font-[700] md:text-[24] my-3">
+            <h2 className="text-rasin-black text-[20px] font-[700] md:text-[24] my-3">
               How can I manage refractory chronic migraine? 
             </h2>
             <p>
@@ -199,7 +199,7 @@ const RecommendedDetailsPage = () => {
               </li>
             </ol>
 
-            <h2 className="text-[#231F20] text-[20px] font-[700] md:text-[24] my-3">
+            <h2 className="text-rasin-black text-[20px] font-[700] md:text-[24] my-3">
               When does chronic migraine become refractory?
             </h2>
             <p>
@@ -244,7 +244,7 @@ const RecommendedDetailsPage = () => {
               </li>
             </ul>
 
-            <h2 className="text-[#231F20] text-[20px] font-[700] md:text-[24] my-3">
+            <h2 className="text-rasin-black text-[20px] font-[700] md:text-[24] my-3">
               How can I manage refractory chronic migraine? 
             </h2>
             <p>
@@ -300,7 +300,7 @@ const RecommendedDetailsPage = () => {
               lifestyle changes and behavioral therapy.
             </p>
 
-            <h3 className="text-[16px] font-[700] md:text-[18] text-center my-5 px-2 text-[#4F4F4F] md:px-12">
+            <h3 className="text-[16px] font-[700] md:text-[18] text-center my-5 px-2 text-rasin-black md:px-12">
               "There’s no cure for migraine, including refractory chronic
               migraine. Management of the condition means trying to reduce your
               number of migraine days by Preventive treatment aims to reduce the

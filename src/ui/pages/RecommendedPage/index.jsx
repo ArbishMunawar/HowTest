@@ -27,8 +27,8 @@ const allTabs= [
   return (
     <>
       <div className="bg-gradient-to-r from-[#FBEEEE] to-[#F7FFFE]">
-        <h2 className="flex justify-center items-center py-[5rem] font-bold text-2xl">
-          Recommended Articles
+        <h2 className="flex justify-center items-center pt-[110px] py-[69px] lg:py-[62px]  text-medium-large lg:text-normal font-[600]">
+          Recommended
         </h2>
       </div>
 
@@ -62,8 +62,8 @@ const allTabs= [
             {isLoading ? (
               <p>Loading...</p>
             ) : filteredArticles.length > 0 ? (
-              <div className=" mt-6">
-                {filteredArticles.slice(2).map((item) => (
+              <div className=" mt-[40px]">
+                {filteredArticles.map((item) => (
                   <RecommendedCard
                    id={item.id}
                     key={item.id}
@@ -80,7 +80,7 @@ const allTabs= [
               <p>No Articles Found</p>
             )}
           </div>
-          <div className="hidden md:block md:w-[35%]">
+          <div className="hidden lg:block md:w-[30%]">
            <Sidebar/>
           </div>
 

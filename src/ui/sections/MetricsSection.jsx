@@ -5,8 +5,8 @@ const MetricsSection = ({ className = "" }) => {
   return (
     <>
       <div className={`lg:max-w-[1200px] mx-auto  ${className}`}>
-        <div className="p-5 px-9 bg-white shadow-xl rounded-xl w-[89%] mx-auto my-[60px] lg:my-[80px] border border-dim-gray md:grid md:grid-cols-4 gap-6">
-          <div className=" border-b border-text-dark-gray py-4 md:border-b-0 md:border-r ">
+        <div className="p-5 px-9 bg-white shadow-xl rounded-xl w-[89%] mx-auto my-[60px] lg:my-[80px] border border-dim-gray lg:grid lg:grid-cols-4 gap-6">
+          <div className=" border-b border-text-dark-gray py-4 lg:border-b-0 lg:border-r ">
             <h2 className="font-[600] text-[15px] text-[#231F20]">Author</h2>
 
             <input
@@ -15,7 +15,7 @@ const MetricsSection = ({ className = "" }) => {
               className="font-[400] text-extra-small text-text-dark-gray  md:text-[16px] border-0 outline-0"
             />
           </div>
-          <div className=" border-b border-text-dark-gray py-4 md:border-b-0 md:border-r">
+          <div className=" border-b border-text-dark-gray py-4 lg:border-b-0 lg:border-r">
             <h2 className="font-[600] text-small text-rasin-black">Title</h2>
 
             <input

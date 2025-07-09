@@ -10,17 +10,17 @@ const Tabs = ({ tabs,activeTab, setActiveTab,className="",title="" }) => {
   };
 
   return (
-    <div className={`md:border-b md:border-gray-200  py-3 bg-white my-9 md:max-w-[65%] ml-5  ${className}`}>
-      <div className="hidden md:flex md:justify-between gap-6 lg:max-w-[1200px] mx-auto px-4">
+    <div className={`lg:border-b lg:border-gray-200 py-[20px] bg-white  lg:max-w-[65%] mx-5  ${className}`}>
+      <div className="hidden md:hidden lg:flex md:justify-between gap-6 lg:max-w-[1200px] mx-auto px-4">
         <div className="md:flex md:gap-10">
           {tabs.map((tab) => (
             <button
               key={tab.value}
               onClick={() => handleTabClick(tab.value)}
-              className={`pb-2 transition-all duration-200 border-b-2 ${
+              className={` transition-all duration-200 border-b-2 ${
                 activeTab === tab.value
-                  ? "border-black text-black font-semibold"
-                  : "border-transparent text-gray-600 hover:text-black"
+                  ? "border-rasin-black text-rasin-black font-semibold"
+                  : "border-transparent text-text-gray hover:text-black"
               }`}
             >
               {tab.label}
@@ -38,7 +38,7 @@ const Tabs = ({ tabs,activeTab, setActiveTab,className="",title="" }) => {
         </div>
       </div>
 
-      <div className="flex md:hidden items-center gap-5 px-4 py-4 shadow-lg absolute top-15 right-0 left-0 bg-[#FCFCFC] ">
+      <div className="flex lg:hidden items-center gap-5 px-4 py-4 shadow-lg absolute top-24 right-0 left-0 bg-[#FCFCFC] z-20 ">
         <button
           onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
           className="text-sm flex items-center gap-1"
@@ -49,7 +49,7 @@ const Tabs = ({ tabs,activeTab, setActiveTab,className="",title="" }) => {
       </div>
 
       {isMobileMenuOpen && (
-        <div className="md:hidden mt-3 px-4 space-y-2 absolute top-25 bg-[#FCFCFC] right-0 left-0">
+        <div className="lg:hidden my-[55px]  space-y-2 absolute top-25 bg-[#FCFCFC] right-0 left-0 z-15">
           {tabs.map((tab) => (
             <button
               key={tab.value}

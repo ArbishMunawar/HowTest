@@ -1,4 +1,4 @@
-import React from "react";
+import React ,{useState} from "react";
 import { Search } from "lucide-react";
 import { Link } from "react-router-dom"; 
 import Blog1 from "../../../assets/images/Blog1.png";
@@ -18,7 +18,7 @@ const AllOnlineBooks = () => {
     { img: Blog1, label: "Featured" },
     { img: Blog3, label: "Microsoft Cares About Your Privacy" },
   ];
-
+  const [mobileSearchOpen, setMobileSearchOpen] = useState(false);
    const { input, setInput, setSearchQuery } = useSearch();
     const navigate = useNavigate();
   
@@ -31,12 +31,12 @@ const AllOnlineBooks = () => {
 
   return (
     <>
-      <div className="bg-gradient-to-r from-[#fef6f6] to-[#f0fdfd] py-14 px-4">
+      <div className="bg-gradient-to-r from-[#fef6f6] to-[#f0fdfd] py-[66px] px-4">
         <div className="max-w-[1200px] mx-auto flex flex-col items-center">
           <h3 className="text-center text-[32px] font-semibold">
             Online Books
           </h3>
-          <p className="hidden md:block text-[18px] font-normal text-[#767070] text-center max-w-2xl mt-2">
+          <p className="hidden md:block text-[18px] font-normal text-[#767070] text-center max-w-2xl ">
             Meet the expert authors behind HowTests' top books, creating
             high-quality study materials for competitive exam aspirants. Explore
             their work and boost your exam preparation with trusted resources!
@@ -46,21 +46,21 @@ const AllOnlineBooks = () => {
             <input
               type="text"
               placeholder="Type for Search..."
-              className="flex-grow text-[#333] placeholder-[#C4C4C4] py-3 px-4 text-sm outline-none"
+              className="flex-grow text-text-gray placeholder-[#C4C4C4] py-3 px-4 text-sm outline-none"
                  onChange={(e) => setInput(e.target.value)}
               onKeyDown={(e) => e.key === "Enter" && handleSearch()}
             />
-            <button className="bg-[#3874FF] text-white px-4 flex items-center justify-center">
+            <button className="bg-azure-blue text-white px-4 flex items-center justify-center">
               <Search />
             </button>
           </div>
         </div>
       </div>
 
-      <div className="max-w-[1200px] mx-auto px-4 my-16">
+      <div className="max-w-[1200px] mx-auto px-4 my-[80px]">
         <div className="grid gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
           {categories.map((cat, index) => {
-            const routeCategory = cat.label.replace(" Books", "").replace(/\s+/g, "-").toLowerCase(); 
+            const routeCategory = cat.label.replace(" Books", "").toLowerCase(); 
 
             return (
               <Link to={`/booksdetail/${routeCategory}`} key={index}>
@@ -78,8 +78,8 @@ const AllOnlineBooks = () => {
             );
           })}
         </div>
-        <SubscribeSection />
       </div>
+        <SubscribeSection />
     </>
   );
 };

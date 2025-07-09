@@ -54,9 +54,9 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="bg-white shadow-3xl w-full relative z-50">
+    <nav className="bg-white shadow-3xl w-full relative z-50 ">
       <div className="lg:max-w-[1200px] mx-auto ">
-        <div className="md:hidden flex justify-between items-center px-6 lg:max-w-[1200px] mx-auto">
+        <div className="lg:hidden flex justify-between items-center px-6 lg:max-w-[1200px] mx-auto">
           <Link to="/">
             <img
               src={Logo}
@@ -163,7 +163,7 @@ const Navbar = () => {
           </div>
         )}
 
-        <div className="hidden md:flex items-center justify-between  z-30">
+        <div className="hidden lg:flex items-center justify-between z-10">
           <div className="flex items-center gap-6">
             <img src={Logo} alt="Logo" className="w-[50px] h-[50px]" />
             <div

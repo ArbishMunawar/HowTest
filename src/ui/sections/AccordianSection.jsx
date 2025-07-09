@@ -27,7 +27,7 @@ const AccordianSection = () => {
             >
               <div className='text-azure-blue bg-blue-100 rounded p-1'>
               {openIndex === idx ? (
-                <ChevronUp className="w-[40px] h-[40px]" />
+                <ChevronUp className="w-5 h-5" />
               ) : (
                 <ChevronDown className="w-5 h-5" />
               )}</div>
