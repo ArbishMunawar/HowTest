@@ -1,42 +1,40 @@
 import React, { useState } from "react";
 import Tabs from "../../components/Common/Tabs";
 import UseFetch from "../../../hooks/UseFetch";
-import { useSearchParams } from "react-router";
+import { createRoutesFromChildren, useSearchParams } from "react-router";
 import RecommendedCard from "../../components/Cards/RecommendeCard";
 import CourseBanner from "../../components/Common/CourseBanner";
-import Sidebar from "../../sections/RecommendedSidebar/Sidebar";
-import SubscribeSection from "../../sections/SubscribeSection";
+import Sidebar  from "../../sections/RecommendedSidebar/Sidebar";
+import SubscribeSection from '../../sections/SubscribeSection'
+import { useParams } from "react-router-dom";
 
-const RecommendedPage = () => {
+
+const CategoriesPage = () => {
   const [searchParams] = useSearchParams();
   const [activeTab, setActiveTab] = useState("all");
-
+const { category } = useParams(); 
   const { data, isLoading } = UseFetch(
     `${import.meta.env.VITE_REACT_APP_API_URL}/articles`
   );
-  const allTabs = [
+const allTabs= [
     { label: "All Articles", value: "all" },
     { label: "Recommended", value: "recommended" },
     { label: "Most Read", value: "mostRead" },
   ];
-  const filteredArticles =
-    activeTab === "all" ? data : data.filter((item) => item.tag === activeTab);
-
+  const filteredArticles =data.filter(
+    (item)=>item.category ===category &&
+ (activeTab === "all" || item.tag === activeTab))
   return (
     <>
       <div className="bg-gradient-to-r from-[#FBEEEE] to-[#F7FFFE]">
         <h2 className="flex justify-center items-center pt-[110px] py-[69px] lg:py-[62px]  text-medium-large lg:text-normal font-[600]">
-          Recommended
+          {category ? ` ${category}` : "Recommended"}
         </h2>
+      
       </div>
 
       <div className="lg:max-w-[1200px] mx-auto">
-        <Tabs
-          tabs={allTabs}
-          activeTab={activeTab}
-          setActiveTab={setActiveTab}
-          title="Recommended"
-        />
+        <Tabs tabs={allTabs} activeTab={activeTab} setActiveTab={setActiveTab} title="Recommended"/>
         <div className=" md:flex ">
           <div className="">
             {isLoading ? (
@@ -59,23 +57,16 @@ const RecommendedPage = () => {
             ) : (
               <p>No Articles Found</p>
             )}
-            <div className="pr-6">
-              <CourseBanner
-                title="Looking to Learn CSS, PMS English?"
-                story=" If you want to learn English Essay and Precis for CSS, PMS, Judiciary,
-        or One Paper Exams, join Sir Syed Kazim Ali, Pakistan’s top English
-        teacher with the highest success rate of his students for years. Start
-        your journey to success today!"
-                buttondata="Explore Courses"
-              />
-            </div>
+
+            <CourseBanner />
+
             {isLoading ? (
               <p>Loading...</p>
             ) : filteredArticles.length > 0 ? (
               <div className=" mt-[40px]">
                 {filteredArticles.slice(2).map((item) => (
                   <RecommendedCard
-                    id={item.id}
+                   id={item.id}
                     key={item.id}
                     image={item.image}
                     title={item.title}
@@ -91,13 +82,14 @@ const RecommendedPage = () => {
             )}
           </div>
           <div className="hidden lg:block md:w-[30%]">
-            <Sidebar />
+           <Sidebar/>
           </div>
+
         </div>
-        <SubscribeSection />
+          <SubscribeSection/>
       </div>
     </>
   );
 };
 
-export default RecommendedPage;
+export default CategoriesPage;

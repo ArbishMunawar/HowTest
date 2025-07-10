@@ -1,6 +1,9 @@
 import { ArrowRight } from "lucide-react";
+import { Link } from "react-router";
 const AuthorCard = ({ author }) => {
   return (
+
+    <Link to={`/author/${author.id}`}>
     <div className="w-full rounded-[10px] border border-light-gray text-center  ">
         <div className="bg-gradient-to-r from-[#FBEEEE] to-[#F7FFFE] p-6 rounded-tr-[10px] rounded-tl-[10px]">
       <img
@@ -34,6 +37,7 @@ const AuthorCard = ({ author }) => {
       </button>
       </div>
     </div>
+    </Link>
   );
 };
 

@@ -15,6 +15,7 @@ import SearchResultsPage from './ui/pages/SearchResultPage/index.jsx';
 import Login from './ui/pages/LoginPage/index.jsx';
 import SignUpPage from './ui/pages/SignUpPage/index.jsx';
 import CategoriesPage from './ui/pages/CategoriesPage/index.jsx';
+import AuthorDeatilsSection from './ui/pages/AuthorDetailsPage/index.jsx';
 const router = createBrowserRouter([
   {
     path: "/",
@@ -25,6 +26,7 @@ const router = createBrowserRouter([
       { path: "/categories/:category", element: <CategoriesPage /> },
       { path: "/articles/:id", element: <RecommendedDetailsPage/>},
       { path: "/authors", element: <AllAuthorsPage /> },
+      { path: "/author/:id", element: <AuthorDeatilsSection /> },
       { path: "/books", element: <AllOnlineBooks /> },
       { path: "/booksdetail/:category", element: <AllOnlineBooksDeatils /> },
       { path: "/book/:id", element: <EachBookDetail /> },

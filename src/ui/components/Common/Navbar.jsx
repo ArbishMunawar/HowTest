@@ -8,7 +8,7 @@ import WriteForUsButton from "../Button/WriteForUsButton";
 import NavSearch from "../../components/Common/NavSearch";
 import { useSearch } from "../../../hooks/searchContet";
 import { useNavigate } from "react-router-dom";
-import { Link } from "react-router-dom";
+import { Link } from "react-router";
 import NavAdd from "../../components/Common/NavAdd";
 
 const Navbar = () => {

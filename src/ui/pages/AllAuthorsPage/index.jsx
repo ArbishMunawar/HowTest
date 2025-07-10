@@ -42,19 +42,19 @@ const AllAuthorsPage = () => {
         ) : data && data.length > 0 ? (
           <>
             <div className="md:hidden flex flex-col  gap-10  my-8 px-5">
-              {data.map((item) => (
+              {data.map((author) => (
                 <div
-                  key={item.id}
+                  key={author.id}
                   className="min-w-[100%] max-w-[100%] flex-shrink-0"
                 >
-                  <AuthorCard author={item} />
+                  <AuthorCard key={author.id} author={author}/>
                 </div>
               ))}
             </div>
 
             <div className="hidden md:grid grid-cols-3 lg:grid-cols-3 xl:grid-cols-3 gap-6 mt-6">
-              {data.map((item) => (
-                <AuthorCard key={item.id} author={item} />
+              {data.map((author) => (
+                <AuthorCard key={author.id} author={author} />
               ))}
             </div>
           </>
