@@ -1,5 +1,5 @@
 import React from "react";
-import Captcha from '../../../assets/images/captcha.png';
+import Captcha from '../../../assets/images/Captcha.png';
 import Button from "../Button/Button";
 const Commentform = () => {
   return (
