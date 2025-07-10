@@ -34,7 +34,7 @@ const RecommendedDetailsPage = () => {
   return (
     <>
       <div className="md:flex lg:max-w-[1200px] mx-auto">
-        <div className=" px-4 py-10  lg:max-w-[1200px] md:max-w-[70%]">
+        <div className=" px-4 py-[70px] lg:max-w-[1200px] md:max-w-[70%]">
           <h1 className="text-[22px] font-[600] mb-4 lg:text-[40px] lg:font-[700]">
             {data.title}
           </h1>
@@ -88,7 +88,7 @@ const RecommendedDetailsPage = () => {
           </div>
 
           <div className="text-[15px] md:text-[18px] lg:text-[18px] font-[400] text-rasin-black">
-            <p className="my-5">
+            <p className="my-[40px]">
               Agriculture has been the backbone of human sustenance since the
               dawn of civilization, providing the vital link between the soil
               beneath his feet and the nourishment on his plate. As societies
@@ -98,7 +98,7 @@ const RecommendedDetailsPage = () => {
 
             <img src={laptop} alt="laptop image" className="rounded-[10px]" />
 
-            <p className="my-5">
+            <p className="my-[40px]">
               Theoretically, the "World Food System" and "The Economics of
               Agriculture" dimensions are integral in shaping food production,
               circulation, and utilization worldwide and impacting the living
@@ -131,7 +131,7 @@ const RecommendedDetailsPage = () => {
               food production for the worldwide population. 
             </p>
 
-            <h2 className="text-rasin-black text-[20px] font-[700] md:text-[24] my-3">
+            <h2 className="text-rasin-black text-[20px] font-[700] md:text-[24] mt-[40px] mb-[20px]">
               Sign Up To Read This Article And Everything Else
             </h2>
             <p>
@@ -152,7 +152,7 @@ const RecommendedDetailsPage = () => {
               supply.
             </p>
 
-            <h2 className="text-rasin-black text-[20px] font-[700] md:text-[24] my-3">
+            <h2 className="text-rasin-black text-[20px] font-[700] md:text-[24] mt-[40px] mb-[20px]">
               How can I manage refractory chronic migraine? 
             </h2>
 
@@ -167,7 +167,7 @@ const RecommendedDetailsPage = () => {
               <li>making certain lifestyle changes</li>
             </ul>
 
-            <h2 className="text-rasin-black text-[20px] font-[700] md:text-[24] my-3">
+            <h2 className="text-rasin-black text-[20px] font-[700] md:text-[24] mt-[40px] mb-[20px]">
               How can I manage refractory chronic migraine? 
             </h2>
             <p>
@@ -199,7 +199,7 @@ const RecommendedDetailsPage = () => {
               </li>
             </ol>
 
-            <h2 className="text-rasin-black text-[20px] font-[700] md:text-[24] my-3">
+            <h2 className="text-rasin-black text-[20px] font-[700] md:text-[24] mt-[40px] mb-[20px]">
               When does chronic migraine become refractory?
             </h2>
             <p>
@@ -244,7 +244,7 @@ const RecommendedDetailsPage = () => {
               </li>
             </ul>
 
-            <h2 className="text-rasin-black text-[20px] font-[700] md:text-[24] my-3">
+            <h2 className="text-rasin-black text-[20px] font-[700] md:text-[24] mt-[40px] mb-[20px]">
               How can I manage refractory chronic migraine? 
             </h2>
             <p>
@@ -258,7 +258,7 @@ const RecommendedDetailsPage = () => {
               <li>making certain lifestyle changes</li>
             </ul>
 
-            <div className="aspect-video w-full my-5">
+            <div className="aspect-video w-full my-[40px]">
               <iframe
                 className="w-full h-full"
                 src="https://www.youtube.com/embed/RiVPPfxJps0"
@@ -279,7 +279,7 @@ const RecommendedDetailsPage = () => {
               <li>making certain lifestyle changes</li>
             </ol>
 
-            <img src={bg1} alt="" className="my-5" />
+            <img src={bg1} alt="" className="my-[40px]" />
             <p>
               There’s no cure for migraine, including refractory chronic
               migraine. Management of the condition means trying to reduce your
@@ -290,7 +290,7 @@ const RecommendedDetailsPage = () => {
               <li>seeking out alternative therapies</li>
               <li>making certain lifestyle changes</li>
             </ul>
-            <img src={bg2} alt="" className="my-5" />
+            <img src={bg2} alt="" className="my-[40px]" />
             <p>
               There’s no cure for migraine, including refractory chronic
               migraine. Management of the condition means trying to reduce your
@@ -300,7 +300,7 @@ const RecommendedDetailsPage = () => {
               lifestyle changes and behavioral therapy.
             </p>
 
-            <h3 className="text-[16px] font-[700] md:text-[18] text-center my-5 px-2 text-rasin-black md:px-12">
+            <h3 className="text-[16px] font-[700] md:text-[18] text-center my-[40px] px-2 text-rasin-black md:px-12">
               "There’s no cure for migraine, including refractory chronic
               migraine. Management of the condition means trying to reduce your
               number of migraine days by Preventive treatment aims to reduce the
@@ -321,8 +321,8 @@ const RecommendedDetailsPage = () => {
           </div>
         </div>
 
-        <div className="hidden md:block">
-          <Sidebar />
+        <div className="hidden md:block pt-[70px]">
+          <Sidebar/>
           <img src={S1} alt="" className="my-6" />
           <img src={S1} alt="" className="my-6" />
           <img src={S2} alt="" className="my-6" />

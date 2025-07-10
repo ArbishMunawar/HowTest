@@ -15,7 +15,9 @@ const FromCategory = () => {
       {isLoading ? (
         <p>Loading...</p>
       ) : data && data.length > 0 ? (
-        <div className="mt-6 bg-[#F9F9F9]">
+        
+        <div className="mt-6 bg-[#F9F9F9] p-5">
+          <h2 className='lg:text-medium font-[600] text-small-medium text-rasin-black'>From This Category</h2>
           {data.slice(0,2).map((item) => (
             <RecommendedCard
               key={item.id}
@@ -37,7 +39,8 @@ const FromCategory = () => {
        {isLoading ? (
         <p>Loading...</p>
       ) : data && data.length > 0 ? (
-        <div className="mt-6 bg-[#F9F9F9]">
+        <div className="mt-6 bg-[#F9F9F9] p-5">
+           <h2 className='lg:text-medium font-[600] text-small-medium text-rasin-black'>Latest Articles</h2>
           {data.slice(0,2).map((item) => (
             <RecommendedCard
               key={item.id}

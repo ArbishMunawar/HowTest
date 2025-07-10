@@ -12,6 +12,7 @@ const RecommendedCard = ({
   views,
   author,
   image,
+  category
 }) => {
   return (
     <Link to={`/articles/${id}`}>

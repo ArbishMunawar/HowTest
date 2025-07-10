@@ -14,6 +14,7 @@ import EachBookDetail from './ui/pages/EachBookDetail/index.jsx';
 import SearchResultsPage from './ui/pages/SearchResultPage/index.jsx';
 import Login from './ui/pages/LoginPage/index.jsx';
 import SignUpPage from './ui/pages/SignUpPage/index.jsx';
+import CategoriesPage from './ui/pages/CategoriesPage/index.jsx';
 const router = createBrowserRouter([
   {
     path: "/",
@@ -21,7 +22,8 @@ const router = createBrowserRouter([
     children: [
       { index: true, path:"/", element: <HomePage /> },
       { path: "/recommended", element: <RecommendedPage /> },
-        { path: "/articles/:id", element: <RecommendedDetailsPage/>},
+      { path: "/categories/:category", element: <CategoriesPage /> },
+      { path: "/articles/:id", element: <RecommendedDetailsPage/>},
       { path: "/authors", element: <AllAuthorsPage /> },
       { path: "/books", element: <AllOnlineBooks /> },
       { path: "/booksdetail/:category", element: <AllOnlineBooksDeatils /> },

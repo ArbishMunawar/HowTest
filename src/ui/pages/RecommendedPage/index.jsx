@@ -63,7 +63,7 @@ const allTabs= [
               <p>Loading...</p>
             ) : filteredArticles.length > 0 ? (
               <div className=" mt-[40px]">
-                {filteredArticles.map((item) => (
+                {filteredArticles.slice(2).map((item) => (
                   <RecommendedCard
                    id={item.id}
                     key={item.id}

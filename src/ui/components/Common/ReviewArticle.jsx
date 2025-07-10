@@ -10,11 +10,11 @@ import Wicon from '../../../assets/icons/Wicon'
 const ReviewArticle = () => {
   return (
    <>
-   <div className='  border-t border-[#DCDBDB] my-7 hidden md-block'></div>
-   <div className='text-center my-7'>
+   <div className='  border-t border-[#DCDBDB] my-[40px] hidden md-block'></div>
+   <div className='text-center my-[40px]'>
 
 
-    <h2 className='text-[#4F4F4F] text-[18px] font-[400]'>Was Article helpful?</h2>
+    <h2 className='text-[#4F4F4F] text-[18px] font-[400] pt-5'>Was Article helpful?</h2>
     <h2 className='text-[#64748B] text-[15px] font-[400]'>(12,300 found it helpful)
         <div className='flex justify-center gap-5 py-3'>
         <Thumbdown/>

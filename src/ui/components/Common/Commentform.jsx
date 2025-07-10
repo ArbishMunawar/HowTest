@@ -3,7 +3,7 @@ import Captcha from '../../../assets/images/captcha.png';
 import Button from "../Button/Button";
 const Commentform = () => {
   return (
-    <div className="border border-[#D4D7E5] rounded-[9px] p-6 mt-8 bg-white ">
+    <div className="border border-[#D4D7E5] rounded-[9px] p-6 my-[40px] bg-white ">
       <h2 className="text-[20px] font-[600] text-[#231F20] mb-4">Comments</h2>
       <form className="space-y-4">
         <div className="  gap-4">

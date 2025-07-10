@@ -1,72 +1,151 @@
 {
-  "articles": [
-    {
-      "id": 1,
-      "image": "/images/R1.jpg",
-      "bio": "Bio of the author goes here. Bio can be up to a limited number of characters",
-      "title": "13 Complete Protein Sources for Vegetarians and Vegans You...",
-      "summary": "There are a number of health benefits associated with yoga, but can...",
-      "date": "5 Feb, 2025",
-      "views": "5.5k",
-      "author": "Kazim Ali",
-      "tag": "recommended"
-    },
-    {
-      "id": 2,
-      "image": "/images/R2.jpg",
-      "bio": "Bio of the author goes here. Bio can be up to a limited number of characters",
-      "title": "Living with Migraine? These Simple Exercises from DWTS Judge Derek Hough May Help",
-      "summary": "There are a number of health benefits associated with yoga, but can...",
-      "date": "5 Mar, 2025",
-      "views": "5.5k",
-      "author": "Kazim Ali",
-      "tag": "recommended"
-    },
-    {
-      "id": 3,
-      "image": "/images/R3.jpg",
-      "bio": "Bio of the author goes here. Bio can be up to a limited number of characters",
-      "title": "Can Stress Cause Migraines? Loretta Lynn's Daughter Patsy Lynn Says Yes and Shares Her Tips for Relief",
-      "summary": "There are a number of health benefits associated with yoga, but can...",
-      "date": "5 Jun, 2025",
-      "views": "5.5k",
-      "author": "Kazim Ali",
-      "tag": "mostRead"
-    },
-    {
-      "id": 4,
-      "image": "/images/R4.jpg",
-      "bio": "Bio of the author goes here. Bio can be up to a limited number of characters",
-      "title": "Living with Migraine? These Simple Exercises from DWTS Judge Derek Hough May Help These Simple Exercises from DWTS Judge Derek Hough May Help",
-      "summary": "There are a number of health benefits associated with yoga, but can...",
-      "date": "5 Apr, 2025",
-      "views": "5.5k",
-      "author": "Kazim Ali",
-      "tag": "mostRead"
-    },
-    {
-      "id": 5,
-      "image": "/images/R5.jpg",
-      "bio": "Bio of the author goes here. Bio can be up to a limited number of characters",
-      "title": "Can Stress Cause Migraines?",
-      "summary": "There are a number of health benefits associated with yoga, but can...",
-      "date": "5 May, 2025",
-      "views": "5.5k",
-      "author": "Kazim Ali",
-      "tag": "mostRead"
-    },
-    {
-      "id": 6,
-      "image": "/images/R6.jpg",
-      "bio": "Bio of the author goes here. Bio can be up to a limited number of characters",
-      "title": "Living with Migraine? These Simple Exercises from DWTS Judge Derek Hough May Help",
-      "summary": "There are a number of health benefits associated with yoga, but can...",
-      "date": "5 Mar, 2025",
-      "views": "5.5k",
-      "author": "Kazim Ali",
-      "tag": "recommended"
-    }
-  ],
+ "articles": [
+  {
+    "id": 1,
+    "image": "/images/R1.jpg",
+    "bio": "Bio of the author goes here. Bio can be up to a limited number of characters",
+    "title": "13 Complete Protein Sources for Vegetarians and Vegans You...",
+    "summary": "There are a number of health benefits associated with yoga, but can...",
+    "date": "5 Feb, 2025",
+    "views": "5.5k",
+    "author": "Kazim Ali",
+    "tag": "recommended",
+    "category": "Blogs"
+  },
+  {
+    "id": 2,
+    "image": "/images/R2.jpg",
+    "bio": "Bio of the author goes here. Bio can be up to a limited number of characters",
+    "title": "Living with Migraine? These Simple Exercises from DWTS Judge Derek Hough May Help",
+    "summary": "There are a number of health benefits associated with yoga, but can...",
+    "date": "5 Mar, 2025",
+    "views": "6.2k",
+    "author": "Kazim Ali",
+    "tag": "recommended",
+    "category": "CSS Essays"
+  },
+  {
+    "id": 3,
+    "image": "/images/R3.jpg",
+    "bio": "Bio of the author goes here. Bio can be up to a limited number of characters",
+    "title": "Can Stress Cause Migraines? Loretta Lynn's Daughter Patsy Lynn Shares Her Tips",
+    "summary": "There are a number of health benefits associated with yoga, but can...",
+    "date": "5 Jun, 2025",
+    "views": "5.9k",
+    "author": "Kazim Ali",
+    "tag": "mostRead",
+    "category": "PMS Essays"
+  },
+  {
+    "id": 4,
+    "image": "/images/R4.jpg",
+    "bio": "Bio of the author goes here. Bio can be up to a limited number of characters",
+    "title": "DWTS Judge Derek Hough's Top Exercises to Fight Migraine Pain",
+    "summary": "There are a number of health benefits associated with yoga, but can...",
+    "date": "5 Apr, 2025",
+    "views": "4.3k",
+    "author": "Kazim Ali",
+    "tag": "mostRead",
+    "category": "Courses"
+  },
+  {
+    "id": 5,
+    "image": "/images/R5.jpg",
+    "bio": "Bio of the author goes here. Bio can be up to a limited number of characters",
+    "title": "Can Stress Cause Migraines? What Experts Say",
+    "summary": "There are a number of health benefits associated with yoga, but can...",
+    "date": "5 May, 2025",
+    "views": "7.1k",
+    "author": "Kazim Ali",
+    "tag": "mostRead",
+    "category": "Civil Judge Essays"
+  },
+  {
+    "id": 6,
+    "image": "/images/R6.jpg",
+    "bio": "Bio of the author goes here. Bio can be up to a limited number of characters",
+    "title": "Migraine and Lifestyle: Daily Habits That Can Help",
+    "summary": "There are a number of health benefits associated with yoga, but can...",
+    "date": "5 Mar, 2025",
+    "views": "6.8k",
+    "author": "Kazim Ali",
+    "tag": "recommended",
+    "category": "CSS Solved Papers"
+  },
+  {
+    "id": 7,
+    "image": "/images/R1.jpg",
+    "bio": "Bio of the author goes here. Bio can be up to a limited number of characters",
+    "title": "Yoga for Beginners: The Best 5 Poses to Start With",
+    "summary": "Learn the basics of yoga and its physical and mental benefits...",
+    "date": "10 Feb, 2025",
+    "views": "5.2k",
+    "author": "Kazim Ali",
+    "tag": "recommended",
+    "category": "PMS Ministerial Essays"
+  },
+  {
+    "id": 8,
+    "image": "/images/R2.jpg",
+    "bio": "Bio of the author goes here. Bio can be up to a limited number of characters",
+    "title": "How to Stay Productive While Dealing with Chronic Pain",
+    "summary": "There are a number of tips and routines that can support you daily...",
+    "date": "12 Mar, 2025",
+    "views": "5.6k",
+    "author": "Kazim Ali",
+    "tag": "mostRead",
+    "category": "CSS Essays"
+  },
+  {
+    "id": 9,
+    "image": "/images/R3.jpg",
+    "bio": "Bio of the author goes here. Bio can be up to a limited number of characters",
+    "title": "Mental Health Awareness and its Impact on Professional Life",
+    "summary": "Explore how mental well-being influences work and performance...",
+    "date": "14 Apr, 2025",
+    "views": "4.7k",
+    "author": "Kazim Ali",
+    "tag": "recommended",
+    "category": "Courses"
+  },
+  {
+    "id": 10,
+    "image": "/images/R4.jpg",
+    "bio": "Bio of the author goes here. Bio can be up to a limited number of characters",
+    "title": "Top 10 Natural Remedies to Reduce Migraine Frequency",
+    "summary": "Remedies backed by research for effective relief from migraine...",
+    "date": "20 Apr, 2025",
+    "views": "6.9k",
+    "author": "Kazim Ali",
+    "tag": "mostRead",
+    "category": "Blogs"
+  },
+  {
+    "id": 11,
+    "image": "/images/R5.jpg",
+    "bio": "Bio of the author goes here. Bio can be up to a limited number of characters",
+    "title": "Breaking Down the PMS Essay Structure: A Step-by-Step Guide",
+    "summary": "Get insights into writing powerful and well-structured essays...",
+    "date": "28 Apr, 2025",
+    "views": "6.3k",
+    "author": "Kazim Ali",
+    "tag": "recommended",
+    "category": "PMS Essays"
+  },
+  {
+    "id": 12,
+    "image": "/images/R6.jpg",
+    "bio": "Bio of the author goes here. Bio can be up to a limited number of characters",
+    "title": "CSS Solved Papers: Essay Topic Analysis from Past 5 Years",
+    "summary": "Learn from past solved papers to better prepare your CSS attempt...",
+    "date": "2 May, 2025",
+    "views": "8.2k",
+    "author": "Kazim Ali",
+    "tag": "recommended",
+    "category": "CSS Solved Papers"
+  }
+]
+,
  "books": [
     {
       "id": 1,

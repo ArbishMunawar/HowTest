@@ -3,7 +3,7 @@ import HistoryCheck from "../../../assets/icons/HistoryCheck";
 import ArticleHistoryIcon from "../../../assets/icons/ArticleHistory";
 
 const ArticleHistory = () => (
-  <div className="relative pl-6 my-10">
+  <div className="relative pl-6 my-[40px]">
     <div className="absolute left-3  h-[110px] top-17 border-l-[2px] border-[#4F4F4F66]"></div>
 
     <div className=" mb-6  flex absolute left-0">
@@ -42,7 +42,7 @@ const HistoryTabs = () => {
   const [activeTab, setActiveTab] = useState("article");
 
   return (
-    <div className="max-w-md p-4">
+    <div className="max-w-md my-[40px]">
       <div className="flex items-center gap-10  pb-2 mb-4">
         <button
           className={`flex items-center gap-2 pb-1 border-b-2 ${

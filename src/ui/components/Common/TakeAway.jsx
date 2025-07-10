@@ -11,7 +11,7 @@ const TakeAway = () => {
   return (
     <>
       <div className="text-[15px] md:text-[18px] lg:text-[18px] font-[400] text-[#4F4F4F]">
-        <h2 className="text-[#231F20] text-[20px] font-[700] md:text-[24] my-3">
+        <h2 className="text-[#231F20] text-[20px] font-[700] md:text-[24] mb-[20px]">
           TakeAway
         </h2>
         <p>
@@ -23,7 +23,7 @@ const TakeAway = () => {
           behavioral therapy.
         </p>
 
-        <div className="bg-[#F9F9F9] rounded-[10px] my-5">
+        <div className="bg-[#F9F9F9] rounded-[10px] my-[40px]">
           <div className=" p-5 md:flex  md:gap-10 ">
             <img
               src={bg3}
@@ -31,7 +31,7 @@ const TakeAway = () => {
               className="rounded-[10px] md:mt-7 md:w-[40%] md:h-[70%] lg:w-[185px] lg:h-[185px]"
             />
             <div className="">
-              <h2 className="text-[20px] font-[700] text-[#231F20] py-5">
+              <h2 className="text-[20px] font-[700] text-[#231F20] py-[40px]">
                 Heading of the ad goes here
               </h2>
               <p>

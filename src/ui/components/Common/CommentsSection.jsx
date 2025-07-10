@@ -12,7 +12,7 @@ const CommentCard = ({ name, email, text, date, isReply }) => (
 const CommentsSection = () => {
   return (
     <div className="mt-10">
-      <h3 className="text-[20px] font-[600] text-[#231F20] mb-4">All Comments & Replies</h3>
+      <h3 className="text-[20px] font-[600] text-[#231F20] mb-[40px]">All Comments & Replies</h3>
 
       <CommentCard
         name="Ralph Edwards"
