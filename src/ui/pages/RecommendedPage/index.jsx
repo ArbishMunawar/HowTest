@@ -4,8 +4,8 @@ import UseFetch from "../../../hooks/UseFetch";
 import { useSearchParams } from "react-router";
 import RecommendedCard from "../../components/Cards/RecommendeCard";
 import CourseBanner from "../../components/Common/CourseBanner";
-import Sidebar  from "../../sections/RecommendedSidebar/Sidebar";
-import SubscribeSection from '../../sections/SubscribeSection'
+import Sidebar from "../../sections/RecommendedSidebar/Sidebar";
+import SubscribeSection from "../../sections/SubscribeSection";
 
 const RecommendedPage = () => {
   const [searchParams] = useSearchParams();
@@ -14,15 +14,13 @@ const RecommendedPage = () => {
   const { data, isLoading } = UseFetch(
     `${import.meta.env.VITE_REACT_APP_API_URL}/articles`
   );
-const allTabs= [
+  const allTabs = [
     { label: "All Articles", value: "all" },
     { label: "Recommended", value: "recommended" },
     { label: "Most Read", value: "mostRead" },
   ];
   const filteredArticles =
-    activeTab === "all"
-      ? data
-      : data.filter((item) => item.tag === activeTab);
+    activeTab === "all" ? data : data.filter((item) => item.tag === activeTab);
 
   return (
     <>
@@ -33,7 +31,12 @@ const allTabs= [
       </div>
 
       <div className="lg:max-w-[1200px] mx-auto">
-        <Tabs tabs={allTabs} activeTab={activeTab} setActiveTab={setActiveTab} title="Recommended"/>
+        <Tabs
+          tabs={allTabs}
+          activeTab={activeTab}
+          setActiveTab={setActiveTab}
+          title="Recommended"
+        />
         <div className=" md:flex ">
           <div className="">
             {isLoading ? (
@@ -56,16 +59,23 @@ const allTabs= [
             ) : (
               <p>No Articles Found</p>
             )}
-
-            <CourseBanner />
-
+            <div className="pr-6">
+              <CourseBanner
+                title="Looking to Learn CSS, PMS English?"
+                story=" If you want to learn English Essay and Precis for CSS, PMS, Judiciary,
+        or One Paper Exams, join Sir Syed Kazim Ali, Pakistan’s top English
+        teacher with the highest success rate of his students for years. Start
+        your journey to success today!"
+                buttondata="Explore Courses"
+              />
+            </div>
             {isLoading ? (
               <p>Loading...</p>
             ) : filteredArticles.length > 0 ? (
               <div className=" mt-[40px]">
                 {filteredArticles.slice(2).map((item) => (
                   <RecommendedCard
-                   id={item.id}
+                    id={item.id}
                     key={item.id}
                     image={item.image}
                     title={item.title}
@@ -81,11 +91,10 @@ const allTabs= [
             )}
           </div>
           <div className="hidden lg:block md:w-[30%]">
-           <Sidebar/>
+            <Sidebar />
           </div>
-
         </div>
-          <SubscribeSection/>
+        <SubscribeSection />
       </div>
     </>
   );

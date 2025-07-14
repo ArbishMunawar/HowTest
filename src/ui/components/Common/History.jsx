@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import HistoryCheck from "../../../assets/icons/HistoryCheck";
 import ArticleHistoryIcon from "../../../assets/icons/ArticleHistory";
 
-const ArticleHistory = () => (
+const ArticleHistory = ({ author, date, qualifications, degree, position }) => (
   <div className="relative pl-6 my-[40px]">
     <div className="absolute left-3  h-[110px] top-17 border-l-[2px] border-[#4F4F4F66]"></div>
 
@@ -13,12 +13,12 @@ const ArticleHistory = () => (
 
     <div className="absolute left-2 mr-4 top-11 w-3 h-3 bg-gray-700 rounded-full"></div>
     <div className="relative top-10">
-      <h4 className="font-bold text-[16px] my-5">24 January 2025</h4>
+      <h4 className="font-bold text-[16px] my-5">{date}</h4>
       <p className="mt-1 text-gray-700 text-sm">
         <span className="font-medium">Written By</span>
         <br />
-        Roman Baker <br />
-        Master in Islamic Studies <br />
+       {author} <br />
+       {qualifications} in {degree}<br />
         Deputy Director NAB
       </p>
     </div>
@@ -38,7 +38,7 @@ const UpdateHistory = () => (
   </div>
 );
 
-const HistoryTabs = () => {
+const HistoryTabs = ({ author, date, qualifications, degree, position }) => {
   const [activeTab, setActiveTab] = useState("article");
 
   return (
@@ -62,12 +62,18 @@ const HistoryTabs = () => {
           }`}
           onClick={() => setActiveTab("update")}
         >
-          <ArticleHistoryIcon /> Update History
+          <ArticleHistoryIcon 
+          />
+             Update History
         </button>
       </div>
 
       <div>
-        {activeTab === "article" ? <ArticleHistory /> : <UpdateHistory />}
+        {activeTab === "article" ? <ArticleHistory 
+          author={author}
+           date={date}
+            qualifications={qualifications}
+            degree={degree}/> : <UpdateHistory />}
       </div>
     </div>
   );

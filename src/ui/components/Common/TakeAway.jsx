@@ -7,7 +7,13 @@ import ReviewArticle from "./ReviewArticle";
 import Commentform from "../Common/Commentform";
 import CommentsSection from "../Common/CommentsSection";
 import FromCategory from "../Common/FromCategory";
+import { useParams } from "react-router";
+import UseFetch from "../../../hooks/UseFetch";
 const TakeAway = () => {
+  const { id } = useParams();
+  const { data } = UseFetch(
+    `${import.meta.env.VITE_REACT_APP_API_URL}/authors/${id}`
+  );
   return (
     <>
       <div className="text-[15px] md:text-[18px] lg:text-[18px] font-[400] text-[#4F4F4F]">
@@ -72,14 +78,19 @@ const TakeAway = () => {
           more in our Editorial and Publishing Policy.
         </p>
 
-        <History />
+        <History
+          author={data?.name}
+          date="13 July 2025"
+          qualifications={data.credentials?.Qualifications}
+          degree={data.credentials?.Degree}
+        />
 
         <ReviewArticle />
 
         <Commentform />
         <CommentsSection />
         <Commentform />
-        <FromCategory/>
+        <FromCategory />
       </div>
     </>
   );

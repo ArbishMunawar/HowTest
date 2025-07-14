@@ -11,7 +11,7 @@ export default function Root() {
       <div className="layout">
         {/* <h1 className="text-azure-blue" >Test</h1> */}
       <Navbar/>
-      <main  >
+      <main >
       <Outlet />
       </main>
       <Footer />
