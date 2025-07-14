@@ -7,6 +7,7 @@ import CourseBanner from "../../components/Common/CourseBanner";
 import Sidebar  from "../../sections/RecommendedSidebar/Sidebar";
 import SubscribeSection from '../../sections/SubscribeSection'
 import { useParams } from "react-router-dom";
+import Button from "../../components/Button/Button";
 
 
 const CategoriesPage = () => {
@@ -58,10 +59,19 @@ const allTabs= [
               <p>No Articles Found</p>
             )}
 
-            <CourseBanner />
+           
+        <div className="lg:max-w-[1200px] mx-auto py-[50px] mr-[30px]">
+          <CourseBanner
+            className="py-[40px]  bg-gradient-to-r from-[#f7fffe] to-[#FBEEEE]"
+            title="Want to Get Heard Like This Author?"
+            story="Share your knowledge with millions of competitive exam aspirants worldwide. Publish your stories, articles, guidelines, etc. on HowTests and make a lasting impact on students' success."
+            buttondata="Read More"
+            />
+           
+        </div>
 
             {isLoading ? (
-              <p>Loading...</p>
+              <p>Loading...</p> 
             ) : filteredArticles.length > 0 ? (
               <div className=" mt-[40px]">
                 {filteredArticles.slice(2).map((item) => (

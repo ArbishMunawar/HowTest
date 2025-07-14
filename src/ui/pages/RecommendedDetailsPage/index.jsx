@@ -89,11 +89,7 @@ const RecommendedDetailsPage = () => {
 
           <div className="text-[15px] md:text-[18px] lg:text-[18px] font-[400] text-rasin-black">
             <p className="my-[40px]">
-              Agriculture has been the backbone of human sustenance since the
-              dawn of civilization, providing the vital link between the soil
-              beneath his feet and the nourishment on his plate. As societies
-              evolved, so did the field of agricultural economics as a dynamic
-              discipline that wields the power to reshape the world food system.
+              {data.abstract}
             </p>
 
             <img src={laptop} alt="laptop image" className="rounded-[10px]" />

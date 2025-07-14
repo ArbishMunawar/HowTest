@@ -1,7 +1,7 @@
-import React from "react";
+import React, { Children } from "react";
 import Button from "../Button/Button";
 
-const CourseBanner = ({ title, story, buttondata, className }) => {
+const CourseBanner = ({ title, story, buttondata, className, children }) => {
   return (
     <div
       className={`bg-gradient-to-r from-[#FBEEEE] to-[#F7FFFE]  lg:rounded-[10px] py-[46px] px-[19.5px] text-center  mx-auto ${className}`}
@@ -12,7 +12,9 @@ const CourseBanner = ({ title, story, buttondata, className }) => {
       <p className="text-text-gray mt-3 text-[12px] font-[400] md:text-base">
         {story}
       </p>
-      <Button className="mt-3">{buttondata}</Button>
+      {buttondata && <Button className="mt-3">{buttondata}</Button>}
+
+      {children}
     </div>
   );
 };

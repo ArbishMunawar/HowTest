@@ -1,5 +1,5 @@
 {
-  "articles": [
+   "articles": [
     {
       "id": 1,
       "image": "/images/R1.jpg",
@@ -8,9 +8,10 @@
       "summary": "There are a number of health benefits associated with yoga, but can...",
       "date": "5 Feb, 2025",
       "views": "5.5k",
-      "author": "Kazim Ali",
+      "author": "Tamás Hám-Szabó",
       "tag": "recommended",
-      "category": "Blogs"
+      "category": "Blogs",
+      "abstract": "Agriculture has been the backbone of human sustenance since the dawn of civilization, providing the vital link between the soil beneath his feet and the nourishment on his plate. As societies evolved, so did the field of agricultural economics as a dynamic discipline that wields the power to reshape the world food system."
     },
     {
       "id": 2,
@@ -20,9 +21,10 @@
       "summary": "There are a number of health benefits associated with yoga, but can...",
       "date": "5 Mar, 2025",
       "views": "6.2k",
-      "author": "Kazim Ali",
+      "author": "Hira Naveed",
       "tag": "recommended",
-      "category": "CSS Essays"
+      "category": "CSS Essays",
+      "abstract": "Daily migraines can be debilitating, but simple lifestyle changes like targeted exercises can provide relief. Fitness expert Derek Hough shares accessible movements that promote circulation, reduce tension, and help manage migraine symptoms naturally."
     },
     {
       "id": 3,
@@ -32,9 +34,10 @@
       "summary": "There are a number of health benefits associated with yoga, but can...",
       "date": "5 Jun, 2025",
       "views": "5.9k",
-      "author": "Kazim Ali",
+      "author": "Zoya Malik",
       "tag": "mostRead",
-      "category": "PMS Essays"
+      "category": "PMS Essays",
+      "abstract": "Emotional stress is a major trigger for migraines. In this article, Patsy Lynn, daughter of country legend Loretta Lynn, opens up about her migraine journey and shares practical strategies to manage stress and avoid painful flare-ups."
     },
     {
       "id": 4,
@@ -44,9 +47,10 @@
       "summary": "There are a number of health benefits associated with yoga, but can...",
       "date": "5 Apr, 2025",
       "views": "4.3k",
-      "author": "Kazim Ali",
+      "author": "Hamza Shahid",
       "tag": "mostRead",
-      "category": "Courses"
+      "category": "Courses",
+      "abstract": "Dancing with the Stars judge Derek Hough introduces his favorite anti-migraine exercises that blend movement and mindfulness. Learn how these routines reduce tension and support overall brain health."
     },
     {
       "id": 5,
@@ -56,9 +60,10 @@
       "summary": "There are a number of health benefits associated with yoga, but can...",
       "date": "5 May, 2025",
       "views": "7.1k",
-      "author": "Kazim Ali",
+      "author": "Mehwish Tariq",
       "tag": "mostRead",
-      "category": "Civil Judge Essays"
+      "category": "Civil Judge Essays",
+      "abstract": "Chronic stress is more than a mental health issue — it's a physical one too. Discover expert opinions on the direct correlation between stress and migraines, and explore preventative steps for long-term relief."
     },
     {
       "id": 6,
@@ -68,9 +73,10 @@
       "summary": "There are a number of health benefits associated with yoga, but can...",
       "date": "5 Mar, 2025",
       "views": "6.8k",
-      "author": "Kazim Ali",
+      "author": "Ali Raza",
       "tag": "recommended",
-      "category": "CSS Solved Papers"
+      "category": "CSS Solved Papers",
+      "abstract": "Lifestyle changes like regular sleep, hydration, and screen-time control play a crucial role in migraine prevention. This article dives into effective habits that support long-term migraine management."
     },
     {
       "id": 7,
@@ -80,9 +86,10 @@
       "summary": "Learn the basics of yoga and its physical and mental benefits...",
       "date": "10 Feb, 2025",
       "views": "5.2k",
-      "author": "Kazim Ali",
+      "author": "Fatima Noor",
       "tag": "recommended",
-      "category": "PMS Ministerial Essays"
+      "category": "PMS Ministerial Essays",
+      "abstract": "Yoga offers both physical and mental health benefits, making it ideal for beginners. Learn five essential poses that improve flexibility, calm the mind, and reduce stress — a major migraine trigger."
     },
     {
       "id": 8,
@@ -92,9 +99,10 @@
       "summary": "There are a number of tips and routines that can support you daily...",
       "date": "12 Mar, 2025",
       "views": "5.6k",
-      "author": "Kazim Ali",
+      "author": "Zain Ali",
       "tag": "mostRead",
-      "category": "CSS Essays"
+      "category": "CSS Essays",
+      "abstract": "Chronic pain can impact your focus and productivity. Discover practical routines, ergonomic tips, and mindset shifts that help you stay effective and balanced throughout your workday."
     },
     {
       "id": 9,
@@ -106,7 +114,8 @@
       "views": "4.7k",
       "author": "Kazim Ali",
       "tag": "recommended",
-      "category": "Courses"
+      "category": "Courses",
+      "abstract": "Mental wellness is deeply connected to job performance. This article explores how mental health challenges affect workplace behavior and offers suggestions for both individuals and organizations to foster resilience."
     },
     {
       "id": 10,
@@ -116,9 +125,10 @@
       "summary": "Remedies backed by research for effective relief from migraine...",
       "date": "20 Apr, 2025",
       "views": "6.9k",
-      "author": "Kazim Ali",
+      "author": "Sara Ahmad",
       "tag": "mostRead",
-      "category": "Blogs"
+      "category": "Blogs",
+      "abstract": "Migraine sufferers are turning to natural remedies backed by science for long-term relief. From magnesium to acupuncture, explore 10 trusted methods that reduce the frequency and intensity of attacks."
     },
     {
       "id": 11,
@@ -128,9 +138,10 @@
       "summary": "Get insights into writing powerful and well-structured essays...",
       "date": "28 Apr, 2025",
       "views": "6.3k",
-      "author": "Kazim Ali",
+      "author": "Bilal Khan",
       "tag": "recommended",
-      "category": "PMS Essays"
+      "category": "PMS Essays",
+      "abstract": "Writing a high-scoring PMS essay requires a well-structured approach. This guide breaks down each component — introduction, argumentation, and conclusion — with tips to impress examiners."
     },
     {
       "id": 12,
@@ -140,9 +151,10 @@
       "summary": "Learn from past solved papers to better prepare your CSS attempt...",
       "date": "2 May, 2025",
       "views": "8.2k",
-      "author": "Kazim Ali",
+      "author": "Amina Shah",
       "tag": "recommended",
-      "category": "CSS Solved Papers"
+      "category": "CSS Solved Papers",
+      "abstract": "Understanding past CSS papers is key to future success. This analysis highlights recurring themes, writing strategies, and sample breakdowns from the last five years of CSS essay exams."
     }
   ],
   "books": [
@@ -150,7 +162,7 @@
       "id": 1,
       "image": "/images/B1.png",
       "title": "Current Affair",
-      "subtitle": "By Seth Price / Barry Feldman",
+      "subtitle": "Tamás Hám-Szabó",
       "author": "Seth Price / Barry Feldman",
       "bio": "Seth Price and Barry Feldman are experienced educators",
       "category": "Featured",
@@ -165,7 +177,7 @@
       "image": "/images/B2.png",
       "title": "The Road to Recognition",
       "subtitle": "By Seth Price / Barry Feldman",
-      "author": "Seth Price / Barry Feldman",
+      "author": "Hira Naveed",
       "bio": "Seth Price and Barry Feldman are experienced educators",
       "category": "PPSC",
       "tag": "Recommended",
@@ -179,7 +191,7 @@
       "image": "/images/B3.png",
       "title": "International Relations Paper One CSS and PMS",
       "subtitle": "By Seth Price / Barry Feldman",
-      "author": "Seth Price / Barry Feldman",
+      "author": "Zoya Malik",
       "bio": "Seth Price and Barry Feldman are experienced educators",
       "category": "FPSC",
       "tag": "Most Download",
@@ -192,7 +204,7 @@
       "id": 4,
       "image": "/images/B4.png",
       "title": "Most Important MCQs of Everyday Science (1980 to Date)",
-      "subtitle": "By Seth Price / Barry Feldman",
+      "subtitle": "Hamza Shahid",
       "author": "Seth Price / Barry Feldman",
       "bio": "Seth Price and Barry Feldman are experienced educators",
       "category": "PMA",
@@ -207,7 +219,7 @@
       "image": "/images/B5.png",
       "title": "The First Free Online Standardized English Test for CSS and PMS Aspirants",
       "subtitle": "By Joyce Meyer",
-      "author": "Joyce Meyer",
+      "author": "Mehwish Tariq",
       "bio": "Joyce Meyer is a renowned educationist and content creator, known for her contributions to English testing resources.",
       "category": "FPSC",
       "tag": "Recommended",
@@ -221,7 +233,7 @@
       "image": "/images/B1.png",
       "title": "500 Most Repeated MCQs on Pakistan Affairs",
       "subtitle": "By Seth Price / Barry Feldman",
-      "author": "Seth Price / Barry Feldman",
+      "author": "Ali Raza",
       "bio": "Seth Price and Barry Feldman are experienced educators",
       "category": "PPSC",
       "tag": "Most Download",
@@ -235,7 +247,7 @@
       "image": "/images/B2.png",
       "title": "1000 Most Important One Word Substitutions MCQs (Edition 2)",
       "subtitle": "By Seth Price / Barry Feldman",
-      "author": "Seth Price / Barry Feldman",
+      "author": "Fatima Noor",
       "bio": "Seth Price and Barry Feldman are experienced educators",
       "category": "PMA",
       "tag": "Recommended",
@@ -249,7 +261,7 @@
       "image": "/images/B3.png",
       "title": "1000 Most Important MCQs",
       "subtitle": "By Seth Price / Barry Feldman",
-      "author": "Seth Price / Barry Feldman",
+      "author": "Zain Ali",
       "bio": "Seth Price and Barry Feldman are experienced educators",
       "category": "FPSC",
       "tag": "Most Download",
@@ -263,7 +275,7 @@
       "image": "/images/B4.png",
       "title": "1000 Most Important MCQs of Everyday Science",
       "subtitle": "By Seth Price / Barry Feldman",
-      "author": "Seth Price / Barry Feldman",
+      "author": "Kazim Ali",
       "bio": "Seth Price and Barry Feldman are experienced educators",
       "category": "Microsoft Cares About Your Privacy",
       "tag": "Recommended",
@@ -277,7 +289,7 @@
       "image": "/images/B5.png",
       "title": "1000 Most Important One Word Substitutions MCQs (CSS and PMS)",
       "subtitle": "By Seth Price / Barry Feldman",
-      "author": "Seth Price / Barry Feldman",
+      "author": "Sara Ahmad",
       "bio": "Seth Price and Barry Feldman are experienced educators",
       "category": "Featured",
       "tag": "Most Download",
@@ -291,7 +303,7 @@
       "image": "/images/B1.png",
       "title": "Pakistan Affairs for CSS",
       "subtitle": "By Seth Price / Barry Feldman",
-      "author": "Seth Price / Barry Feldman",
+      "author": "Bilal Khan",
       "bio": "Seth Price and Barry Feldman are experienced educators",
       "category": "Featured",
       "tag": "Recommended",
@@ -305,7 +317,7 @@
       "image": "/images/B2.png",
       "title": "Public Administration Guide",
       "subtitle": "By Seth Price / Barry Feldman",
-      "author": "Seth Price / Barry Feldman",
+      "author": "Amina Shah",
       "bio": "Seth Price and Barry Feldman are experienced educators",
       "category": "PPSC",
       "tag": "Most Download",
@@ -319,7 +331,7 @@
       "image": "/images/B3.png",
       "title": "Political Science MCQs for CSS",
       "subtitle": "By Seth Price / Barry Feldman",
-      "author": "Seth Price / Barry Feldman",
+      "author": "Sara Ahmad",
       "bio": "Seth Price and Barry Feldman are experienced educators",
       "category": "Microsoft Cares About Your Privacy",
       "tag": "Recommended",
@@ -333,7 +345,7 @@
       "image": "/images/B4.png",
       "title": "Everyday Science MCQs CSS",
       "subtitle": "By Seth Price / Barry Feldman",
-      "author": "Seth Price / Barry Feldman",
+      "author": "Sara Ahmad",
       "bio": "Seth Price and Barry Feldman are experienced educators",
       "category": "PMA",
       "tag": "Most Download",
@@ -347,7 +359,7 @@
       "image": "/images/B5.png",
       "title": "Standardized English Test Practice",
       "subtitle": "By Joyce Meyer",
-      "author": "Joyce Meyer",
+      "author": "Bilal Khan",
       "bio": "Joyce Meyer is a renowned educationist and content creator, known for her contributions to English testing resources.",
       "category": "FPSC",
       "tag": "Most Download",
@@ -361,7 +373,7 @@
       "image": "/images/B1.png",
       "title": "Pakistan Studies MCQs",
       "subtitle": "By Seth Price / Barry Feldman",
-      "author": "Seth Price / Barry Feldman",
+      "author": "Amina Shah",
       "bio": "Seth Price and Barry Feldman are experienced educators",
       "category": "PPSC",
       "tag": "Recommended",
@@ -375,7 +387,7 @@
       "image": "/images/B2.png",
       "title": "One Word Substitution - Vol. 2",
       "subtitle": "By Seth Price / Barry Feldman",
-      "author": "Seth Price / Barry Feldman",
+      "author": "Mariam Khan",
       "bio": "Seth Price and Barry Feldman are experienced educators",
       "category": "PMA",
       "tag": "Most Download",
@@ -389,7 +401,7 @@
       "image": "/images/B3.png",
       "title": "General Knowledge for Competitive Exams",
       "subtitle": "By Seth Price / Barry Feldman",
-      "author": "Seth Price / Barry Feldman",
+      "author": "Asad Mehmood",
       "bio": "Seth Price and Barry Feldman are experienced educators",
       "category": "FPSC",
       "tag": "Recommended",
@@ -403,7 +415,7 @@
       "image": "/images/B4.png",
       "title": "Everyday Science - Objective MCQs",
       "subtitle": "By Seth Price / Barry Feldman",
-      "author": "Seth Price / Barry Feldman",
+      "author": "Rabia Khalid",
       "bio": "Seth Price and Barry Feldman are experienced educators",
       "category": "PPSC",
       "tag": "Most Download",
@@ -417,7 +429,7 @@
       "image": "/images/B5.png",
       "title": "Word Power MCQs for CSS & PMS",
       "subtitle": "By Seth Price / Barry Feldman",
-      "author": "Seth Price / Barry Feldman",
+      "author": "Adnan Javed",
       "bio": "Seth Price and Barry Feldman are experienced educators",
       "category": "Featured",
       "tag": "Recommended",
@@ -441,7 +453,7 @@
       "isVerified": true,
       "about": "Hi there! My name is Muhammad Raheel, and I’m a passionate and experienced full stack developer. I specialize in creating dynamic, user-friendly web applications that meet the highest standards of functionality and design. With a strong foundation in JavaScript, ReactJS, NodeJS, ExpressJS, MongoDB, Postgresql and Graphql, I bring your ideas to life with robust and scalable solutions. Whether it's building sleek, responsive interfaces with custom CSS, Tailwind Css, Sass Css or developing complex server-side logic, I've got you covered. I'm proficient in TypeScript, which allows me to write clean and maintainable code. I also adhere to best practices and design principles like SOLID, ensuring that my code is both efficient and scalable. I’m well-versed in various design patterns including the atomic design pattern, domain-driven design, and dependency injection pattern. These patterns help me structure my code effectively and deliver high-quality applications. In today’s rapidly evolving tech landscape, understanding the nuances of microservices and monorepos is crucial. I have extensive experience in architecting and managing microservices, ensuring they work seamlessly together. Cloud services are an integral part of modern applications, and I have hands-on experience with AWS services such as AWS Lambda, DynamoDB, RDS, API Gateway, and EC2.  (200 Words)",
       "credentials": {
-        "Qualifications": "Masters",
+        "Qualifications": "Bacholers",
         "Degree": "Bs Computer Science",
         "University": "Lums",
         "Profession": "Lecturer",
@@ -464,7 +476,7 @@
       "about": "Hi there! My name is Muhammad Raheel, and I’m a passionate and experienced full stack developer. I specialize in creating dynamic, user-friendly web applications that meet the highest standards of functionality and design. With a strong foundation in JavaScript, ReactJS, NodeJS, ExpressJS, MongoDB, Postgresql and Graphql, I bring your ideas to life with robust and scalable solutions. Whether it's building sleek, responsive interfaces with custom CSS, Tailwind Css, Sass Css or developing complex server-side logic, I've got you covered. I'm proficient in TypeScript, which allows me to write clean and maintainable code. I also adhere to best practices and design principles like SOLID, ensuring that my code is both efficient and scalable. I’m well-versed in various design patterns including the atomic design pattern, domain-driven design, and dependency injection pattern. These patterns help me structure my code effectively and deliver high-quality applications. In today’s rapidly evolving tech landscape, understanding the nuances of microservices and monorepos is crucial. I have extensive experience in architecting and managing microservices, ensuring they work seamlessly together. Cloud services are an integral part of modern applications, and I have hands-on experience with AWS services such as AWS Lambda, DynamoDB, RDS, API Gateway, and EC2.  (200 Words)",
       "credentials": {
         "Qualifications": "Masters",
-        "Degree": "Bs Computer Science",
+        "Degree": "Chemistry",
         "University": "Lums",
         "Profession": "Lecturer",
         "City": "Lahore",
@@ -485,8 +497,8 @@
       "isVerified": false,
       "about": "Hi there! My name is Muhammad Raheel, and I’m a passionate and experienced full stack developer. I specialize in creating dynamic, user-friendly web applications that meet the highest standards of functionality and design. With a strong foundation in JavaScript, ReactJS, NodeJS, ExpressJS, MongoDB, Postgresql and Graphql, I bring your ideas to life with robust and scalable solutions. Whether it's building sleek, responsive interfaces with custom CSS, Tailwind Css, Sass Css or developing complex server-side logic, I've got you covered. I'm proficient in TypeScript, which allows me to write clean and maintainable code. I also adhere to best practices and design principles like SOLID, ensuring that my code is both efficient and scalable. I’m well-versed in various design patterns including the atomic design pattern, domain-driven design, and dependency injection pattern. These patterns help me structure my code effectively and deliver high-quality applications. In today’s rapidly evolving tech landscape, understanding the nuances of microservices and monorepos is crucial. I have extensive experience in architecting and managing microservices, ensuring they work seamlessly together. Cloud services are an integral part of modern applications, and I have hands-on experience with AWS services such as AWS Lambda, DynamoDB, RDS, API Gateway, and EC2.  (200 Words)",
       "credentials": {
-        "Qualifications": "Masters",
-        "Degree": "Bs Computer Science",
+        "Qualifications": "Becholers",
+        "Degree": "Physics",
         "University": "Lums",
         "Profession": "Lecturer",
         "City": "Lahore",

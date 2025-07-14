@@ -10,7 +10,7 @@ const Tabs = ({ tabs,activeTab, setActiveTab,className="",title="" }) => {
   };
 
   return (
-    <div className={`lg:border-b lg:border-gray-200 py-[20px] bg-white  lg:max-w-[65%] mx-5  ${className}`}>
+    <div className={`lg:border-b lg:border-gray-200 border-0 lg:py-[20px] bg-white  lg:max-w-[65%] mx-5  ${className}`}>
       <div className="hidden md:hidden lg:flex md:justify-between gap-6 lg:max-w-[1200px] mx-auto px-4">
         <div className="md:flex md:gap-10">
           {tabs.map((tab) => (
