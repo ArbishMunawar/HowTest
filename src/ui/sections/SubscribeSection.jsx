@@ -22,6 +22,7 @@ const SubscribeSection = () => {
           type="submit"
           className="bg-azure-blue hover:bg-azure-blue text-white px-6 py-2 rounded-md transition duration-300"
         >
+          
           Subscribe
         </button>
       </form>
