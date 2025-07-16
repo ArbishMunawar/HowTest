@@ -2,8 +2,8 @@ import React from "react";
 
 const SubscribeSection = () => {
   return (
-    <div className="bg-gradient-to-r from-[#fef6f6] to-[#f0fdfd] rounded-0 lg:rounded-xl py-[48px] px-[21px] lg:px-0 lg:py-[58px] my-[50px] lg:my-[80px]  max-w-5xl mx-auto text-center shadow-sm">
-      <h2 className="text-medium font-[700] text-rasin-black mb-[20px]">
+    <div className="bg-gradient-to-r from-[#fef6f6] to-[#f0fdfd] rounded-0 lg:rounded-xl p-6 sm:p-10 my-[50px] lg:my-[80px]  max-w-5xl mx-auto text-center shadow-sm">
+      <h2 className="text-xl sm:text-2xl font-semibold text-rasin-black mb-2">
         Subscribe to Get Updated!
       </h2>
       <p className="text-extra-small font-[400] text-text-gray max-w-2xl mx-auto mb-6">
