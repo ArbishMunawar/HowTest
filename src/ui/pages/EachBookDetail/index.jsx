@@ -7,7 +7,7 @@ import ShareIcon from "../../../assets/icons/ShareIcon";
 import ShareIconBorder from "../../../assets/icons/ShareIconBorder";
 import Teracy from "../../../assets/images/Teracy.png";
 import Button from "../../components/Button/Button";
-import HistoryTabs from "../../components/Common/History";
+import History from "../../components/Common/History";
 import ReviewArticle from "../../components/Common/ReviewArticle";
 import SubscribeSection from "../../sections/SubscribeSection";
 import MostReadBooks from "../../sections/MostReadBooks";
@@ -18,6 +18,7 @@ const EachBookDetail = () => {
   const { data, isLoading } = UseFetch(
     `${import.meta.env.VITE_REACT_APP_API_URL}/books/${id}`
   );
+  
   return (
     <>
       <div className="lg:max-w-[1200px] mx-auto mt-10">
@@ -215,7 +216,10 @@ const EachBookDetail = () => {
             </div>
           </div>
           <div className="my-9">
-            <HistoryTabs />
+            <History    author={data?.name}
+          date="13 July 2025"
+          qualifications={data.credentials?.Qualifications}
+          degree={data.credentials?.Degree} />
             <ReviewArticle />
           </div>
           <MostReadBooks />
