@@ -44,13 +44,13 @@ const Footer = () => {
             <div>
               <h3 className="text-lg font-semibold mb-3">Quick Links</h3>
               <ul className="space-y-2 text-sm text-gray-300">
-                <Link to="/books">
-                  <li>
+                <li>
+                  <Link to="/books">
                     <a href="#" className="hover:text-white">
                       All Books
                     </a>
-                  </li>
-                </Link>
+                  </Link>
+                </li>
                 <li>
                   <a href="#" className="hover:text-white">
                     All Mocks
