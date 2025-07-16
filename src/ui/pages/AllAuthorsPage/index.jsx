@@ -3,7 +3,6 @@ import UseFetch from "../../../hooks/UseFetch";
 import { Link, useSearchParams } from "react-router";
 import AuthorCard from "../../components/Cards/AuthorCard";
 import { Search } from "lucide-react";
-// import NavSearch from "../../components/NavSearch";
 const AllAuthorsPage = () => {
   const [searchParams] = useSearchParams();
   const { data, isLoading } = UseFetch(
@@ -13,35 +12,38 @@ const AllAuthorsPage = () => {
 
   return (
     <>
-      <div className="bg-gradient-to-r from-[#fef6f6] to-[#f0fdfd] p-5 py-14 ">
-        <div className=" lg:max-w-[1200px] mx-auto  md:flex md:flex-col md:justify-center md:items-center px-[7rem]">
-        <h3 className="text-center text-[32px] font-[600]">All Authors</h3>
-        <p className=" hidden md:block text-[18px] font-[400] text-[#767070] text-center">
-          Meet the expert authors behind HowTests' top books, creating
-          high-quality study materials for competitive exam aspirants. Explore
-          their work and boost your exam preparation with trusted resources!
-        </p>
+      <div className="bg-gradient-to-r from-[#fef6f6] to-[#f0fdfd] p-5  py-[52px] lg:py-[68px] ">
+     
 
-        <div className="relative flex justify-between bg-white mt-3 md:w-[50%] lg:w-[35%]">
-          <input
-            type="text"
-            placeholder="Type fot Search..."
-            className="w-full border border-[#DCDBDB99] text-[#C4C4C4] rounded py-4 lg:py-2 px-4 pr-[7rem] text-[14px] font-[400]"
-          />
-          <div className="bg-[#3874FF]">
-            <button className="absolute right-0 rounded-tr rounded-br top-1/2 transform -translate-y-1/2 text-white bg-[#3874FF] py-3.5 lg:py-2 px-4">
+         <div className="max-w-[1200px] mx-auto flex flex-col items-center">
+          <h3 className="text-center text-[32px] font-semibold">
+            All Authors
+          </h3>
+          <p className="hidden md:block text-[18px] font-normal text-[#767070] text-center max-w-2xl ">
+            Meet the expert authors behind HowTests' top books, creating
+            high-quality study materials for competitive exam aspirants. Explore
+            their work and boost your exam preparation with trusted resources!
+          </p>
+
+          <div className="relative flex w-[90%] md:w-[60%] lg:w-[40%] bg-white mt-6 rounded overflow-hidden border border-[#DCDBDB99]">
+            <input
+              type="text"
+              placeholder="Type for Search..."
+              className="flex-grow text-text-gray placeholder-[#C4C4C4] py-3 px-4 text-sm outline-none"
+              
+            />
+            <button className="bg-azure-blue text-white px-4 flex items-center justify-center">
               <Search />
             </button>
           </div>
         </div>
-        </div>
       </div>
-      <div className="lg:max-w-[1200px] mx-auto  lg:my-10 my-8">
+      <div className="lg:max-w-[1200px] mx-auto py-[50px] lg:py-[80px] px-5 lg:px-0">
         {isLoading ? (
           <p>Loading...</p>
         ) : data && data.length > 0 ? (
           <>
-            <div className="md:hidden flex flex-col  gap-10  my-8 px-5">
+            <div className="md:hidden flex flex-col  gap-10  ">
               {data.map((author) => (
                 <div
                   key={author.id}
