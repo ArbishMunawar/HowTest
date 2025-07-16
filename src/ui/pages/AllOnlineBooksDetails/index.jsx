@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import UseFetch from "../../../hooks/UseFetch";
 import Tabs from "../../components/Common/Tabs";
 import { useParams } from "react-router-dom";
-import { Link } from "react-router";
+import { Link } from "react-router-dom";
 import BookCard from "../../components/Cards/BookCard";
 import MetricsSection from "../../sections/MetricsSection";
 import SubscribeSection from "../../sections/SubscribeSection";
@@ -57,7 +57,7 @@ const AllOnlineBooksDetails = () => {
           </div>
         </div>
       </div>
-      <div className="max-w-[1200px] mx-auto px-4 md: mt-60 lg:mt-20">
+      <div className="max-w-[1200px] mx-auto px-4 lg:px-0 md: mt-60 lg:mt-20">
         <Tabs
           title="All books"
           tabs={booksTabs}
@@ -74,6 +74,7 @@ const AllOnlineBooksDetails = () => {
               {filteredBooks.map((item) => (
                 <Link to={`/book/${item.id}`}>
                   <BookCard
+                   id={item.id}
                     key={item.id}
                     image={item.image}
                     title={item.title}

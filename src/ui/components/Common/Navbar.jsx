@@ -15,7 +15,6 @@ const Navbar = () => {
   const [mobileOpen, setMobileOpen] = useState(false);
   const [mobileSearchOpen, setMobileSearchOpen] = useState(false);
   const [activeSubMenu, setActiveSubMenu] = useState("main");
-  // const [input, setInput] = useState("");
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const [activeMenu, setActiveMenu] = useState(null);
   const { input, setInput, setSearchQuery } = useSearch();
@@ -30,26 +29,36 @@ const Navbar = () => {
 
   const subMenus = {
     Blog: [
-      "CSS Essays",
-      "PMS Essays",
-      "Editorials",
-      "Past Papers",
-      "CSS Past Papers",
-      "PMS Past Papers",
-      "CSS Current Affairs",
-      "PMS Current Affairs",
+      { label: "Blogs", path: "/categories/Blogs" },
+      { label: "CSS Essays", path: "/categories/CSS Essays" },
+      { label: "PMS Essays", path: "/categories/PMS Essays" },
+      { label: "Civil Judge Essays", path: "/categories/Civil Judge Essays" },
+      { label: "CSS Solved Papers", path: "/categories/CSS Solved Papers" },
+      {
+        label: "PMS Ministerial Essays",
+        path: "/categories/PMS Ministerial Essays",
+      },
     ],
-    Books: ["All Books", "FPSC Books", "PPSC Books", "PMA Books"],
-    Mock: ["All Mocks", "FPSC Mocks", "PMS Mocks"],
+    Books: [
+      { label: "All Books", path: "/booksdetail/all" },
+      { label: "FPSC Books", path: "/booksdetail/fpsc" },
+      { label: "PPSC Books", path: "/booksdetail/ppsc" },
+      { label: "PMA Books", path: "/booksdetail/pma" },
+      { label: "Current Affairs", path: "/booksdetail/Current Affairs" },
+    ],
+    Mock: [
+      { label: "All Mocks", path: "/booksdetail/all" },
+    { label: "FPSC Mocks", path: "/booksdetail/fpsc" },
+      { label: "PPSC Mocks", path: "/booksdetail/ppsc" },
+    ],
     Other: [
-      "Online Mocks",
-      "Recommended Articles",
-      "Most Read Books",
-      "Current Affairs",
-      "Write For Us",
-      "Privacy Policy",
-      "FAQs",
-      "Courses",
+      { label: "Online Mocks", path: "/online-mocks" },
+      { label: "Recommended Articles", path: "/recommended" },
+      { label: "Current Affairs", path: "/booksdetail/Current Affairs" },
+      { label: "Write For Us", path: "" },
+      { label: "Privacy Policy", path: "" },
+      { label: "FAQs", path: "" },
+      { label: "Courses", path: "/categories/Courses" },
     ],
   };
 
@@ -143,10 +152,11 @@ const Navbar = () => {
                   </h2>
                 </div>
                 <ul className="space-y-5 text-gray-700 text-lg">
-                  {Array.isArray(subMenus[activeSubMenu]) &&
-                    subMenus[activeSubMenu].map((item, idx) => (
-                      <li key={idx}>{item}</li>
-                    ))}
+                  {subMenus[activeSubMenu]?.map((item, idx) => (
+                    <li key={idx}>
+                      <Link to={item.path}>{item.label}</Link>
+                    </li>
+                  ))}
                 </ul>
               </>
             )}
@@ -186,7 +196,9 @@ const Navbar = () => {
 
               {isDropdownOpen && (
                 <div className=" fixed left-0 top-5 mt-9 bg-white shadow-md rounded w-screen z-50">
-                    <h2 className="lg:max-w-[1200px] mx-auto pt-[40px] text-small-medium font-[600]">Explore</h2>
+                  <h2 className="lg:max-w-[1200px] mx-auto pt-[40px] text-small-medium font-[600]">
+                    Explore
+                  </h2>
                   <div className="flex gap-[30px] py-[30px] lg:max-w-[1200px] mx-auto">
                     <ul className="space-y-4 text-[16px] text-rasin-black  border-r border-border-gray pr-6">
                       <li
@@ -196,7 +208,7 @@ const Navbar = () => {
                         }}
                         className="cursor-pointer flex items-center pr-[149px] hover:text-blue-600"
                       >
-                        Blog Categories 
+                        Blog Categories
                       </li>
                       <li
                         onClick={(e) => {
@@ -205,7 +217,7 @@ const Navbar = () => {
                         }}
                         className="cursor-pointer flex items-center justify-between hover:text-blue-600"
                       >
-                        Online Books 
+                        Online Books
                       </li>
                       <li
                         onClick={(e) => {
@@ -214,7 +226,7 @@ const Navbar = () => {
                         }}
                         className="cursor-pointer flex items-center justify-between hover:text-blue-600"
                       >
-                        Mock Tests 
+                        Mock Tests
                       </li>
                       <li
                         onClick={(e) => {
@@ -223,7 +235,7 @@ const Navbar = () => {
                         }}
                         className="cursor-pointer flex items-center justify-between "
                       >
-                        Other Pages 
+                        Other Pages
                       </li>
                     </ul>
 
@@ -231,11 +243,13 @@ const Navbar = () => {
                       {activeMenu && (
                         <ul className="space-y-3">
                           {subMenus[activeMenu]?.map((item, idx) => (
-                            <li
-                              key={idx}
-                              className=" cursor-pointer"
-                            >
-                              {item}
+                            <li key={idx}>
+                              <Link
+                                to={item.path}
+                                className="hover:text-blue-600"
+                              >
+                                {item.label}
+                              </Link>
                             </li>
                           ))}
                         </ul>

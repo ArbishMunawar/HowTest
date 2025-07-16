@@ -12,11 +12,11 @@ const RecommendedCard = ({
   views,
   author,
   image,
-  category
+  category,
 }) => {
   return (
     <Link to={`/articles/${id}`}>
-      <div className="  md:w-full flex my-[30px] pr-5">
+      <div className="  md:w-full flex my-[30px] gap-x-4 lg:gap-x-9 lg:my-11 px-5 lg:px-0">
         <div className="lg:h-full lg:w-[280px] w-[102px] md:[105px] ">
           <img
             src={image}
@@ -26,16 +26,16 @@ const RecommendedCard = ({
         </div>
         <div className=" w-[70%] lg:w-[60%] md:w-[90%]">
           <div>
-            <h2 className="pl-4 text-[16px] lg:text-[22px] font-[500] text-text-gray lg:text-wrap hover:text-azure-blue cursor-pointer ellipse">
+            <h2 className=" text-[16px] lg:text-[22px] font-[500] text-text-gray lg:text-wrap hover:text-azure-blue cursor-pointer ellipse">
               {title}
             </h2>
 
-            <p className="hidden md:block text-text-gray text-sm px-2 md:pl-4">
+            <p className="hidden md:block text-text-gray text-sm  ">
               {summary}
             </p>
           </div>
 
-          <div className="flex items-center pl-5 text-[12px]  text-text-gray  pt-3">
+          <div className="flex items-center  text-[12px]  text-text-gray  pt-3">
             <div className="flex  border-r border-text-dark-gray  gap-2 pr-2">
               <DateIcon />
               <span>{date}</span>

@@ -25,7 +25,7 @@ const RecommendedPage = () => {
   return (
     <>
       <div className="bg-gradient-to-r from-[#FBEEEE] to-[#F7FFFE]">
-        <h2 className="flex justify-center items-center pt-[110px] py-[69px] lg:py-[62px]  text-medium-large lg:text-normal font-[600]">
+        <h2 className="flex justify-center items-center pt-[110px] py-[70px] lg:py-[64px] text-medium-large lg:text-normal font-[600]">
           Recommended
         </h2>
       </div>
@@ -37,8 +37,8 @@ const RecommendedPage = () => {
           setActiveTab={setActiveTab}
           title="Recommended"
         />
-        <div className=" md:flex ">
-          <div className="">
+        <div className=" lg:flex justify-between ">
+          <div className=" ">
             {isLoading ? (
               <p>Loading...</p>
             ) : filteredArticles.length > 0 ? (
@@ -59,13 +59,13 @@ const RecommendedPage = () => {
             ) : (
               <p>No Articles Found</p>
             )}
-            <div className="pr-6">
+            <div className="lg:pr-14">
               <CourseBanner
                 title="Looking to Learn CSS, PMS English?"
                 story=" If you want to learn English Essay and Precis for CSS, PMS, Judiciary,
-        or One Paper Exams, join Sir Syed Kazim Ali, Pakistan’s top English
-        teacher with the highest success rate of his students for years. Start
-        your journey to success today!"
+                or One Paper Exams, join Sir Syed Kazim Ali, Pakistan’s top English
+                teacher with the highest success rate of his students for years. Start
+                your journey to success today!"
                 buttondata="Explore Courses"
               />
             </div>
@@ -90,7 +90,7 @@ const RecommendedPage = () => {
               <p>No Articles Found</p>
             )}
           </div>
-          <div className="hidden lg:block md:w-[30%]">
+          <div className="hidden lg:block md:w-[23.33%]">
             <Sidebar />
           </div>
         </div>

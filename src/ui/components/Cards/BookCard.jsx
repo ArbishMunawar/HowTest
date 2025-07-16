@@ -1,7 +1,8 @@
 import React from 'react';
-
+import {Link} from 'react-router-dom'
 const BookCard = ({id, image, title, subtitle }) => {
   return (
+    //  <Link to={`/book/${id}`}>
     <div className="bg-white rounded-lg overflow-hidden   flex flex-col h-full">
       <img
         src={image}
@@ -18,6 +19,7 @@ const BookCard = ({id, image, title, subtitle }) => {
         </p>
       </div>
     </div>
+    // </Link>
   );
 };
 
