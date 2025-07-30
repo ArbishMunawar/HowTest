@@ -20,4 +20,4 @@ export default function Root() {
   )
 }
 
-// pnpx json-server --watch db.json --port 3000
+// pnpx json-server --watch db.json --port 8000

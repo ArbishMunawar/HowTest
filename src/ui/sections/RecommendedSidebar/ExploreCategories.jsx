@@ -3,7 +3,7 @@ import UseFetch from "../../../hooks/UseFetch";
 
 const ExploreCategories = () => {
   const { data: articles } = UseFetch(
-    `${import.meta.env.VITE_REACT_APP_API_URL}/articles`
+    `/articles`
   );
 
   const Categories = [...new Set(articles?.map((item) => item.category))];

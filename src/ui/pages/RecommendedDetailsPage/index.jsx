@@ -20,7 +20,7 @@ const RecommendedDetailsPage = () => {
   const { id } = useParams();
 
   const { data, isLoading } = UseFetch(
-    `${import.meta.env.VITE_REACT_APP_API_URL}/articles/${id}`
+    `/articles/${id}`
   );
 
   if (isLoading) {
@@ -39,19 +39,19 @@ const RecommendedDetailsPage = () => {
             {data.title}
           </h1>
           <div className="flex  ">
-            {data.image && (
+            {data.author?.image && (
               <img
                 src={Teracy}
-                alt={data.title}
+                alt={data.author.name}
                 className=" mb-6 h-[60px] w-[60px]"
               />
             )}
             <div className="pl-4 md:w-[60%]">
               <div className="text-[#231F2 text-[14px] md:text-[16px] font-[500] ">
-                <span>{data.author}</span>
+                <span>{data.author?.name || "Unknown Author"}</span>
               </div>
               <span className="text-text-normal-gray text-[12px] font-[400] ">
-                {data.bio}
+                {data.author?.bio || "No bio available"}
               </span>
               <div className="text-azure-blue text-[12px] font-[400]">
                 <a href="">View Author</a>

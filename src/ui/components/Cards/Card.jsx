@@ -15,7 +15,7 @@ const Card = ({ id, bio, title, summary, date, views, author, image }) => {
           <p className="text-text-gray text-sm mb-4 ">{summary}</p>
         </div>
         <div className="flex items-center justify-between text-xs text-text-gray  pt-3">
-          <span className="font-medium text-text-gray">{author}</span>
+          <span className="font-medium text-text-gray">{author?.name}</span>
           <span>{date}</span>
         </div>
       </div>

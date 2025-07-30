@@ -16,7 +16,7 @@ const EachBookDetail = () => {
   const { id } = useParams();
 
   const { data, isLoading } = UseFetch(
-    `${import.meta.env.VITE_REACT_APP_API_URL}/books/${id}`
+    `/books/${id}`
   );
   
   return (

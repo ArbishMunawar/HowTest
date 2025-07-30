@@ -15,7 +15,7 @@ const CategoriesPage = () => {
   const [activeTab, setActiveTab] = useState("all");
 const { category } = useParams(); 
   const { data, isLoading } = UseFetch(
-    `${import.meta.env.VITE_REACT_APP_API_URL}/articles`
+    `/articles`
   );
 const allTabs= [
     { label: "All Articles", value: "all" },

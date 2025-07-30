@@ -7,7 +7,7 @@ import BookCard from "../components/Cards/BookCard";
 const OnlineMocksSection = () => {
   const [searchParams] = useSearchParams();
   const { data, isLoading } = UseFetch(
-    `${import.meta.env.VITE_REACT_APP_API_URL}/books?${searchParams.toString()}`
+    `/books?${searchParams.toString()}`
   );
 
   const [activeIndex, setActiveIndex] = useState(0);

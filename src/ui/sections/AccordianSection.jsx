@@ -7,7 +7,7 @@ import { ChevronDown, ChevronUp } from "lucide-react";
 const AccordianSection = () => {
     const [searchParams] = useSearchParams();
   const { data, isLoading } = UseFetch(
-    `${import.meta.env.VITE_REACT_APP_API_URL}/accordian?${searchParams.toString()}`
+    `/accordian?${searchParams.toString()}`
   );
   const [openIndex, setOpenIndex] = useState(null);
 

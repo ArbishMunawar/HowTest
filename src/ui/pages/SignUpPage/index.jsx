@@ -1,21 +1,78 @@
-import React from "react";
+import  React from "react";
+import { useNavigate } from "react-router-dom";
+import { api_base_url } from "../../../helper";
+import { useState } from "react";
 
 const Signup = () => {
+  const navigate = useNavigate();
+  
+  const [userName, setUserName] = useState("");
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [password, setPassword] =useState("");
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    try {
+      const res = await fetch(`${api_base_url}/user/signup`, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          userName,
+          name,
+          email,
+          password,
+        }),
+      });
+
+      const data = await res.json();
+      console.log(data);
+
+      if (data.success) {
+        alert("Signup successful!");
+        navigate("/login");
+      } else {
+        alert(data.msg || "Signup failed!");
+      }
+    } catch (err) {
+      console.error("Error during signup:", err);
+      alert("Something went wrong.");
+    }
+  };
+
   return (
     <div className="min-h-screen bg-gray-100 flex items-center justify-center px-4">
       <div className="bg-white p-8 rounded-2xl shadow-md w-full max-w-md">
         <h2 className="text-2xl font-bold text-center text-gray-800 mb-6">
-          Create Your Account 
+          Create Your Account
         </h2>
 
-        <form className="space-y-4">
+        <form className="space-y-4" onSubmit={handleSubmit}>
           <div>
             <label className="block text-sm font-medium text-gray-600 mb-1">
-              Full Name
+              Name
             </label>
             <input
               type="text"
-              placeholder="John Doe"
+              value={name}
+              onChange={(e) => setName(e.target.value)}
+              placeholder="Your Full Name"
+              className="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
+            />
+          </div>
+
+          <div>
+            <label className="block text-sm font-medium text-gray-600 mb-1">
+              User Name
+            </label>
+            <input
+              type="text"
+              value={userName}
+              onChange={(e) => setUserName(e.target.value)}
+              placeholder="Your User Name"
               className="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
             />
           </div>
@@ -26,6 +83,8 @@ const Signup = () => {
             </label>
             <input
               type="email"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
               placeholder="you@example.com"
               className="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
             />
@@ -37,6 +96,8 @@ const Signup = () => {
             </label>
             <input
               type="password"
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
               placeholder="........."
               className="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
             />

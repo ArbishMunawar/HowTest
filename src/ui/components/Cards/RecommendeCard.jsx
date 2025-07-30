@@ -48,7 +48,7 @@ const RecommendedCard = ({
 
             <div className="hidden md:block md:flex md:items-center gap-2 border-l border-text-dark-gray pl-3 items-center ">
               <AuthorIcon />
-              <span>{author}</span>
+              <span>{author?.name}</span>
             </div>
 
             {/* <span className=" hidden md:block font-medium text-gray-700">{author}</span> */}

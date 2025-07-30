@@ -8,13 +8,13 @@ const SearchResultsPage = () => {
   const [localInput, setLocalInput] = useState(searchQuery);
 
   const { data: books } = UseFetch(
-    `${import.meta.env.VITE_REACT_APP_API_URL}/books`
+    `/books`
   );
   const { data: articles } = UseFetch(
-    `${import.meta.env.VITE_REACT_APP_API_URL}/articles`
+    `/articles`
   );
   const { data: authors } = UseFetch(
-    `${import.meta.env.VITE_REACT_APP_API_URL}/authors`
+    `/authors`
   );
 
   const handleSearch = () => {

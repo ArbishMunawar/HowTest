@@ -10,6 +10,7 @@ import Iblack from "../../../assets/icons/iblack";
 import Inblack from "../../../assets/icons/inblack";
 import Wblack from "../../../assets/icons/wblack";
 import Pblack from "../../../assets/icons/pblack";
+import { api_base_url } from "../../../helper";
 import Xblack from "../../../assets/icons/xblack";
 const AuthorDetailsSection = () => {
   const { id } = useParams();
@@ -17,7 +18,7 @@ const AuthorDetailsSection = () => {
   const [activeTab, setActiveTab] = useState("articles");
 
   const { data, isLoading } = UseFetch(
-    `${import.meta.env.VITE_REACT_APP_API_URL}/authors/${id}`
+    `/authors/${id}`
   );
 
   const [articles, setArticles] = useState([]);
@@ -28,9 +29,7 @@ const AuthorDetailsSection = () => {
 
     if (activeTab === "articles" && articles.length === 0) {
       fetch(
-        `${
-          import.meta.env.VITE_REACT_APP_API_URL
-        }/articles?author=${encodeURIComponent(data.name)}`
+        `${api_base_url}/articles?author=${data._id}`
       )
         .then((res) => res.json())
         .then((data) => setArticles(data));
@@ -38,9 +37,7 @@ const AuthorDetailsSection = () => {
 
     if (activeTab === "books" && books.length === 0) {
       fetch(
-        `${
-          import.meta.env.VITE_REACT_APP_API_URL
-        }/books?author=${encodeURIComponent(data.name)}`
+        `${api_base_url}/books?author=${data._id}`
       )
         .then((res) => res.json())
         .then((data) => setBooks(data));
@@ -92,7 +89,7 @@ const AuthorDetailsSection = () => {
         <div className="pb-[50px] md:grid md:grid-cols-2 lg:max-w-[1200px] mx-auto ">
           <div className="px-[20px]">
             <h2 className="text-medium lg:text-medium-large font-[600] text-rasin-black py-[20px]">{`About  ${data.name}`}</h2>
-            <h2 className="text-small text-text-gray">{data.about}</h2>
+            <h2 className="text-small text-text-gray">{data.bio}</h2>
           </div>
           <div>
             <div className="bg-gradient-to-r from-[#FBEEEE] to-[#F7FFFE] px-[20px] mt-[50px]  pb-[28px] md:rounded-[10px] lg:py-[47px]">
@@ -132,14 +129,14 @@ const AuthorDetailsSection = () => {
                 {articles.length > 0 ? (
                   articles.map((item, index) => (
                     <RecommendedCard
-                      id={item.id}
-                      key={item.id}
+                      id={item._id}
+                      key={item._id}
                       image={item.image}
                       title={item.title}
                       summary={item.summary}
                       date={item.date}
                       views={item.views}
-                      author={item.author}
+                      author={item.author.name}
                     />
                   ))
                 ) : (
@@ -153,7 +150,7 @@ const AuthorDetailsSection = () => {
                 {books.length > 0 ? (
                   books.map((item, index) => (
                     <BookCard
-                      key={item.id}
+                      key={item._id}
                       image={item.image}
                       title={item.title}
                       subtitle={item.subtitle}
@@ -165,6 +162,7 @@ const AuthorDetailsSection = () => {
               </div>
             )}
           </div>
+          
         </div>
 
         <div className="lg:max-w-[1200px] mx-auto py-[50px]">

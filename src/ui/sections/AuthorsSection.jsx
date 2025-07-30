@@ -7,7 +7,7 @@ import TopSection from "../components/Common/TopSection";
 const AuthorsSection = () => {
   const [searchParams] = useSearchParams();
   const { data, isLoading } = UseFetch(
-    `${import.meta.env.VITE_REACT_APP_API_URL}/authors?${searchParams.toString()}`
+    `/authors?${searchParams.toString()}`
   );
 
   const [currentGroupIndex, setCurrentGroupIndex] = useState(0);
@@ -65,7 +65,7 @@ const AuthorsSection = () => {
                 <div key={i} className="w-full shrink-0 flex gap-6 px-5 md:px-0 md:hidden">
                   {group.map((item) => (
                     <div
-                      key={item.id}
+                      key={item._id}
                       className="w-full "
                       style={{ flex: groupSize === 3 ? "1" : "none" }}
                     >

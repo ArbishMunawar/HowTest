@@ -12,7 +12,7 @@ const RecommendedPage = () => {
   const [activeTab, setActiveTab] = useState("all");
 
   const { data, isLoading } = UseFetch(
-    `${import.meta.env.VITE_REACT_APP_API_URL}/articles`
+    `/articles?${searchParams.toString()}`
   );
   const allTabs = [
     { label: "All Articles", value: "all" },
@@ -45,8 +45,8 @@ const RecommendedPage = () => {
               <div className=" mt-6">
                 {filteredArticles.slice(0, 2).map((item) => (
                   <RecommendedCard
-                    id={item.id}
-                    key={item.id}
+                    id={item._id}
+                    key={item._id}
                     image={item.image}
                     title={item.title}
                     summary={item.summary}
@@ -75,8 +75,8 @@ const RecommendedPage = () => {
               <div className=" mt-[40px]">
                 {filteredArticles.slice(2).map((item) => (
                   <RecommendedCard
-                    id={item.id}
-                    key={item.id}
+                    id={item._id}
+                    key={item._id}
                     image={item.image}
                     title={item.title}
                     summary={item.summary}
