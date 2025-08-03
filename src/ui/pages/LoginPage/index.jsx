@@ -1,15 +1,15 @@
 import React from "react";
-import {Link} from 'react-router-dom'
+import { Link } from "react-router-dom";
 import { api_base_url } from "../../../helper";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
 const Login = () => {
- const navigate = useNavigate();
+  const navigate = useNavigate();
   const [email, setEmail] = useState("");
-  const [password, setPassword] =useState("");
-const [message, setMessage] = useState("");
-const handleSubmit = async (e) => {
+  const [password, setPassword] = useState("");
+  const [message, setMessage] = useState("");
+  const handleSubmit = async (e) => {
     e.preventDefault();
 
     try {
@@ -19,6 +19,7 @@ const handleSubmit = async (e) => {
         headers: {
           "Content-Type": "application/json",
         },
+        credentials: "include",
         body: JSON.stringify({
           email,
           password,
@@ -28,8 +29,11 @@ const handleSubmit = async (e) => {
       const data = await response.json();
 
       if (data.success) {
+        localStorage.setItem("user", JSON.stringify(data.user));
+        localStorage.setItem("token", data.token);
+// console.log("Login successful:", data);
         setMessage("Login successful!");
-         navigate("/");
+        navigate("/");
       } else {
         setMessage(data.msg || "Login failed.");
       }
@@ -38,12 +42,12 @@ const handleSubmit = async (e) => {
       setMessage("Something went wrong.");
     }
   };
-  
+
   return (
     <div className="min-h-screen bg-gray-100 flex items-center justify-center">
       <div className="bg-white p-8 rounded-2xl shadow-md w-full max-w-md">
         <h2 className="text-2xl font-bold text-center text-gray-800 mb-6">
-          Welcome Back 
+          Welcome Back
         </h2>
 
         <form className="space-y-4" onSubmit={handleSubmit}>
@@ -66,7 +70,7 @@ const handleSubmit = async (e) => {
             </label>
             <input
               type="password"
-               value={password}
+              value={password}
               onChange={(e) => setPassword(e.target.value)}
               placeholder="......."
               className="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
@@ -80,14 +84,14 @@ const handleSubmit = async (e) => {
             Login
           </button>
         </form>
-
+        {message && (
+          <p className="mt-4 text-center text-sm text-red-600">{message}</p>
+        )}
         <div className="mt-4 text-center text-sm text-gray-500">
           <p>
             Don’t have an account?{" "}
-            <Link to={"signup"}>
-            <a href="/register" className="text-blue-600 hover:underline">
+            <Link to={"signup"} className="text-blue-600 hover:underline">
               Register
-            </a>
             </Link>
           </p>
         </div>

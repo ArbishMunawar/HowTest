@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState,useEffect } from "react";
 import Logo from "../../../assets/images/Logo.png";
 import MenuIcon from "../../../assets/icons/MenuIcon";
 import CrossIcon from "../../../assets/icons/CrossIcon";
@@ -12,6 +12,7 @@ import { Link } from "react-router";
 import NavAdd from "../../components/Common/NavAdd";
 
 const Navbar = () => {
+  const [user, setUser] = useState(null);
   const [mobileOpen, setMobileOpen] = useState(false);
   const [mobileSearchOpen, setMobileSearchOpen] = useState(false);
   const [activeSubMenu, setActiveSubMenu] = useState("main");
@@ -48,7 +49,7 @@ const Navbar = () => {
     ],
     Mock: [
       { label: "All Mocks", path: "/booksdetail/all" },
-    { label: "FPSC Mocks", path: "/booksdetail/fpsc" },
+      { label: "FPSC Mocks", path: "/booksdetail/fpsc" },
       { label: "PPSC Mocks", path: "/booksdetail/ppsc" },
     ],
     Other: [
@@ -60,6 +61,18 @@ const Navbar = () => {
       { label: "FAQs", path: "" },
       { label: "Courses", path: "/categories/Courses" },
     ],
+  };
+  useEffect(() => {
+    const storedUser = localStorage.getItem("user");
+    if (storedUser) {
+      setUser(JSON.parse(storedUser));
+    }
+  }, []);
+
+  const handleLogout = () => {
+    localStorage.removeItem("user");
+    localStorage.removeItem("token");
+    setUser(null);
   };
 
   return (
@@ -265,9 +278,27 @@ const Navbar = () => {
           <div className="flex gap-6 items-center">
             <NavSearch />
             <WriteForUsButton>Write For Us</WriteForUsButton>
-            <Link to={"login"}>
-              <button className="text-blue-500 cursor-pointer">LogIn</button>
-            </Link>
+            {user ? (
+              <>
+                <Link to="/dashboard">
+                  <button className="text-blue-500 cursor-pointer">
+                    Dashboard
+                  </button>
+                </Link>
+
+                <button
+                  onClick={handleLogout}
+                  className="text-blue-500 cursor-pointer"
+                >
+                  Logout
+                </button>
+              </>
+            ) : (
+              <Link to="/login">
+                <button className="text-blue-500 cursor-pointer">LogIn</button>
+              </Link>
+            )}
+
             {/* </div> */}
           </div>
         </div>

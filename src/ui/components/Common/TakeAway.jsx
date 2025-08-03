@@ -11,9 +11,7 @@ import { useParams } from "react-router";
 import UseFetch from "../../../hooks/UseFetch";
 const TakeAway = () => {
   const { id } = useParams();
-  const { data } = UseFetch(
-    `${import.meta.env.VITE_REACT_APP_API_URL}/authors/${id}`
-  );
+  const { data } = UseFetch(`/authors/${id}`);
   return (
     <>
       <div className="text-[15px] md:text-[18px] lg:text-[18px] font-[400] text-[#4F4F4F]">
@@ -79,10 +77,11 @@ const TakeAway = () => {
         </p>
 
         <History
-          author={data?.name}
-          date="13 July 2025"
-          qualifications={data.credentials?.Qualifications}
-          degree={data.credentials?.Degree}
+          author={data?.author?.name}
+          date={data?.createdAt}
+          qualifications={data?.author?.qualifications}
+          degree={data?.author?.degree}
+          position={data?.author?.position}
         />
 
         <ReviewArticle />

@@ -6,7 +6,7 @@ import { useState } from "react";
 const Signup = () => {
   const navigate = useNavigate();
   
-  const [userName, setUserName] = useState("");
+  const [username, setUserName] = useState("");
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] =useState("");
@@ -20,8 +20,9 @@ const Signup = () => {
         headers: {
           "Content-Type": "application/json",
         },
+           credentials: "include",
         body: JSON.stringify({
-          userName,
+          username,
           name,
           email,
           password,
@@ -70,7 +71,7 @@ const Signup = () => {
             </label>
             <input
               type="text"
-              value={userName}
+              value={username}
               onChange={(e) => setUserName(e.target.value)}
               placeholder="Your User Name"
               className="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"

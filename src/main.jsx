@@ -16,6 +16,7 @@ import Login from './ui/pages/LoginPage/index.jsx';
 import SignUpPage from './ui/pages/SignUpPage/index.jsx';
 import CategoriesPage from './ui/pages/CategoriesPage/index.jsx';
 import AuthorDeatilsSection from './ui/pages/AuthorDetailsPage/index.jsx';
+import Dashboard from './ui/pages/Dashboard/index.jsx';
 const router = createBrowserRouter([
   {
     path: "/",
@@ -33,6 +34,7 @@ const router = createBrowserRouter([
       { path: "/search", element: <SearchResultsPage  /> },
       { path: "/login", element: <Login /> },
       { path: "/login/signup", element: <SignUpPage /> },
+      { path: "/dashboard", element: <Dashboard /> },
     ],
   },
 ]);

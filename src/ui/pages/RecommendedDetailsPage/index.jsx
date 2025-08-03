@@ -19,9 +19,7 @@ import SidebarOrientation from "../../components/Common/SidebarOrientation";
 const RecommendedDetailsPage = () => {
   const { id } = useParams();
 
-  const { data, isLoading } = UseFetch(
-    `/articles/${id}`
-  );
+  const { data, isLoading } = UseFetch(`/articles/${id}`);
 
   if (isLoading) {
     return <p className="text-center py-10">Loading...</p>;
@@ -60,17 +58,22 @@ const RecommendedDetailsPage = () => {
           </div>
 
           <div className="mt-5 text-[#3874FF] text-[12px] md:text-[16px] font-[400] grid grid-cols-2 items-center grid-rows-2 md:grid md:grid-cols-3 md:pr-20">
-            <span>Economics of Agriculture</span>
-            <span>Economics of Agriculture</span>
-            <span>Economics of Agriculture</span>
-            <span>Economics of Agriculture</span>
+            {data.tags?.map((tag, index) => (
+              <span key={index}>{tag}</span>
+            ))}
           </div>
 
           <div className="flex justify-between items-center border-y-1 border-dim-gray mt-5">
             <div className="flex items-center text-[14px] text-text-normal-gray  py-3">
               <div className="flex  border-r gap-2 pr-3">
                 <DateIcon />
-                <span>{data.date}</span>
+                <span>
+                  {new Date(data.createdAt).toLocaleDateString("en-US", {
+                    year: "numeric",
+                    month: "long",
+                    day: "numeric",
+                  })}
+                </span>
               </div>
 
               <div className="flex gap-2 items-center pl-2 pr-2">
@@ -88,9 +91,7 @@ const RecommendedDetailsPage = () => {
           </div>
 
           <div className="text-[15px] md:text-[18px] lg:text-[18px] font-[400] text-rasin-black">
-            <p className="my-[40px]">
-              {data.abstract}
-            </p>
+            <p className="my-[40px]">{data.abstract}</p>
 
             <img src={laptop} alt="laptop image" className="rounded-[10px]" />
 
@@ -318,7 +319,7 @@ const RecommendedDetailsPage = () => {
         </div>
 
         <div className="hidden md:block pt-[70px]">
-          <Sidebar/>
+          <Sidebar />
           <img src={S1} alt="" className="my-6" />
           <img src={S1} alt="" className="my-6" />
           <img src={S2} alt="" className="my-6" />
