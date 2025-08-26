@@ -6,8 +6,8 @@ const useFetch = (url) => {
   const [error, setError] = useState(null);
   useEffect(() => {
     setIsLoading(true);
-    // fetch(url)
-    fetch(`${api_base_url}${url}`)
+    fetch(url)
+    // fetch(`${api_base_url}${url}`)
       .then((response) => response.json())
       .then((data) => setData(data))
       .catch((error) => setError(error))

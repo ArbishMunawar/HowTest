@@ -11,38 +11,42 @@ const Signup = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] =useState("");
 
+
   const handleSubmit = async (e) => {
     e.preventDefault();
+     navigate("/login");}
+  // const handleSubmit = async (e) => {
+  //   e.preventDefault();
 
-    try {
-      const res = await fetch(`${api_base_url}/user/signup`, {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-           credentials: "include",
-        body: JSON.stringify({
-          username,
-          name,
-          email,
-          password,
-        }),
-      });
+  //   try {
+  //     const res = await fetch(`${api_base_url}/user/signup`, {
+  //       method: "POST",
+  //       headers: {
+  //         "Content-Type": "application/json",
+  //       },
+  //          credentials: "include",
+  //       body: JSON.stringify({
+  //         username,
+  //         name,
+  //         email,
+  //         password,
+  //       }),
+  //     });
 
-      const data = await res.json();
-      console.log(data);
+  //     const data = await res.json();
+  //     console.log(data);
 
-      if (data.success) {
-        alert("Signup successful!");
-        navigate("/login");
-      } else {
-        alert(data.msg || "Signup failed!");
-      }
-    } catch (err) {
-      console.error("Error during signup:", err);
-      alert("Something went wrong.");
-    }
-  };
+  //     if (data.success) {
+  //       alert("Signup successful!");
+  //       navigate("/login");
+  //     } else {
+  //       alert(data.msg || "Signup failed!");
+  //     }
+  //   } catch (err) {
+  //     console.error("Error during signup:", err);
+  //     alert("Something went wrong.");
+  //   }
+  // };
 
   return (
     <div className="min-h-screen bg-gray-100 flex items-center justify-center px-4">

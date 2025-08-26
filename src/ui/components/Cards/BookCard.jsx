@@ -1,6 +1,6 @@
 import React from 'react';
 import {Link} from 'react-router-dom'
-const BookCard = ({id, image, title, subtitle }) => {
+const BookCard = ({id, image, title, author }) => {
   return (
     //  <Link to={`/book/${id}`}>
     <div className="bg-white rounded-lg overflow-hidden   flex flex-col h-full">
@@ -15,7 +15,7 @@ const BookCard = ({id, image, title, subtitle }) => {
           {title}
         </h3>
         <p className="text-extra-small text-text-gray mt-1 line-clamp-2">
-          {subtitle}
+          {author}
         </p>
       </div>
     </div>

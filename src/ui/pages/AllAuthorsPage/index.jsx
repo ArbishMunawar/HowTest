@@ -1,13 +1,15 @@
-import React from "react";
+import React, { useContext } from "react";
 import UseFetch from "../../../hooks/UseFetch";
 import { Link, useSearchParams } from "react-router";
 import AuthorCard from "../../components/Cards/AuthorCard";
 import { Search } from "lucide-react";
+import { AppContext } from "../../../context/AppContext";
 const AllAuthorsPage = () => {
-  const [searchParams] = useSearchParams();
-  const { data, isLoading } = UseFetch(
-    `/authors?${searchParams.toString()}`
-  );
+  // const [searchParams] = useSearchParams();
+  // const { data, isLoading } = UseFetch(
+  //   `/authors?${searchParams.toString()}`
+  // );
+  const { authors, authorLoading } = useContext(AppContext);
 
   return (
     <>
@@ -36,24 +38,24 @@ const AllAuthorsPage = () => {
         </div>
       </div>
       <div className="lg:max-w-[1200px] mx-auto py-[50px] lg:py-[80px] px-5 lg:px-0">
-        {isLoading ? (
+        {authorLoading ? (
           <p>Loading...</p>
-        ) : data && data.length > 0 ? (
+        ) : authors && authors.length > 0 ? (
           <>
             <div className="md:hidden flex flex-col  gap-10  ">
-              {data.map((author) => (
+              {authors.map((author) => (
                 <div
-                  key={author.id}
+                  key={author._id}
                   className="min-w-[100%] max-w-[100%] flex-shrink-0"
                 >
-                  <AuthorCard key={author.id} author={author.name}/>
+                  <AuthorCard key={author._id} author={author.name}/>
                 </div>
               ))}
             </div>
 
             <div className="hidden md:grid grid-cols-3 lg:grid-cols-3 xl:grid-cols-3 gap-6 mt-6">
-              {data.map((author) => (
-                <AuthorCard key={author.id} author={author.name} />
+              {authors.map((author) => (
+                <AuthorCard key={author._id} author={author.name} />
               ))}
             </div>
           </>

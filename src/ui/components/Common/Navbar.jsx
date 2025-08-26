@@ -62,18 +62,9 @@ const Navbar = () => {
       { label: "Courses", path: "/categories/Courses" },
     ],
   };
-  useEffect(() => {
-    const storedUser = localStorage.getItem("user");
-    if (storedUser) {
-      setUser(JSON.parse(storedUser));
-    }
-  }, []);
 
-  const handleLogout = () => {
-    localStorage.removeItem("user");
-    localStorage.removeItem("token");
-    setUser(null);
-  };
+
+  
 
   return (
     <nav className="bg-white shadow-3xl w-full relative z-50 ">
@@ -278,7 +269,7 @@ const Navbar = () => {
           <div className="flex gap-6 items-center">
             <NavSearch />
             <WriteForUsButton>Write For Us</WriteForUsButton>
-            {user ? (
+            {/* {user ? (
               <>
                 <Link to="/dashboard">
                   <button className="text-blue-500 cursor-pointer">
@@ -297,9 +288,13 @@ const Navbar = () => {
               <Link to="/login">
                 <button className="text-blue-500 cursor-pointer">LogIn</button>
               </Link>
-            )}
+            )} */}
 
             {/* </div> */}
+
+            <Link to="/login">
+                <button className="text-blue-500 cursor-pointer">LogIn</button>
+              </Link>
           </div>
         </div>
       </div>

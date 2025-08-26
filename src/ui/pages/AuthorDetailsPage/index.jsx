@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import { useParams } from "react-router-dom";
 import UseFetch from "../../../hooks/UseFetch";
 import Tabs from "../../components/Common/Tabs";
@@ -12,44 +12,43 @@ import Wblack from "../../../assets/icons/wblack";
 import Pblack from "../../../assets/icons/pblack";
 import { api_base_url } from "../../../helper";
 import Xblack from "../../../assets/icons/xblack";
+import { AppContext } from "../../../context/AppContext";
+import defaultAuthorImg from "../../../assets/images/userDeafult.png";
+
+const backendUrl = import.meta.env.VITE_REACT_APP_API_URL; 
 const AuthorDetailsSection = () => {
   const { id } = useParams();
 
   const [activeTab, setActiveTab] = useState("articles");
+  const { authors, authorLoading } = useContext(AppContext);
 
-  const { data, isLoading } = UseFetch(
-    `/authors/${id}`
-  );
-
+  const author = authors.find((a) => a._id === id);
   const [articles, setArticles] = useState([]);
   const [books, setBooks] = useState([]);
 
   useEffect(() => {
-    if (!data.name) return;
+    if (!author) return;
 
     if (activeTab === "articles" && articles.length === 0) {
-      fetch(
-        `${api_base_url}/articles?author=${data._id}`
-      )
+      fetch(`${api_base_url}/articles?author=${author._id}`)
         .then((res) => res.json())
-        .then((data) => setArticles(data));
+        .then((data) => setArticles(data.data || []));
     }
 
     if (activeTab === "books" && books.length === 0) {
-      fetch(
-        `${api_base_url}/books?author=${data._id}`
-      )
+      fetch(`${api_base_url}/books?author=${author._id}`)
         .then((res) => res.json())
-        .then((data) => setBooks(data));
+        .then((data) => setBooks(data.data || []));
     }
-  }, [activeTab, data.name]);
+  }, [activeTab, author]);
 
   const authorsTabs = [
     { label: "Articles", value: "articles" },
     { label: "MCQ Books", value: "books" },
   ];
 
-  if (isLoading) return <p className="text-center py-10">Loading...</p>;
+if (authorLoading) return <p className="text-center py-10">Loading...</p>;
+if (!author) return <p className="text-center py-10">Author not found.</p>;
 
   return (
     <>
@@ -59,7 +58,10 @@ const AuthorDetailsSection = () => {
             <div className="pt-[100px] pb-[66px] flex flex-col items-center justify-center px-[20px] ">
               <div className="relative h-[161px] w-[170px] bg-white flex justify-end items-end rounded-[60%_30%_40%_60%/50%_60%_40%_50%] overflow-hidden">
                 <img
-                  src={data.image}
+                  src={
+                    author.image
+                       ? backendUrl + author.image : defaultAuthorImg
+                  }
                   alt=""
                   className="absolute bottom-0 w-[90%] object-cover"
                 />
@@ -68,7 +70,7 @@ const AuthorDetailsSection = () => {
                 Author
               </p>
               <h2 className="text-rasin-black text-medium lg:text-normal font-[600]">
-                {data.name}
+                {author.name}
               </h2>
               <p className="text-text-normal-gray text-small lg:text-small-medium py-[20px] text-center">
                 I’m a passionate and experienced full stack developer.
@@ -88,28 +90,30 @@ const AuthorDetailsSection = () => {
 
         <div className="pb-[50px] md:grid md:grid-cols-2 lg:max-w-[1200px] mx-auto ">
           <div className="px-[20px]">
-            <h2 className="text-medium lg:text-medium-large font-[600] text-rasin-black py-[20px]">{`About  ${data.name}`}</h2>
-            <h2 className="text-small text-text-gray">{data.bio}</h2>
+            <h2 className="text-medium lg:text-medium-large font-[600] text-rasin-black py-[20px]">{`About  ${author.name}`}</h2>
+            <h2 className="text-small text-text-gray">{author.bio}</h2>
           </div>
           <div>
             <div className="bg-gradient-to-r from-[#FBEEEE] to-[#F7FFFE] px-[20px] mt-[50px]  pb-[28px] md:rounded-[10px] lg:py-[47px]">
               <h2 className="text-rasin-black lg:px-[40px] pt-[28px] pb-[20px] text-[22px] lg:text-[24px] font-[600] ">
                 Credentials
               </h2>
-              {data?.credentials &&
-                Object.entries(data.credentials).map(([key, value], index) => (
-                  <div key={index} className="px-3 lg:px-[70px] ">
-                    <div className="flex justify-between items-center text-extra-small lg:text-small">
-                      <span className="text-text-gray font-[600] text-extra-small lg:text-small">
-                        {key}
-                      </span>
-                      <span className="text-text-gray font-[400] py-[10px] text-extra-small lg:text-small">
-                        {value}
-                      </span>
+              {author?.credentials &&
+                Object.entries(author.credentials).map(
+                  ([key, value], index) => (
+                    <div key={index} className="px-3 lg:px-[70px] ">
+                      <div className="flex justify-between items-center text-extra-small lg:text-small">
+                        <span className="text-text-gray font-[600] text-extra-small lg:text-small">
+                          {key}
+                        </span>
+                        <span className="text-text-gray font-[400] py-[10px] text-extra-small lg:text-small">
+                          {value}
+                        </span>
+                      </div>
+                      <div className="h-[1px] w-full bg-gradient-to-r from-[#FFFFFF] via-[#C4C4C4] to-[#FFFFFF]" />
                     </div>
-                    <div className="h-[1px] w-full bg-gradient-to-r from-[#FFFFFF] via-[#C4C4C4] to-[#FFFFFF]" />
-                  </div>
-                ))}
+                  )
+                )}
             </div>
           </div>
         </div>
@@ -162,7 +166,6 @@ const AuthorDetailsSection = () => {
               </div>
             )}
           </div>
-          
         </div>
 
         <div className="lg:max-w-[1200px] mx-auto py-[50px]">

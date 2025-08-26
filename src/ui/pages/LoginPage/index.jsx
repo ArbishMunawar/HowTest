@@ -9,39 +9,45 @@ const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [message, setMessage] = useState("");
+
   const handleSubmit = async (e) => {
     e.preventDefault();
+     navigate("/");
+  
+  }
+//   const handleSubmit = async (e) => {
+//     e.preventDefault();
 
-    try {
-      const response = await fetch(`${api_base_url}/user/login`, {
-        method: "POST",
-        mode: "cors",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        credentials: "include",
-        body: JSON.stringify({
-          email,
-          password,
-        }),
-      });
+//     try {
+//       const response = await fetch(`${api_base_url}/user/login`, {
+//         method: "POST",
+//         mode: "cors",
+//         headers: {
+//           "Content-Type": "application/json",
+//         },
+//         credentials: "include",
+//         body: JSON.stringify({
+//           email,
+//           password,
+//         }),
+//       });
 
-      const data = await response.json();
+//       const data = await response.json();
 
-      if (data.success) {
-        localStorage.setItem("user", JSON.stringify(data.user));
-        localStorage.setItem("token", data.token);
-// console.log("Login successful:", data);
-        setMessage("Login successful!");
-        navigate("/");
-      } else {
-        setMessage(data.msg || "Login failed.");
-      }
-    } catch (error) {
-      console.error("Login error:", error);
-      setMessage("Something went wrong.");
-    }
-  };
+//       if (data.success) {
+//         localStorage.setItem("user", JSON.stringify(data.user));
+//         localStorage.setItem("token", data.token);
+// // console.log("Login successful:", data);
+//         setMessage("Login successful!");
+//         navigate("/");
+//       } else {
+//         setMessage(data.msg || "Login failed.");
+//       }
+//     } catch (error) {
+//       console.error("Login error:", error);
+//       setMessage("Something went wrong.");
+//     }
+//   };
 
   return (
     <div className="min-h-screen bg-gray-100 flex items-center justify-center">

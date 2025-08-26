@@ -1,5 +1,10 @@
 import { ArrowRight } from "lucide-react";
 import { Link } from "react-router";
+import defaultAuthorImg from "../../../assets/images/userDeafult.png";
+
+
+const backendUrl = import.meta.env.VITE_REACT_APP_API_URL; 
+
 const AuthorCard = ({ author }) => {
   return (
 
@@ -7,7 +12,7 @@ const AuthorCard = ({ author }) => {
     <div className="w-full rounded-[10px] border border-light-gray text-center  ">
         <div className="bg-gradient-to-r from-[#FBEEEE] to-[#F7FFFE] p-6 rounded-tr-[10px] rounded-tl-[10px]">
       <img
-        src={author.image}
+        src={author.image ? backendUrl + author.image : defaultAuthorImg}
         alt={author.name}
         className="w-20 h-20 mx-auto rounded-full object-cover mb-4"
       />

@@ -1,14 +1,17 @@
-import React, { useEffect, useState } from "react";
-import UseFetch from "../../hooks/UseFetch";
+import React, { useContext, useEffect, useState } from "react";
+// import UseFetch from "../../hooks/UseFetch";
 import { Link, useSearchParams } from "react-router";
 import AuthorCard from "../components/Cards/AuthorCard";
 import TopSection from "../components/Common/TopSection";
+import { AppContext } from "../../context/AppContext";
 
 const AuthorsSection = () => {
-  const [searchParams] = useSearchParams();
-  const { data, isLoading } = UseFetch(
-    `/authors?${searchParams.toString()}`
-  );
+  // const [searchParams] = useSearchParams();
+  // const { data, isLoading } = UseFetch(
+  //   `/authors?${searchParams.toString()}`
+  // );
+
+    const { authors, authorLoading } = useContext(AppContext);
 
   const [currentGroupIndex, setCurrentGroupIndex] = useState(0);
   const [groupSize, setGroupSize] = useState(1); 
@@ -28,19 +31,20 @@ const AuthorsSection = () => {
   }, []);
 
   const groupedData = [];
-  for (let i = 0; i < data?.length; i += groupSize) {
-    groupedData.push(data.slice(i, i + groupSize));
+  for (let i = 0; i < authors?.length; i += groupSize) {
+    groupedData.push(authors.slice(i, i + groupSize));
   }
 
+  console.log("AUTHORS in component:", authors); 
   return (
     <div className="lg:max-w-[1200px] mx-auto lg:mb-[80px] my-8">
       <Link to={`authors`}>
         <TopSection title="All Authors" />
       </Link>
 
-      {isLoading ? (
+      {authorLoading ? (
         <p>Loading...</p>
-      ) : data && data.length > 0 ? (
+      ) : authors && authors.length > 0 ? (
         <>
           <div className="relative w-full overflow-hidden my-8">
             <div
@@ -51,7 +55,7 @@ const AuthorsSection = () => {
                 <div key={i} className="w-full shrink-0 flex gap-6 px-5 md:px-0">
                   {group.map((item) => (
                     <div
-                      key={item.id}
+                      key={item._id}
                       className="w-full "
                       style={{ flex: groupSize === 3 ? "1" : "none" }}
                     >

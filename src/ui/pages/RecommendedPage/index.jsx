@@ -1,26 +1,30 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import Tabs from "../../components/Common/Tabs";
-import UseFetch from "../../../hooks/UseFetch";
-import { useSearchParams } from "react-router";
+// import UseFetch from "../../../hooks/UseFetch";
+// import { useSearchParams } from "react-router";
 import RecommendedCard from "../../components/Cards/RecommendeCard";
 import CourseBanner from "../../components/Common/CourseBanner";
 import Sidebar from "../../sections/RecommendedSidebar/Sidebar";
 import SubscribeSection from "../../sections/SubscribeSection";
+import { AppContext } from "../../../context/AppContext";
 
 const RecommendedPage = () => {
-  const [searchParams] = useSearchParams();
+  // const [searchParams] = useSearchParams();
   const [activeTab, setActiveTab] = useState("all");
 
-  const { data, isLoading } = UseFetch(
-    `/articles?${searchParams.toString()}`
-  );
+  // const { data, isLoading } = UseFetch(
+  //    `${import.meta.env.VITE_REACT_APP_API_URL}/api/v1/article/`
+  // );
+
+    const {  articles, isLoading } = useContext(AppContext);
   const allTabs = [
     { label: "All Articles", value: "all" },
     { label: "Recommended", value: "recommended" },
     { label: "Most Read", value: "mostRead" },
   ];
+
   const filteredArticles =
-    activeTab === "all" ? data : data.filter((item) => item.tag === activeTab);
+    activeTab === "all" ? articles : articles.filter((item) => item.tag === activeTab);
 
   return (
     <>
