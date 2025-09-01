@@ -2,7 +2,7 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
-import { useAdmin } from "../context/AdminContext";
+import { useAdmin } from "../../../context/AdminContext";
 
 export default function AdminLoginPage() {
   const [email, setEmail] = useState("");

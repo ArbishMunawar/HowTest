@@ -16,11 +16,15 @@ import Login from "./ui/pages/LoginPage/index.jsx";
 import SignUpPage from "./ui/pages/SignUpPage/index.jsx";
 import CategoriesPage from "./ui/pages/CategoriesPage/index.jsx";
 import AuthorDeatilsSection from "./ui/pages/AuthorDetailsPage/index.jsx";
-import AdminRoot from "./admin/AdminRoot.jsx";
-import AdminLoginPage from "./admin/AdminLogin.jsx";
+// import AdminRoot from "./admin/AdminRoot.jsx";
+import AdminLoginPage from "./ui/pages/Admin/AdminLogin.jsx";
 import AppContextProvider from "./context/AppContext.jsx";
 import { AdminProvider } from "./context/AdminContext.jsx";
-import AdminDashboard  from "./admin/AdminDashboard.jsx";
+import AdminDashboard from "./ui/pages/Admin/AdminDashboard.jsx";
+import AdminAuthors from "./ui/pages/Admin/AdminAuthors.jsx/index.jsx";
+import AddAdminAuthor from "./ui/pages/Admin/AddAdminAuthors.jsx/index.jsx";
+import AddAdminCategory from "./ui/pages/Admin/AddAdminCategory.jsx/index.jsx";
+import AdminCategories from "./ui/pages/Admin/AdminCategories/index.jsx";
 const router = createBrowserRouter([
   {
     path: "/",
@@ -38,19 +42,24 @@ const router = createBrowserRouter([
       { path: "/search", element: <SearchResultsPage /> },
       { path: "/login", element: <Login /> },
       { path: "/login/signup", element: <SignUpPage /> },
-      // { path: "/dashboard", element: <Dashboard /> },
+      { path: "/admin/login", element: <AdminLoginPage /> },
+      { path: "/admin/dashboard", element: <AdminDashboard /> },
+      { path: "/admin/authors", element: <AdminAuthors /> },
+      { path: "/admin/new-author", element: <AddAdminAuthor /> },
+      { path: "/admin/new-category", element: <AddAdminCategory /> },
+      { path: "/admin/category", element: <AdminCategories /> },
     ],
   },
   //admin routes
-  {
-    path: "/admin/login",
-    element: <AdminLoginPage />,
-  },
-  {
-    path: "/admin",
-    element: <AdminRoot />,
-    children: [{ path: "dashboard", element: <AdminDashboard /> }],
-  },
+  //   {
+  //     path: "/admin/login",
+  //     element: <AdminLoginPage />,
+  //   },
+  //   {
+  //     path: "/admin",
+  //     element: <AdminRoot />,
+  //     children: [{ path: "dashboard", element: <AdminDashboard /> }],
+  //   },
 ]);
 
 createRoot(document.getElementById("root")).render(
